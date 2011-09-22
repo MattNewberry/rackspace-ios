@@ -12,6 +12,7 @@
 #import <SenTestingKit/SenTestingKit.h>
 
 @interface RSFileConnectionTest : SenTestCase
+
 @end
 
 @implementation RSFileConnectionTest

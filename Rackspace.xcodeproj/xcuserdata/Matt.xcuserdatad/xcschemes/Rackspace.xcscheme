@@ -31,9 +31,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C94ADAB5141AA2D000766C2F"
-               BuildableName = "RackspaceTests.octest"
-               BlueprintName = "RackspaceTests"
+               BlueprintIdentifier = "C9C73773142BC9890000638E"
+               BuildableName = "UnitTests.octest"
+               BlueprintName = "UnitTests"
                ReferencedContainer = "container:Rackspace.xcodeproj">
             </BuildableReference>
          </TestableReference>

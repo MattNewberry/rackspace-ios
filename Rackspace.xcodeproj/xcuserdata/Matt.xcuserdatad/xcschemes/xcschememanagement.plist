@@ -9,7 +9,7 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>RackspaceTests.xcscheme</key>
+		<key>UnitTests.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
@@ -23,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>C94ADAB5141AA2D000766C2F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C9C73773142BC9890000638E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

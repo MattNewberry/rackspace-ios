@@ -6,11 +6,13 @@
 //  The Rackspace project is provided under the Apache 2.0 license.
 //
 
+#import <SenTestingKit/SenTestingKit.h>
 #import "RSAccount.h"
 #import "RSProvider.h"
-#import <SenTestingKit/SenTestingKit.h>
+
 
 @interface RSAccountTest : SenTestCase 
+
 @end
 
 @implementation RSAccountTest
