@@ -458,13 +458,13 @@
 		C9C73778142BC9890000638E /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				C9C73779142BC9890000638E /* Supporting Files */,
 				C9C73790142BCA3D0000638E /* fixtures */,
 				C9C73786142BCA280000638E /* RSAccountTest.m */,
 				C9C73787142BCA280000638E /* RSFileConnection.h */,
 				C9C73788142BCA280000638E /* RSFileConnection.m */,
 				C9C73789142BCA280000638E /* RSFileConnectionTest.m */,
 				C9C7378A142BCA280000638E /* RSProviderTest.m */,
-				C9C73779142BC9890000638E /* Supporting Files */,
 				27AA29DC142BD19100E2F051 /* RSFlavorTest.m */,
 			);
 			path = UnitTests;
