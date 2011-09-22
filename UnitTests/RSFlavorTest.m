@@ -22,7 +22,7 @@
     flavor.ram = [NSNumber numberWithInt:256];
     flavor.disk = [NSNumber numberWithInt:10];
     
-    STAssertEquals(@"256 MB RAM, 10 GB Disk", [flavor description], @"Flavor description is incorrect");
+    STAssertEqualObjects(@"256 MB RAM, 10 GB Disk", [flavor description], @"Flavor description is incorrect");
     
 }
 @end
