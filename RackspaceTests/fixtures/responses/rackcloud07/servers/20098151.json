@@ -1,0 +1,1 @@
+{"progress"=>100, "id"=>20098151, "imageId"=>76, "flavorId"=>3, "status"=>"ACTIVE", "name"=>"swift.slave.openstack.org", "hostId"=>"4da34297244a1eb624d385d46c9b597c", "addresses"=>{"public"=>["184.106.211.23"], "private"=>["10.179.110.233"]}, "metadata"=>{}}
