@@ -24,7 +24,7 @@
     
     NSString *value = [daily objectForKey:@"H_1800_2000"];
     
-    STAssertEqualObjects(@"10:00 AM - 12:00 PM PST", value, @"Daily options dictionary is incorrect");
+    STAssertEqualObjects(value, @"10:00 AM - 12:00 PM PST", @"Daily options dictionary is incorrect");
         
 }
 
@@ -32,11 +32,11 @@
     
     NSString *value = [[RSServerBackupSchedule weeklyOptionsDict] objectForKey:@"Every Monday"];
     
-    STAssertEqualObjects(@"MONDAY", value, @"Weekly options dictionary is incorrect");
+    STAssertEqualObjects(value, @"MONDAY", @"Weekly options dictionary is incorrect");
     
     value = [[RSServerBackupSchedule weeklyOptionsDict] objectForKey:@"Disabled"];
     
-    STAssertEqualObjects(@"DISABLED", value, @"Weekly options dictionary is incorrect");
+    STAssertEqualObjects(value, @"DISABLED", @"Weekly options dictionary is incorrect");
 }
 
 - (void)testHumanWeeklyDescription {
@@ -44,11 +44,11 @@
     RSServerBackupSchedule *backupSchedule = [RSServerBackupSchedule blank];
     backupSchedule.weekly = @"MONDAY";
     
-    STAssertEqualObjects(@"Every Monday", [backupSchedule humanWeeklyDescription], @"Human weekly description is incorrect");
+    STAssertEqualObjects([backupSchedule humanWeeklyDescription], @"Every Monday", @"Human weekly description is incorrect");
     
     backupSchedule.weekly = @"DISABLED";
 
-    STAssertEqualObjects(@"Disabled", [backupSchedule humanWeeklyDescription], @"Human weekly description is incorrect");
+    STAssertEqualObjects([backupSchedule humanWeeklyDescription], @"Disabled", @"Human weekly description is incorrect");
     
 }
 
@@ -60,7 +60,7 @@
     RSServerBackupSchedule *backupSchedule = [RSServerBackupSchedule blank];
     backupSchedule.daily = @"H_1800_2000";
     
-    STAssertEqualObjects(@"10:00 AM - 12:00 PM PST", [backupSchedule humanDailyDescription], @"Human daily description is incorrect");
+    STAssertEqualObjects([backupSchedule humanDailyDescription], @"10:00 AM - 12:00 PM PST", @"Human daily description is incorrect");
     
 }
 

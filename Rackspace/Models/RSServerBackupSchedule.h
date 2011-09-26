@@ -10,7 +10,7 @@
 + (NSArray *)dailyOptions;
 + (NSDictionary *)weeklyOptionsDict;
 + (NSDictionary *)dailyOptionsDict;
-+ (NSString *)humanizedWeeklyForString:(NSString *)weeklyString;
-+ (NSString *)humanizedDailyForString:(NSString *)timeRange;
++ (NSString *)humanWeeklyDescriptionForString:(NSString *)weeklyString;
++ (NSString *)humanDailyDescriptionForString:(NSString *)timeRange;
 
 @end
