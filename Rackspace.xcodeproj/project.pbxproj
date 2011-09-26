@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		27AA29DF142BD25200E2F051 /* RSFlavorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AA29DC142BD19100E2F051 /* RSFlavorTest.m */; };
+		27B043BB1430E9C600EFB07D /* RSServerBackupScheduleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B043B81430E8A300EFB07D /* RSServerBackupScheduleTest.m */; };
 		C94ADA8C141AA2CF00766C2F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94ADA8B141AA2CF00766C2F /* UIKit.framework */; };
 		C94ADA8E141AA2CF00766C2F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94ADA8D141AA2CF00766C2F /* Foundation.framework */; };
 		C94ADA90141AA2CF00766C2F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94ADA8F141AA2CF00766C2F /* CoreGraphics.framework */; };
@@ -139,6 +140,7 @@
 
 /* Begin PBXFileReference section */
 		27AA29DC142BD19100E2F051 /* RSFlavorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSFlavorTest.m; sourceTree = "<group>"; };
+		27B043B81430E8A300EFB07D /* RSServerBackupScheduleTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSServerBackupScheduleTest.m; sourceTree = "<group>"; };
 		C94ADA87141AA2CF00766C2F /* Rackspace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rackspace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C94ADA8B141AA2CF00766C2F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C94ADA8D141AA2CF00766C2F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -466,6 +468,7 @@
 				C9C73789142BCA280000638E /* RSFileConnectionTest.m */,
 				C9C7378A142BCA280000638E /* RSProviderTest.m */,
 				27AA29DC142BD19100E2F051 /* RSFlavorTest.m */,
+				27B043B81430E8A300EFB07D /* RSServerBackupScheduleTest.m */,
 			);
 			path = UnitTests;
 			sourceTree = "<group>";
@@ -772,6 +775,7 @@
 				C9C737FA142BCB7F0000638E /* RSNSURLConnection.m in Sources */,
 				C9C737FB142BCB820000638E /* YAMLParsing.m in Sources */,
 				27AA29DF142BD25200E2F051 /* RSFlavorTest.m in Sources */,
+				27B043BB1430E9C600EFB07D /* RSServerBackupScheduleTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
