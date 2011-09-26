@@ -17,14 +17,20 @@
 
 - (void)testDailyOptionsDict {
 
-    NSTimeZone *timeZone = [NSTimeZone timeZoneWithAbbreviation:@"PST"];
+    // we're using Hawaii time because it's one of the few in the US that does not
+    // observe daylight savings, thus making this unit test valid at any time of year
+    
+    NSTimeZone *timeZone = [NSTimeZone timeZoneWithName:@"Pacific/Honolulu"];
+    
+    STAssertEqualObjects([timeZone name], @"Pacific/Honolulu", @"Time zone not initialized properly");
+    
     [NSTimeZone setDefaultTimeZone:timeZone];
 
     NSDictionary *daily = [RSServerBackupSchedule dailyOptionsDict];
     
     NSString *value = [daily objectForKey:@"H_1800_2000"];
     
-    STAssertEqualObjects(value, @"10:00 AM - 12:00 PM PST", @"Daily options dictionary is incorrect");
+    STAssertEqualObjects(value, @"8:00 AM - 10:00 AM HST", @"Daily options dictionary is incorrect");
         
 }
 
@@ -54,13 +60,16 @@
 
 - (void)testHumanDailyDescription {
     
-    NSTimeZone *timeZone = [NSTimeZone timeZoneWithAbbreviation:@"PST"];
+    NSTimeZone *timeZone = [NSTimeZone timeZoneWithName:@"Pacific/Honolulu"];
+    
+    STAssertEqualObjects([timeZone name], @"Pacific/Honolulu", @"Time zone not initialized properly");
+    
     [NSTimeZone setDefaultTimeZone:timeZone];
     
     RSServerBackupSchedule *backupSchedule = [RSServerBackupSchedule blank];
     backupSchedule.daily = @"H_1800_2000";
-    
-    STAssertEqualObjects([backupSchedule humanDailyDescription], @"10:00 AM - 12:00 PM PST", @"Human daily description is incorrect");
+
+    STAssertEqualObjects([backupSchedule humanDailyDescription], @"8:00 AM - 10:00 AM HST", @"Human daily description is incorrect");
     
 }
 

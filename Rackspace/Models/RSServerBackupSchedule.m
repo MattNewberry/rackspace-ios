@@ -11,7 +11,9 @@
 }
 
 - (NSString *)humanDailyDescription {
-    return @"not implemented";
+
+    return [RSServerBackupSchedule humanDailyDescriptionForString:self.daily];
+
 }
 
 + (NSArray *)weeklyOptions {
@@ -50,7 +52,7 @@
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithCapacity:8];
     
     for (NSString *option in weeklyOptions) {
-        [dict setObject:[self humanWeeklyDescriptionForString:option] forKey:option];
+        [dict setObject:option forKey:[self humanWeeklyDescriptionForString:option]];
     }
 
     return [NSDictionary dictionaryWithDictionary:dict];;
@@ -85,7 +87,80 @@
 }
 
 + (NSString *)humanDailyDescriptionForString:(NSString *)timeRange {
-    return @"not implemented";
+
+    if ([timeRange isEqualToString:@"DISABLED"]) {
+        
+        return @"Disabled";
+        
+    } else {      
+        
+        NSTimeZone *tz = [NSTimeZone defaultTimeZone];
+        NSArray *components = [timeRange componentsSeparatedByString:@"_"];
+        
+        NSInteger gmtOffset = ([tz secondsFromGMT] / 3600) * 100;
+        NSInteger fromInt = [[components objectAtIndex:1] intValue] + gmtOffset;
+        if (fromInt < 0) {
+            fromInt += 2400;
+        }
+        
+        NSString *from = @"";
+        if (fromInt >= 1200) {
+            
+            from = $S(@"%i:00 PM", (fromInt - 1200) / 100);
+
+        } else if (fromInt == 0) {
+            
+            from = @"12:00 AM";
+            
+        } else {
+            
+            from = $S(@"%i:00 AM", fromInt / 100);
+            
+        }
+        
+        if ([from isEqualToString:@"0:00 PM"]) {
+            
+            from = @"12:00 PM";
+            
+        } else if ([from isEqualToString:@"0:00 AM"]) {
+            
+            from = @"12:00 AM";
+            
+        }
+        
+        NSInteger toInt = [[components objectAtIndex:2] intValue] + gmtOffset;
+        if (toInt < 0) {
+            toInt += 2400;
+        }
+        
+        NSString *to = @"";
+        if (toInt >= 1200) {
+            
+            to = $S(@"%i:00 PM", (toInt - 1200) / 100);
+            
+        } else if (toInt == 0) {
+            
+            to = @"12:00 AM";
+            
+        } else {
+            
+            to = $S(@"%i:00 AM", toInt / 100);
+            
+        }
+        
+        if ([to isEqualToString:@"0:00 PM"]) {
+            
+            to = @"12:00 PM";
+            
+        } else if ([to isEqualToString:@"0:00 AM"]) {
+            
+            to = @"12:00 AM";
+            
+        }
+        
+        return $S(@"%@ - %@ %@", from, to, [tz abbreviation]);
+    }
+    
 }
 
 
