@@ -15,7 +15,7 @@
 
 - (id) init{
     
-    if(self == [super init]){
+    if(self = [super init]){
         
         self.rootPath = $S(@"%@/fixtures/accounts/%@", [[NSBundle bundleForClass:[self class]] bundlePath], [RSAccount activeAccount].username);
     }
