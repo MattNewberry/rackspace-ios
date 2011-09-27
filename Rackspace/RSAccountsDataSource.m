@@ -16,9 +16,10 @@
 }
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath withObject:(id)object {
-    
+
     RSAccount *account = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = account.username;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
 }
 

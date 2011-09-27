@@ -10,6 +10,4 @@
 
 @interface RSAccountsViewController : UITableViewController
 
-- (IBAction)addButtonPressed:(id)sender;
-
 @end

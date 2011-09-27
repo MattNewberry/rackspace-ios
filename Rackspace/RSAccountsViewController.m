@@ -11,12 +11,9 @@
 
 @implementation RSAccountsViewController
 
-- (IBAction)addButtonPressed:(id)sender {
-    
-    RSAccount *account = [RSAccount blank];
-    account.username = @"mike";
-    BOOL result = [account save];
-    NSLog(@"account saved: %i", result);
+- (void)viewDidLoad {
+
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
     
 }
 
