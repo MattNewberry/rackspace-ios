@@ -88,9 +88,11 @@
 
 + (NSString *)humanDailyDescriptionForString:(NSString *)timeRange {
 
+    NSString *result = nil;
+    
     if ([timeRange isEqualToString:@"DISABLED"]) {
         
-        return @"Disabled";
+        result = @"Disabled";
         
     } else {      
         
@@ -158,8 +160,10 @@
             
         }
         
-        return $S(@"%@ - %@ %@", from, to, [tz abbreviation]);
+        result = $S(@"%@ - %@ %@", from, to, [tz abbreviation]);
     }
+    
+    return result;
     
 }
 
