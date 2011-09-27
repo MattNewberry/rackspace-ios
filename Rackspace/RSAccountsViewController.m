@@ -7,7 +7,17 @@
 //
 
 #import "RSAccountsViewController.h"
+#import "RSAccount.h"
 
 @implementation RSAccountsViewController
+
+- (IBAction)addButtonPressed:(id)sender {
+    
+    RSAccount *account = [RSAccount blank];
+    account.username = @"mike";
+    BOOL result = [account save];
+    NSLog(@"account saved: %i", result);
+    
+}
 
 @end

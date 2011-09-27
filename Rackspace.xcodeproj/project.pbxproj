@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2736812014325A1E00C85805 /* RSAccountsViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 2736811E14325A1E00C85805 /* RSAccountsViewController.h */; };
 		2736812114325A1E00C85805 /* RSAccountsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2736811F14325A1E00C85805 /* RSAccountsViewController.m */; };
+		27C1E39B14326FFC001A18FC /* RSAccountsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C1E39A14326FFC001A18FC /* RSAccountsDataSource.m */; };
 		C94ADA8C141AA2CF00766C2F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94ADA8B141AA2CF00766C2F /* UIKit.framework */; };
 		C94ADA8E141AA2CF00766C2F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94ADA8D141AA2CF00766C2F /* Foundation.framework */; };
 		C94ADA90141AA2CF00766C2F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94ADA8F141AA2CF00766C2F /* CoreGraphics.framework */; };
@@ -142,6 +142,8 @@
 /* Begin PBXFileReference section */
 		2736811E14325A1E00C85805 /* RSAccountsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = RSAccountsViewController.h; sourceTree = "<group>"; };
 		2736811F14325A1E00C85805 /* RSAccountsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAccountsViewController.m; sourceTree = "<group>"; };
+		27C1E39914326FFC001A18FC /* RSAccountsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAccountsDataSource.h; sourceTree = "<group>"; };
+		27C1E39A14326FFC001A18FC /* RSAccountsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAccountsDataSource.m; sourceTree = "<group>"; };
 		C94ADA87141AA2CF00766C2F /* Rackspace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rackspace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C94ADA8B141AA2CF00766C2F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C94ADA8D141AA2CF00766C2F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -326,6 +328,8 @@
 			children = (
 				2736811E14325A1E00C85805 /* RSAccountsViewController.h */,
 				2736811F14325A1E00C85805 /* RSAccountsViewController.m */,
+				27C1E39914326FFC001A18FC /* RSAccountsDataSource.h */,
+				27C1E39A14326FFC001A18FC /* RSAccountsDataSource.m */,
 			);
 			name = Accounts;
 			sourceTree = "<group>";
@@ -734,8 +738,8 @@
 				C9E0ABA3142BAF4900EA595C /* NSString+InflectionSupport.m in Sources */,
 				C9E0ABA5142BAF4900EA595C /* Reachability.m in Sources */,
 				C9E0ABA7142BAF4900EA595C /* CoreSupport.m in Sources */,
-				2736812014325A1E00C85805 /* RSAccountsViewController.h in Sources */,
 				2736812114325A1E00C85805 /* RSAccountsViewController.m in Sources */,
+				27C1E39B14326FFC001A18FC /* RSAccountsDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
