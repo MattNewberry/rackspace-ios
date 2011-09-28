@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class RSAccountsDataSource;
+
 @interface RSAccountsViewController : UITableViewController
+
+@property (nonatomic, strong) IBOutlet RSAccountsDataSource *dataSource;
 
 @end

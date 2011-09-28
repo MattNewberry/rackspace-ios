@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2736812114325A1E00C85805 /* RSAccountsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2736811F14325A1E00C85805 /* RSAccountsViewController.m */; };
+		278A19D114339AFC0087EA57 /* RSLoginEndpointViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 278A19D014339AFC0087EA57 /* RSLoginEndpointViewController.m */; };
+		278A19D514339B1C0087EA57 /* RSLoginDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 278A19D414339B1C0087EA57 /* RSLoginDetailsViewController.m */; };
 		27C1E39B14326FFC001A18FC /* RSAccountsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C1E39A14326FFC001A18FC /* RSAccountsDataSource.m */; };
 		C94ADA8C141AA2CF00766C2F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94ADA8B141AA2CF00766C2F /* UIKit.framework */; };
 		C94ADA8E141AA2CF00766C2F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94ADA8D141AA2CF00766C2F /* Foundation.framework */; };
@@ -142,8 +144,13 @@
 /* Begin PBXFileReference section */
 		2736811E14325A1E00C85805 /* RSAccountsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = RSAccountsViewController.h; sourceTree = "<group>"; };
 		2736811F14325A1E00C85805 /* RSAccountsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAccountsViewController.m; sourceTree = "<group>"; };
+		278A19CF14339AFC0087EA57 /* RSLoginEndpointViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = RSLoginEndpointViewController.h; sourceTree = "<group>"; };
+		278A19D014339AFC0087EA57 /* RSLoginEndpointViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSLoginEndpointViewController.m; sourceTree = "<group>"; };
+		278A19D314339B1C0087EA57 /* RSLoginDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = RSLoginDetailsViewController.h; sourceTree = "<group>"; };
+		278A19D414339B1C0087EA57 /* RSLoginDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSLoginDetailsViewController.m; sourceTree = "<group>"; };
 		27C1E39914326FFC001A18FC /* RSAccountsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAccountsDataSource.h; sourceTree = "<group>"; };
 		27C1E39A14326FFC001A18FC /* RSAccountsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAccountsDataSource.m; sourceTree = "<group>"; };
+		27C1E3A214328805001A18FC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C94ADA87141AA2CF00766C2F /* Rackspace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rackspace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C94ADA8B141AA2CF00766C2F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C94ADA8D141AA2CF00766C2F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -318,6 +325,7 @@
 		2736811C143259BF00C85805 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				27C1E3A11432866F001A18FC /* Login */,
 				2736811D143259C800C85805 /* Accounts */,
 			);
 			name = "View Controllers";
@@ -334,9 +342,21 @@
 			name = Accounts;
 			sourceTree = "<group>";
 		};
+		27C1E3A11432866F001A18FC /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				278A19CF14339AFC0087EA57 /* RSLoginEndpointViewController.h */,
+				278A19D014339AFC0087EA57 /* RSLoginEndpointViewController.m */,
+				278A19D314339B1C0087EA57 /* RSLoginDetailsViewController.h */,
+				278A19D414339B1C0087EA57 /* RSLoginDetailsViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 		C94ADA7C141AA2CF00766C2F = {
 			isa = PBXGroup;
 			children = (
+				27C1E3A214328805001A18FC /* MapKit.framework */,
 				C94ADA91141AA2CF00766C2F /* Rackspace */,
 				C9C73778142BC9890000638E /* UnitTests */,
 				C94ADA8A141AA2CF00766C2F /* Frameworks */,
@@ -740,6 +760,8 @@
 				C9E0ABA7142BAF4900EA595C /* CoreSupport.m in Sources */,
 				2736812114325A1E00C85805 /* RSAccountsViewController.m in Sources */,
 				27C1E39B14326FFC001A18FC /* RSAccountsDataSource.m in Sources */,
+				278A19D114339AFC0087EA57 /* RSLoginEndpointViewController.m in Sources */,
+				278A19D514339B1C0087EA57 /* RSLoginDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
