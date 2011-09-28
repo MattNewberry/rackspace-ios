@@ -1,5 +1,7 @@
-demo:
-    - username: rackcloud07
-      api_key: 8bd642735860c898d27677a32c322a60
-      active: 1
-      provider: 1
+{ "demo": {
+    "username": "rackcloud07",
+    "api_key": "8bd642735860c898d27677a32c322a60",
+    "active": 1,
+    "provider": "1"
+  }
+}
