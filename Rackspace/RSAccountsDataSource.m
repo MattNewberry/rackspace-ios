@@ -22,4 +22,16 @@
     
 }
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        RSAccount *account = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        [account remove];        
+        [RSAccount save];
+        
+    }
+    
+}
+
 @end
