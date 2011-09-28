@@ -10,6 +10,8 @@
 		2736812114325A1E00C85805 /* RSAccountsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2736811F14325A1E00C85805 /* RSAccountsViewController.m */; };
 		278A19D114339AFC0087EA57 /* RSLoginEndpointViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 278A19D014339AFC0087EA57 /* RSLoginEndpointViewController.m */; };
 		278A19D514339B1C0087EA57 /* RSLoginDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 278A19D414339B1C0087EA57 /* RSLoginDetailsViewController.m */; };
+		278A19D61433A4900087EA57 /* seeds in Resources */ = {isa = PBXBuildFile; fileRef = C9C737FD142BCFF40000638E /* seeds */; };
+		278A19D91433A9500087EA57 /* RSProvidersDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 278A19D81433A9500087EA57 /* RSProvidersDataSource.m */; };
 		27C1E39B14326FFC001A18FC /* RSAccountsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C1E39A14326FFC001A18FC /* RSAccountsDataSource.m */; };
 		C94ADA8C141AA2CF00766C2F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94ADA8B141AA2CF00766C2F /* UIKit.framework */; };
 		C94ADA8E141AA2CF00766C2F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94ADA8D141AA2CF00766C2F /* Foundation.framework */; };
@@ -144,10 +146,12 @@
 /* Begin PBXFileReference section */
 		2736811E14325A1E00C85805 /* RSAccountsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = RSAccountsViewController.h; sourceTree = "<group>"; };
 		2736811F14325A1E00C85805 /* RSAccountsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAccountsViewController.m; sourceTree = "<group>"; };
-		278A19CF14339AFC0087EA57 /* RSLoginEndpointViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = RSLoginEndpointViewController.h; sourceTree = "<group>"; };
+		278A19CF14339AFC0087EA57 /* RSLoginEndpointViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSLoginEndpointViewController.h; sourceTree = "<group>"; };
 		278A19D014339AFC0087EA57 /* RSLoginEndpointViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSLoginEndpointViewController.m; sourceTree = "<group>"; };
-		278A19D314339B1C0087EA57 /* RSLoginDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = RSLoginDetailsViewController.h; sourceTree = "<group>"; };
+		278A19D314339B1C0087EA57 /* RSLoginDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSLoginDetailsViewController.h; sourceTree = "<group>"; };
 		278A19D414339B1C0087EA57 /* RSLoginDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSLoginDetailsViewController.m; sourceTree = "<group>"; };
+		278A19D71433A9500087EA57 /* RSProvidersDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSProvidersDataSource.h; sourceTree = "<group>"; };
+		278A19D81433A9500087EA57 /* RSProvidersDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSProvidersDataSource.m; sourceTree = "<group>"; };
 		27C1E39914326FFC001A18FC /* RSAccountsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAccountsDataSource.h; sourceTree = "<group>"; };
 		27C1E39A14326FFC001A18FC /* RSAccountsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAccountsDataSource.m; sourceTree = "<group>"; };
 		27C1E3A214328805001A18FC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -349,6 +353,8 @@
 				278A19D014339AFC0087EA57 /* RSLoginEndpointViewController.m */,
 				278A19D314339B1C0087EA57 /* RSLoginDetailsViewController.h */,
 				278A19D414339B1C0087EA57 /* RSLoginDetailsViewController.m */,
+				278A19D71433A9500087EA57 /* RSProvidersDataSource.h */,
+				278A19D81433A9500087EA57 /* RSProvidersDataSource.m */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -670,6 +676,7 @@
 				C94ADAB0141AA2CF00766C2F /* second@2x.png in Resources */,
 				C94ADACF141AA3C600766C2F /* Localizations.strings in Resources */,
 				C9E0AB9F142BAF4900EA595C /* inflections.plist in Resources */,
+				278A19D61433A4900087EA57 /* seeds in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -762,6 +769,7 @@
 				27C1E39B14326FFC001A18FC /* RSAccountsDataSource.m in Sources */,
 				278A19D114339AFC0087EA57 /* RSLoginEndpointViewController.m in Sources */,
 				278A19D514339B1C0087EA57 /* RSLoginDetailsViewController.m in Sources */,
+				278A19D91433A9500087EA57 /* RSProvidersDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

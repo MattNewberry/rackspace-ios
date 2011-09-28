@@ -7,14 +7,25 @@
 //
 
 #import "AppDelegate.h"
+#import "RSProvider.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
 
+- (void)seedModels {
+    
+    // prepopulate core data with the default rackspace providers
+    if ([RSProvider count] == 0) {
+        [RSProvider seedGroup:@"providers"];
+    }
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [self seedModels];
+    
     return YES;
 }
 							

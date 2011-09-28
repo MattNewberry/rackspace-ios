@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class RSProvidersDataSource;
+
 @interface RSLoginEndpointViewController : UITableViewController
+
+@property (nonatomic, strong) IBOutlet RSProvidersDataSource *dataSource;
 
 - (IBAction)cancelButtonPressed:(id)sender;
 

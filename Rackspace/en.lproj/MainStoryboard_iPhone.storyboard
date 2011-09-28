@@ -171,7 +171,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="Urj-nt-KHE" id="52e-Pf-24T"/>
+                                    <outlet property="dataSource" destination="dym-Bt-Ng6" id="phf-Tx-8Zn"/>
                                     <outlet property="delegate" destination="Urj-nt-KHE" id="MTP-ZU-XEX"/>
                                 </connections>
                             </tableView>
@@ -186,9 +186,15 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="dataSource" destination="dym-Bt-Ng6" id="I42-vU-yzc"/>
                         <outlet property="view" destination="8wX-y4-Iws" id="C8G-gz-ray"/>
                     </connections>
                 </viewController>
+                <customObject id="dym-Bt-Ng6" customClass="RSProvidersDataSource">
+                    <connections>
+                        <outlet property="tableView" destination="8wX-y4-Iws" id="b3D-qh-Hjv"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="804" y="-634"/>
         </scene>
@@ -253,7 +259,11 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RSLoginEndpointViewController.h"/>
             <relationships>
                 <relationship kind="action" name="cancelButtonPressed:"/>
+                <relationship kind="outlet" name="dataSource" candidateClass="RSProvidersDataSource"/>
             </relationships>
+        </class>
+        <class className="RSProvidersDataSource" superclassName="CKTableViewDataSource">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RSProvidersDataSource.h"/>
         </class>
         <class className="SecondViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SecondViewController.h"/>
