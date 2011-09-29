@@ -7,7 +7,11 @@
 //
 
 #import "RSLoginEndpointViewController.h"
+#import "RSLoginDetailsViewController.h"
+#import "RSProvidersDataSource.h"
 #import "RSProvider.h"
+
+#define kShowLoginDetails @"ShowLoginDetails"
 
 @implementation RSLoginEndpointViewController
 
@@ -21,7 +25,21 @@
 
 #pragma mark - Delegate
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.identifier isEqualToString:kShowLoginDetails]) {
+        
+        RSLoginDetailsViewController *vc = [segue destinationViewController];
+        vc.provider = selectedProvider;
+        
+    }
+    
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    selectedProvider = [self.dataSource.fetchedResultsController objectAtIndexPath:indexPath];
+    [self performSegueWithIdentifier:kShowLoginDetails sender:nil];
     
 }
 

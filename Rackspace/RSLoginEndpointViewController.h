@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class RSProvidersDataSource;
+@class RSProvidersDataSource, RSProvider;
 
-@interface RSLoginEndpointViewController : UITableViewController
+@interface RSLoginEndpointViewController : UITableViewController {
+    @private
+    RSProvider *selectedProvider;
+}
 
 @property (nonatomic, strong) IBOutlet RSProvidersDataSource *dataSource;
 

@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class RSProvider;
+
 @interface RSLoginDetailsViewController : UIViewController
+
+@property (nonatomic, strong) RSProvider *provider;
 
 @end

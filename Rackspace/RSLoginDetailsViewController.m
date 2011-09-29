@@ -7,7 +7,11 @@
 //
 
 #import "RSLoginDetailsViewController.h"
+#import "RSProvider.h"
+#import "RSAccount.h"
 
 @implementation RSLoginDetailsViewController
+
+@synthesize provider;
 
 @end
