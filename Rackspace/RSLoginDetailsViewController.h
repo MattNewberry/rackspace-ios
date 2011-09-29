@@ -10,8 +10,10 @@
 
 @class RSProvider;
 
-@interface RSLoginDetailsViewController : UIViewController
+@interface RSLoginDetailsViewController : UIViewController <UITextFieldDelegate>
 
 @property (nonatomic, strong) RSProvider *provider;
+@property (nonatomic, strong) IBOutlet UITextField *usernameTextField;
+@property (nonatomic, strong) IBOutlet UITextField *apiKeyTextField;
 
 @end

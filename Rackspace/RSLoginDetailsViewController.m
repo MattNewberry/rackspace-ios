@@ -12,6 +12,26 @@
 
 @implementation RSLoginDetailsViewController
 
-@synthesize provider;
+@synthesize provider, usernameTextField, apiKeyTextField;
+
+#pragma mark - Text Field Delegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
+    [textField resignFirstResponder];
+
+    if ([textField isEqual:self.usernameTextField]) {
+        
+        [self.apiKeyTextField becomeFirstResponder];
+        
+    } else if ([textField isEqual:self.apiKeyTextField]) {
+    
+        NSLog(@"login1");
+        
+    }
+    
+    return NO;
+    
+}
 
 @end

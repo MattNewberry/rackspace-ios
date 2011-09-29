@@ -10,7 +10,7 @@
 
 @class RSProvidersDataSource, RSProvider;
 
-@interface RSLoginEndpointViewController : UITableViewController {
+@interface RSLoginProviderViewController : UITableViewController {
     @private
     RSProvider *selectedProvider;
 }

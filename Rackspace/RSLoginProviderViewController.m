@@ -6,14 +6,14 @@
 //  Copyright (c) 2011 Rackspace, US Inc. All rights reserved.
 //
 
-#import "RSLoginEndpointViewController.h"
+#import "RSLoginProviderViewController.h"
 #import "RSLoginDetailsViewController.h"
 #import "RSProvidersDataSource.h"
 #import "RSProvider.h"
 
 #define kShowLoginDetails @"ShowLoginDetails"
 
-@implementation RSLoginEndpointViewController
+@implementation RSLoginProviderViewController
 
 @synthesize dataSource;
 
