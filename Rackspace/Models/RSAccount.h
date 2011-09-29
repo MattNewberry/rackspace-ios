@@ -2,6 +2,8 @@
 
 @interface RSAccount : _RSAccount {}
 
-+ (RSAccount *) activeAccount;
++ (RSAccount *)activeAccount;
+
+- (void)activate;
 
 @end

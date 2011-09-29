@@ -27,4 +27,20 @@
     return @"active";
 }
 
+- (void)activate {
+    
+    NSArray *accounts = [RSAccount findWithPredicate:$P(@"active = 1")];
+    
+    for (RSAccount *account in accounts) {
+        
+        account.active = [NSNumber numberWithBool:NO];
+        [account save];
+        
+    }
+    
+    self.active = [NSNumber numberWithBool:YES];
+    [self save];
+    
+}
+
 @end
