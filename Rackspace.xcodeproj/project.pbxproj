@@ -12,6 +12,8 @@
 		278A19D514339B1C0087EA57 /* RSLoginDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 278A19D414339B1C0087EA57 /* RSLoginDetailsViewController.m */; };
 		278A19D61433A4900087EA57 /* seeds in Resources */ = {isa = PBXBuildFile; fileRef = C9C737FD142BCFF40000638E /* seeds */; };
 		278A19D91433A9500087EA57 /* RSProvidersDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 278A19D81433A9500087EA57 /* RSProvidersDataSource.m */; };
+		27BE75CE14352CE8000D9523 /* UIViewController+Conveniences.h in Sources */ = {isa = PBXBuildFile; fileRef = 27BE75CC14352CE8000D9523 /* UIViewController+Conveniences.h */; };
+		27BE75CF14352CE8000D9523 /* UIViewController+Conveniences.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BE75CD14352CE8000D9523 /* UIViewController+Conveniences.m */; };
 		27C1E39B14326FFC001A18FC /* RSAccountsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C1E39A14326FFC001A18FC /* RSAccountsDataSource.m */; };
 		C94ADA8C141AA2CF00766C2F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94ADA8B141AA2CF00766C2F /* UIKit.framework */; };
 		C94ADA8E141AA2CF00766C2F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94ADA8D141AA2CF00766C2F /* Foundation.framework */; };
@@ -146,12 +148,14 @@
 /* Begin PBXFileReference section */
 		2736811E14325A1E00C85805 /* RSAccountsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = RSAccountsViewController.h; sourceTree = "<group>"; };
 		2736811F14325A1E00C85805 /* RSAccountsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAccountsViewController.m; sourceTree = "<group>"; };
-		278A19CF14339AFC0087EA57 /* RSLoginProviderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = RSLoginProviderViewController.h; sourceTree = "<group>"; };
+		278A19CF14339AFC0087EA57 /* RSLoginProviderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = RSLoginProviderViewController.h; sourceTree = "<group>"; };
 		278A19D014339AFC0087EA57 /* RSLoginProviderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSLoginProviderViewController.m; sourceTree = "<group>"; };
 		278A19D314339B1C0087EA57 /* RSLoginDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSLoginDetailsViewController.h; sourceTree = "<group>"; };
 		278A19D414339B1C0087EA57 /* RSLoginDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSLoginDetailsViewController.m; sourceTree = "<group>"; };
 		278A19D71433A9500087EA57 /* RSProvidersDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSProvidersDataSource.h; sourceTree = "<group>"; };
 		278A19D81433A9500087EA57 /* RSProvidersDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSProvidersDataSource.m; sourceTree = "<group>"; };
+		27BE75CC14352CE8000D9523 /* UIViewController+Conveniences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = "UIViewController+Conveniences.h"; sourceTree = "<group>"; };
+		27BE75CD14352CE8000D9523 /* UIViewController+Conveniences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Conveniences.m"; sourceTree = "<group>"; };
 		27C1E39914326FFC001A18FC /* RSAccountsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAccountsDataSource.h; sourceTree = "<group>"; };
 		27C1E39A14326FFC001A18FC /* RSAccountsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAccountsDataSource.m; sourceTree = "<group>"; };
 		27C1E3A214328805001A18FC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -346,6 +350,15 @@
 			name = Accounts;
 			sourceTree = "<group>";
 		};
+		27BE75C514352CB2000D9523 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				27BE75CC14352CE8000D9523 /* UIViewController+Conveniences.h */,
+				27BE75CD14352CE8000D9523 /* UIViewController+Conveniences.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		27C1E3A11432866F001A18FC /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -398,6 +411,7 @@
 		C94ADA91141AA2CF00766C2F /* Rackspace */ = {
 			isa = PBXGroup;
 			children = (
+				27BE75C514352CB2000D9523 /* Categories */,
 				2736811C143259BF00C85805 /* View Controllers */,
 				C96F0932142A72210048BC2C /* Models */,
 				C94ADA9A141AA2CF00766C2F /* AppDelegate.h */,
@@ -770,6 +784,8 @@
 				278A19D114339AFC0087EA57 /* RSLoginProviderViewController.m in Sources */,
 				278A19D514339B1C0087EA57 /* RSLoginDetailsViewController.m in Sources */,
 				278A19D91433A9500087EA57 /* RSProvidersDataSource.m in Sources */,
+				27BE75CE14352CE8000D9523 /* UIViewController+Conveniences.h in Sources */,
+				27BE75CF14352CE8000D9523 /* UIViewController+Conveniences.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

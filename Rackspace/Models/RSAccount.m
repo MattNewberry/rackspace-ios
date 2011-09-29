@@ -43,4 +43,17 @@
     
 }
 
+- (void)authenticate:(CKResultBlock)completionBlock errorBlock:(CKResultBlock)errorBlock {
+    
+    NSDictionary *headers = [[NSDictionary alloc] initWithObjectsAndKeys:self.username, @"X-Auth-User", self.api_key, @"X-Auth-Key", nil];
+    
+    CKRequest *request = [CKRequest requestWithMap:[CKRouterMap mapWithRemotePath:self.provider.api_auth_url]];
+    [request addHeaders:headers];    
+    request.completionBlock = completionBlock;
+    request.errorBlock = errorBlock;
+    
+    [request send];
+    
+}
+
 @end

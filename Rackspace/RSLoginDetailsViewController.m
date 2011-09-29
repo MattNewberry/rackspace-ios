@@ -9,6 +9,7 @@
 #import "RSLoginDetailsViewController.h"
 #import "RSProvider.h"
 #import "RSAccount.h"
+#import "UIViewController+Conveniences.h"
 
 @implementation RSLoginDetailsViewController
 
@@ -26,9 +27,7 @@
         
     } else if ([textField isEqual:self.apiKeyTextField]) {
         
-        NSLog(@"login1");
-        
-        [self.provider validate:self.usernameTextField.text password:self.apiKeyTextField.text];
+        [self loginButtonPressed:nil];
         
     }
     
@@ -40,7 +39,26 @@
 
 - (IBAction)loginButtonPressed:(id)sender {
     
-    [self dismissModalViewControllerAnimated:YES];
+    // this is obviously temporary until we decide on UI for this :)
+    self.navigationItem.title = @"Authenticating...";
+
+    RSAccount *account = [RSAccount blank];
+    account.provider = self.provider;
+    account.username = self.usernameTextField.text;
+    account.api_key = self.apiKeyTextField.text;
+    
+    [account authenticate:^(CKResult *result) {
+        
+        [self alert:@"login succeeded"];
+        NSLog(@"success! %i %@", result.responseCode, [result responseBody]);
+        [self dismissModalViewControllerAnimated:YES];
+        
+    } errorBlock:^(CKResult *result) {
+
+        NSLog(@"failure! %i %@", result.responseCode, [result responseBody]);
+        [self alert:@"login failed"];
+        
+    }];
     
 }
 
