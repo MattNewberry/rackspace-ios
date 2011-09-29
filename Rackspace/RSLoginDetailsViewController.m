@@ -25,12 +25,22 @@
         [self.apiKeyTextField becomeFirstResponder];
         
     } else if ([textField isEqual:self.apiKeyTextField]) {
-    
+        
         NSLog(@"login1");
+        
+        [self.provider validate:self.usernameTextField.text password:self.apiKeyTextField.text];
         
     }
     
     return NO;
+    
+}
+
+#pragma mark - Login Button
+
+- (IBAction)loginButtonPressed:(id)sender {
+    
+    [self dismissModalViewControllerAnimated:YES];
     
 }
 

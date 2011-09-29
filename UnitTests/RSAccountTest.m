@@ -25,4 +25,22 @@
     STAssertNotNil([RSAccount activeAccount].provider, @"Failed to link provider");
 }
 
+- (void)testActivate {
+    
+    [RSAccount seedGroup:@"demo"];
+    RSAccount *account = [RSAccount activeAccount];
+    
+    STAssertNil(account, @"activate test not implemented");
+    
+}
+
+- (void)testAuthentication {
+    
+    [RSAccount seedGroup:@"demo"];
+    RSAccount *account = [RSAccount activeAccount];
+    
+    STAssertNil(account, @"authentication test not implemented");
+    
+}
+
 @end

@@ -251,7 +251,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="yNv-Qx-NfC">
-                        <barButtonItem key="rightBarButtonItem" title="Login" style="done" id="D6b-0d-eDG"/>
+                        <barButtonItem key="rightBarButtonItem" title="Login" style="done" id="D6b-0d-eDG">
+                            <connections>
+                                <action selector="loginButtonPressed:" destination="ymb-6e-O4v" id="pLy-X8-3jB"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="apiKeyTextField" destination="RGp-nu-v0U" id="mdv-E0-aae"/>
@@ -321,6 +325,7 @@
         <class className="RSLoginDetailsViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RSLoginDetailsViewController.h"/>
             <relationships>
+                <relationship kind="action" name="loginButtonPressed:"/>
                 <relationship kind="outlet" name="apiKeyTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="usernameTextField" candidateClass="UITextField"/>
             </relationships>

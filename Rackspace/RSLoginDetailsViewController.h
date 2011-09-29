@@ -16,4 +16,6 @@
 @property (nonatomic, strong) IBOutlet UITextField *usernameTextField;
 @property (nonatomic, strong) IBOutlet UITextField *apiKeyTextField;
 
+- (IBAction)loginButtonPressed:(id)sender;
+
 @end
