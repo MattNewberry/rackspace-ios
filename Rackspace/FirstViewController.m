@@ -43,21 +43,6 @@
     
     self.view.backgroundColor = [UIColor scrollViewTexturedBackgroundColor];
     
-   
-    SecondViewController *vc = [[SecondViewController alloc] init];
-    vc.modalPresentationStyle = UIModalPresentationFormSheet;
-    vc.view.backgroundColor = [UIColor clearColor];
-    
-    UITextField *textF = [[UITextField alloc] initWithFrame:CGRectMake(50, 50, 200, 41)];
-    textF.keyboardAppearance = UIKeyboardAppearanceAlert;
-    [vc.view addSubview:textF];
-    [textF becomeFirstResponder];
-    
-     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-    nav.modalPresentationStyle = UIModalPresentationFormSheet;
-    nav.view.backgroundColor = [UIColor clearColor];
-    
-    [self presentModalViewController:nav animated:YES];
 }
 
 - (void)viewWillDisappear:(BOOL)animated

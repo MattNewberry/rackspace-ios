@@ -19,6 +19,7 @@
 
     RSAccount *account = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = account.username;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
 }
 

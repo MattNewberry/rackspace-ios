@@ -93,7 +93,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
-                                            <segue destination="4" kind="push" id="Leb-PF-fDC"/>
+                                            <segue destination="4" kind="push" identifier="ShowAccountHome" id="Leb-PF-fDC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
