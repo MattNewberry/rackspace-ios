@@ -9,6 +9,7 @@
 #import "RSAccountsViewController.h"
 #import "RSAccountsDataSource.h"
 #import "RSAccount.h"
+#import "RSProvider.h"
 
 @implementation RSAccountsViewController
 
@@ -17,6 +18,12 @@
 - (void)viewDidLoad {
 
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    
+//    RSAccount *fake = [RSAccount blank];
+//    fake.username = @"mike";
+//    fake.api_key = @"8bd642735860c898d27677a32c322a60";
+//    fake.provider = [[RSProvider all] objectAtIndex:0];
+//    [fake save];
     
 }
 
