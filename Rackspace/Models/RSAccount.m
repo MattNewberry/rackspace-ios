@@ -42,6 +42,8 @@
     self.active = [NSNumber numberWithBool:YES];
     [self save];
     
+    [[CKManager sharedManager] setBaseURL:self.api_server_url];
+    
 }
 
 - (BOOL)authenticate {
