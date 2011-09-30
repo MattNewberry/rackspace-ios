@@ -1,5 +1,6 @@
 #import "RSAccount.h"
 #import "RSProvider.h"
+#import "RSNSURLConnection.h"
 
 @implementation RSAccount
 
@@ -43,17 +44,13 @@
     
 }
 
-- (void)authenticate:(CKResultBlock)completionBlock errorBlock:(CKResultBlock)errorBlock {
+- (BOOL)authenticate {
     
-    NSDictionary *headers = [[NSDictionary alloc] initWithObjectsAndKeys:self.username, @"X-Auth-User", self.api_key, @"X-Auth-Key", nil];
+    RSNSURLConnection *conn = [[RSNSURLConnection alloc] init];
+    conn.account = self;
     
-    CKRequest *request = [CKRequest requestWithMap:[CKRouterMap mapWithRemotePath:self.provider.api_auth_url]];
-    [request addHeaders:headers];    
-    request.completionBlock = completionBlock;
-    request.errorBlock = errorBlock;
-    
-    [request send];
-    
+    return [conn authenticate];
+
 }
 
 @end

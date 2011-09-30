@@ -47,29 +47,16 @@
     account.username = self.usernameTextField.text;
     account.api_key = self.apiKeyTextField.text;
     
-    [account authenticate:^(CKResult *result) {
+    if ([account authenticate]) {
         
-        if ([result isSuccess]) {
-
-            dispatch_async(dispatch_get_main_queue(), ^{
-                
-                [account save];
-                [self dismissModalViewControllerAnimated:YES];
-                
-            });
-
-        } else {
-            
-            [self alert:@"There was a problem logging in.  Please check your username and API key."];
-
-        }
+        [self dismissModalViewControllerAnimated:YES];
         
-    } errorBlock:^(CKResult *result) {
-
-        [self alert:@"login failed"];
+    } else {
         
-    }];
-    
+        [self alert:@"There was a problem logging in.  Please check your username and API key."];
+        
+    }
+
 }
 
 @end
