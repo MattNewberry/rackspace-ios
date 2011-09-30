@@ -2,4 +2,7 @@
 
 @interface RSServer : _RSServer {}
 // Custom logic goes here.
+
++ (void)get;
+
 @end

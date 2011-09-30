@@ -23,5 +23,14 @@
     return request;    
 }
 
++ (void)get {
+    
+    [RSServer get:nil completionBlock:nil errorBlock:^(CKResult *result) {
+        
+        NSLog(@"error: %@", [result.error description]);
+        
+    }];
+    
+}
 
 @end

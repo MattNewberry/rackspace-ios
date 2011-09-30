@@ -128,7 +128,6 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="OuC-el-W6e" id="mkg-yI-hTt"/>
                                     <outlet property="delegate" destination="imO-KM-JRe" id="eYk-jT-qMZ"/>
                                 </connections>
                             </tableView>
@@ -151,15 +150,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="dataSource" destination="OuC-el-W6e" id="RQO-Nj-8Gl"/>
                         <outlet property="view" destination="V5M-ql-7Ay" id="W3R-VH-WqQ"/>
                     </connections>
                 </viewController>
-                <customObject id="OuC-el-W6e" customClass="RSAccountsDataSource">
-                    <connections>
-                        <outlet property="tableView" destination="V5M-ql-7Ay" id="7Ye-rY-Qm3"/>
-                    </connections>
-                </customObject>
             </objects>
             <point key="canvasLocation" x="-292" y="185"/>
         </scene>
@@ -344,14 +337,8 @@
         <class className="FirstViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FirstViewController.h"/>
         </class>
-        <class className="RSAccountsDataSource" superclassName="CKTableViewDataSource">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RSAccountsDataSource.h"/>
-        </class>
         <class className="RSAccountsViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RSAccountsViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="dataSource" candidateClass="RSAccountsDataSource"/>
-            </relationships>
         </class>
         <class className="RSLoginDetailsViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RSLoginDetailsViewController.h"/>

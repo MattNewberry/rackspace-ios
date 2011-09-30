@@ -11,10 +11,6 @@
 
 @implementation RSAccountsDataSource
 
-- (Class)entityClass {
-    return [RSAccount class];
-}
-
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath withObject:(id)object {
 
     RSAccount *account = [self.fetchedResultsController objectAtIndexPath:indexPath];

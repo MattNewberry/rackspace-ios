@@ -22,6 +22,9 @@
 - (void)viewDidLoad {
 
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
+
+    self.dataSource = [RSAccountsDataSource dataSourceForEntity:@"RSAccount" andTableView:self.tableView];
+    self.tableView.dataSource = self.dataSource;
     
 }
 

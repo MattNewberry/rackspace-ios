@@ -24,16 +24,7 @@
     self.dataSource = [RSServersDataSource dataSourceForEntity:@"RSServer" andTableView:self.tableView];
     self.tableView.dataSource = self.dataSource;
     
-    [RSServer get:nil completionBlock:^(CKResult *result) {
-        
-        NSLog(@"response code: %i", result.responseCode);
-        
-    } errorBlock:^(CKResult *result) {
-        
-        NSLog(@"error: %@", [result.error description]);
-        
-    }];
-    
+    [RSServer get];
 }
 
 @end

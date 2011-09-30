@@ -12,6 +12,6 @@
 
 @interface RSAccountsViewController : UITableViewController
 
-@property (nonatomic, strong) IBOutlet RSAccountsDataSource *dataSource;
+@property (nonatomic, strong) RSAccountsDataSource *dataSource;
 
 @end
