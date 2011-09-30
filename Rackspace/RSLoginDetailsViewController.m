@@ -49,13 +49,19 @@
     
     [account authenticate:^(CKResult *result) {
         
-        [self alert:@"login succeeded"];
-        NSLog(@"success! %i %@", result.responseCode, [result responseBody]);
-        [self dismissModalViewControllerAnimated:YES];
+        if ([result isSuccess]) {
+            
+            [account save];
+            [self dismissModalViewControllerAnimated:YES];
+
+        } else {
+            
+            [self alert:@"There was a problem logging in.  Please check your username and API key."];
+
+        }
         
     } errorBlock:^(CKResult *result) {
 
-        NSLog(@"failure! %i %@", result.responseCode, [result responseBody]);
         [self alert:@"login failed"];
         
     }];
