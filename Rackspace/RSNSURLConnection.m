@@ -18,7 +18,12 @@
     CKRequest *request = [CKRequest requestWithMap:[CKRouterMap mapWithRemotePath:_account.provider.api_auth_url]];
     [request addHeaders:$D(_account.username, @"X-Auth-User", _account.api_key, @"X-Auth-Key")];
     
+    NSLog(@"url: %@", _account.provider.api_auth_url);
+    NSLog(@"headers: %@", [request headers]);
+    
     [self sendSyncronously:request];
+    
+    NSLog(@"response code: %i", self.responseCode);
     
     if (self.responseCode == 204){
         

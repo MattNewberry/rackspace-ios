@@ -4,12 +4,13 @@
 
 @implementation RSAccount
 
-+ (RSAccount *) activeAccount{
++ (RSAccount *)activeAccount {
     
     NSArray *result = [RSAccount findWithPredicate:$P(@"active = 1")];
 
-    if([result count] > 0)
+    if ([result count] > 0) {
         return [result objectAtIndex:0];
+    }
     
     return nil;
 }
@@ -25,7 +26,7 @@
 
 + (NSString *) primaryKeyName{
     
-    return @"active";
+    return @"username";
 }
 
 - (void)activate {

@@ -33,4 +33,29 @@
     
 }
 
++ (NSFetchRequest *)fetchRequest {
+
+    NSFetchRequest *fetch = [super fetchRequest];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"account = %@", [RSAccount activeAccount]];
+    fetch.predicate = predicate;
+    
+	return fetch;
+
+}
+
+- (BOOL)save {
+    
+    self.account = [RSAccount activeAccount];
+    return [[self class] save];
+    
+}
+
++ (id)create:(id)data {
+    
+    RSServer *server = [super create:data];
+    server.account = [RSAccount activeAccount];
+    return server;
+    
+}
+
 @end
