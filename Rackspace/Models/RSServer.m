@@ -11,7 +11,9 @@
 
 + (CKRequest *) requestForGet{    
     CKRequest *request = [super requestForGet];
-    //[request.parameters setObject:[[NSDate date] description] forKey:@"now"];
+    
+    // cache busting
+    [request.parameters setObject:[[NSDate date] description] forKey:@"now"];
     
     [request addHeaders:[NSDictionary dictionaryWithObject:[[RSAccount activeAccount] api_auth_token] forKey:@"X-Auth-Token"]];
     
@@ -23,9 +25,31 @@
     return request;    
 }
 
++ (NSPredicate *)predicate {
+    return [NSPredicate predicateWithFormat:@"account = %@", [RSAccount activeAccount]];
+}
+
 + (void)get {
     
-    [RSServer get:nil completionBlock:nil errorBlock:^(CKResult *result) {
+    [RSServer get:nil completionBlock:^(CKResult *result) {
+        
+        // We should remove servers that didn't come back in the results.
+        // To do this, we need to find the complement to the result set and
+        // the set of all servers currently stored in Core Data.
+
+        NSArray *allServers = [RSServer findWithPredicate:[self predicate]];
+
+        NSMutableSet *complementSet = [NSMutableSet setWithArray:allServers];
+        NSMutableSet *intersectionSet = [NSMutableSet setWithArray:allServers];
+        NSMutableSet *resultsSet = [NSMutableSet setWithArray:result.objects];
+        
+        [intersectionSet intersectSet:resultsSet];
+        [complementSet minusSet:intersectionSet];
+                
+        [RSServer removeAllInSet:complementSet];
+        [RSServer save];
+        
+    } errorBlock:^(CKResult *result) {
         
         NSLog(@"error: %@", [result.error description]);
         
@@ -36,9 +60,7 @@
 + (NSFetchRequest *)fetchRequest {
 
     NSFetchRequest *fetch = [super fetchRequest];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"account = %@", [RSAccount activeAccount]];
-    fetch.predicate = predicate;
-    
+    fetch.predicate = [self predicate];    
 	return fetch;
 
 }

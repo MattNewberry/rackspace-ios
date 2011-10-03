@@ -17,9 +17,6 @@
     RSServer *server = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = server.name;
     
-    RSAccount *account = [RSAccount activeAccount];
-    NSLog(@"account: %@/%@", server.account.username, account.username);
-    
 }
 
 @end
