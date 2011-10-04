@@ -9,6 +9,7 @@
 #import "RSServersViewController.h"
 #import "RSServersDataSource.h"
 #import "RSServer.h"
+#import "UIViewController+Conveniences.h"
 
 @implementation RSServersViewController
 
@@ -31,6 +32,13 @@
     
     RSServer *server = [self.dataSource.fetchedResultsController objectAtIndexPath:indexPath];
     [server softReboot];
+    
+    CKResult *result = nil;
+    if ([server softReboot:&result]) {
+        // yay we're happy
+    } else {
+        // [self alert:@"There was a problem rebooting your server." result:result];
+    }
     
 }
 

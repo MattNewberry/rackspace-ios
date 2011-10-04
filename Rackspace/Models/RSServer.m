@@ -42,30 +42,35 @@ typedef enum RSServerRebootType {
 
     // TODO: self.id needs to be a string instead of an int
     CKRequest *request = [CKRequest requestWithRemotePath:$S(@"/%i/action", self.id)];    
+    request.method = CKRequestMethodPOST;
     [request addHeaders:[NSDictionary dictionaryWithObject:[[RSAccount activeAccount] api_auth_token] forKey:@"X-Auth-Token"]];
     return request;
     
 }
 
-- (BOOL)reboot:(RSServerRebootType)rebootType {
+- (BOOL)reboot:(RSServerRebootType)rebootType result:(CKResult **)result {
     
     CKRequest *request = [self actionRequest];
     NSString *json = $S(@"{ \"reboot\": { \"type\": \"%@\" } }", rebootType == RSServerRebootTypeSoft ? @"SOFT" : @"HARD");
     [request setBody:[json dataUsingEncoding:NSUTF8StringEncoding]];
     
     RSNSURLConnection *connection = [[RSNSURLConnection alloc] init];    
-    CKResult *result = [connection sendSyncronously:request];
+    *result = [connection sendSyncronously:request];
     
-    return [result isSuccess];
+    return [*result isSuccess];
 
 }
 
 - (BOOL)softReboot {
-    return [self reboot:RSServerRebootTypeSoft];
+    return [self reboot:RSServerRebootTypeSoft result:nil];
+}
+
+- (BOOL)softReboot:(CKResult **)result {
+    return [self reboot:RSServerRebootTypeSoft result:result];
 }
 
 - (BOOL)hardReboot {
-    return [self reboot:RSServerRebootTypeHard];
+    return [self reboot:RSServerRebootTypeHard result:nil];
 }
 
 + (void)get {

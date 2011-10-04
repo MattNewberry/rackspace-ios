@@ -70,4 +70,8 @@
     [self alert:nil message:message];
 }
 
+- (void)alert:(NSString *)message result:(CKResult *)result {
+    [self alert:nil message:message];
+}
+
 @end

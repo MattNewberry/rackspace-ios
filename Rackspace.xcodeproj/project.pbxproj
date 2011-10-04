@@ -12,6 +12,8 @@
 		278A19D514339B1C0087EA57 /* RSLoginDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 278A19D414339B1C0087EA57 /* RSLoginDetailsViewController.m */; };
 		278A19D61433A4900087EA57 /* seeds in Resources */ = {isa = PBXBuildFile; fileRef = C9C737FD142BCFF40000638E /* seeds */; };
 		278A19D91433A9500087EA57 /* RSProvidersDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 278A19D81433A9500087EA57 /* RSProvidersDataSource.m */; };
+		2792510A143BBCA0000D725B /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 27925108143BBCA0000D725B /* Icon.png */; };
+		2792510B143BBCA0000D725B /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27925109143BBCA0000D725B /* Icon@2x.png */; };
 		27BE75CF14352CE8000D9523 /* UIViewController+Conveniences.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BE75CD14352CE8000D9523 /* UIViewController+Conveniences.m */; };
 		27C1E39B14326FFC001A18FC /* RSAccountsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C1E39A14326FFC001A18FC /* RSAccountsDataSource.m */; };
 		27CA4D9E143661B000348395 /* RSServersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CA4D9D143661B000348395 /* RSServersViewController.m */; };
@@ -155,6 +157,8 @@
 		278A19D414339B1C0087EA57 /* RSLoginDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSLoginDetailsViewController.m; sourceTree = "<group>"; };
 		278A19D71433A9500087EA57 /* RSProvidersDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSProvidersDataSource.h; sourceTree = "<group>"; };
 		278A19D81433A9500087EA57 /* RSProvidersDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSProvidersDataSource.m; sourceTree = "<group>"; };
+		27925108143BBCA0000D725B /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		27925109143BBCA0000D725B /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		27BE75CC14352CE8000D9523 /* UIViewController+Conveniences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = "UIViewController+Conveniences.h"; sourceTree = "<group>"; };
 		27BE75CD14352CE8000D9523 /* UIViewController+Conveniences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Conveniences.m"; sourceTree = "<group>"; };
 		27C1E39914326FFC001A18FC /* RSAccountsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAccountsDataSource.h; sourceTree = "<group>"; };
@@ -356,6 +360,15 @@
 			name = Accounts;
 			sourceTree = "<group>";
 		};
+		27925106143BBC94000D725B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				27925108143BBCA0000D725B /* Icon.png */,
+				27925109143BBCA0000D725B /* Icon@2x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		27BE75C514352CB2000D9523 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -428,6 +441,7 @@
 		C94ADA91141AA2CF00766C2F /* Rackspace */ = {
 			isa = PBXGroup;
 			children = (
+				27925106143BBC94000D725B /* Resources */,
 				27BE75C514352CB2000D9523 /* Categories */,
 				2736811C143259BF00C85805 /* View Controllers */,
 				C96F0932142A72210048BC2C /* Models */,
@@ -708,6 +722,8 @@
 				C94ADACF141AA3C600766C2F /* Localizations.strings in Resources */,
 				C9E0AB9F142BAF4900EA595C /* inflections.plist in Resources */,
 				278A19D61433A4900087EA57 /* seeds in Resources */,
+				2792510A143BBCA0000D725B /* Icon.png in Resources */,
+				2792510B143BBCA0000D725B /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

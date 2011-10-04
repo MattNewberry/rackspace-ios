@@ -8,4 +8,6 @@
 - (BOOL)softReboot;
 - (BOOL)hardReboot;
 
+- (BOOL)softReboot:(CKResult **)result;
+
 @end

@@ -6,7 +6,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class OpenStackRequest;
+@class CKResult;
 
 @interface UIViewController (Conveniences) <UIAlertViewDelegate>
 
@@ -20,5 +20,6 @@
 - (void)presentModalViewControllerWithNavigation:(UIViewController *)viewController;
 - (void)alert:(NSString *)title message:(NSString *)message;
 - (void)alert:(NSString *)message;
+- (void)alert:(NSString *)message result:(CKResult *)result;
 
 @end
