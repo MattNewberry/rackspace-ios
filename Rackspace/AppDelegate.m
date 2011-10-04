@@ -3,7 +3,7 @@
 //  Rackspace
 //
 //  Created by Matt Newberry on 9/9/11.
-//  Copyright (c) 2011 MNDCreative, LLC. All rights reserved.
+//  Copyright (c) 2011 Rackspace, US Inc. All rights reserved.
 //
 
 #import "AppDelegate.h"
