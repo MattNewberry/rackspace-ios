@@ -33,21 +33,32 @@
     
     [RSServer get:nil completionBlock:^(CKResult *result) {
         
-        // We should remove servers that didn't come back in the results.
-        // To do this, we need to find the complement to the result set and
-        // the set of all servers currently stored in Core Data.
-
-        NSArray *allServers = [RSServer findWithPredicate:[self predicate]];
-
-        NSMutableSet *complementSet = [NSMutableSet setWithArray:allServers];
-        NSMutableSet *intersectionSet = [NSMutableSet setWithArray:allServers];
-        NSMutableSet *resultsSet = [NSMutableSet setWithArray:result.objects];
+        if ([result isSuccess]) {
         
-        [intersectionSet intersectSet:resultsSet];
-        [complementSet minusSet:intersectionSet];
-                
-        [RSServer removeAllInSet:complementSet];
-        [RSServer save];
+            // We should remove servers that didn't come back in the results.
+            // To do this, we need to find the complement to the result set and
+            // the set of all servers currently stored in Core Data.
+
+            NSArray *allServers = [RSServer findWithPredicate:[self predicate]];
+
+            NSMutableSet *complementSet = [NSMutableSet setWithArray:allServers];
+            NSMutableSet *intersectionSet = [NSMutableSet setWithArray:allServers];
+            NSMutableSet *resultsSet = [NSMutableSet setWithArray:result.objects];
+            
+            [intersectionSet intersectSet:resultsSet];
+            [complementSet minusSet:intersectionSet];
+                    
+            [RSServer removeAllInSet:complementSet];
+            [RSServer save];
+            
+        } else if (result.responseCode == 401) {
+            
+            // the auth token has expired.  reauthenticate and try this request again
+            if ([[RSAccount activeAccount] authenticate]) {
+                [self get];
+            }
+            
+        }
         
     } errorBlock:^(CKResult *result) {
         
