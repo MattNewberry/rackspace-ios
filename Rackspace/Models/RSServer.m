@@ -2,6 +2,15 @@
 #import "RSAccount.h"
 #import "RSFlavor.h"
 #import "RSImage.h"
+#import "RSNSURLConnection.h"
+
+#define kRebootSoft 0
+#define kRebootHard 1
+
+typedef enum RSServerRebootType {
+    RSServerRebootTypeSoft,
+    RSServerRebootTypeHard
+} RSServerRebootType;
 
 @implementation RSServer
 
@@ -27,6 +36,36 @@
 
 + (NSPredicate *)predicate {
     return [NSPredicate predicateWithFormat:@"account = %@", [RSAccount activeAccount]];
+}
+
+- (CKRequest *)actionRequest {
+
+    // TODO: self.id needs to be a string instead of an int
+    CKRequest *request = [CKRequest requestWithRemotePath:$S(@"/%i/action", self.id)];    
+    [request addHeaders:[NSDictionary dictionaryWithObject:[[RSAccount activeAccount] api_auth_token] forKey:@"X-Auth-Token"]];
+    return request;
+    
+}
+
+- (BOOL)reboot:(RSServerRebootType)rebootType {
+    
+    CKRequest *request = [self actionRequest];
+    NSString *json = $S(@"{ \"reboot\": { \"type\": \"%@\" } }", rebootType == RSServerRebootTypeSoft ? @"SOFT" : @"HARD");
+    [request setBody:[json dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    RSNSURLConnection *connection = [[RSNSURLConnection alloc] init];    
+    CKResult *result = [connection sendSyncronously:request];
+    
+    return [result isSuccess];
+
+}
+
+- (BOOL)softReboot {
+    return [self reboot:RSServerRebootTypeSoft];
+}
+
+- (BOOL)hardReboot {
+    return [self reboot:RSServerRebootTypeHard];
 }
 
 + (void)get {

@@ -5,4 +5,7 @@
 
 + (void)get;
 
+- (BOOL)softReboot;
+- (BOOL)hardReboot;
+
 @end

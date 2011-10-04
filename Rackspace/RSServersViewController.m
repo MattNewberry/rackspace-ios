@@ -27,4 +27,11 @@
     [RSServer get];
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    RSServer *server = [self.dataSource.fetchedResultsController objectAtIndexPath:indexPath];
+    [server softReboot];
+    
+}
+
 @end
