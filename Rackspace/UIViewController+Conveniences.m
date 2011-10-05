@@ -71,6 +71,10 @@
 }
 
 - (void)alert:(NSString *)message result:(CKResult *)result {
+    NSLog(@"result: %i", result.responseCode);
+    NSString *response = [[NSString alloc] initWithData:result.responseBody encoding:NSUTF8StringEncoding];
+    NSLog(@"response: %@", response);
+    NSLog(@"error: %@", [result.error description]);
     [self alert:nil message:message];
 }
 

@@ -41,23 +41,30 @@ typedef enum RSServerRebootType {
 - (CKRequest *)actionRequest {
 
     // TODO: self.id needs to be a string instead of an int
-    CKRequest *request = [CKRequest requestWithRemotePath:$S(@"/%i/action", self.id)];    
+    CKRequest *request = [CKRequest requestWithRemotePath:$S(@"/servers/%@/action", self.id)];    
+    NSLog(@"request url: %@", request.remoteURL);
     request.method = CKRequestMethodPOST;
     [request addHeaders:[NSDictionary dictionaryWithObject:[[RSAccount activeAccount] api_auth_token] forKey:@"X-Auth-Token"]];
     return request;
     
 }
 
-- (BOOL)reboot:(RSServerRebootType)rebootType result:(CKResult **)result {
+- (BOOL)reboot:(RSServerRebootType)rebootType result:(CKResult **)returnResult {
     
     CKRequest *request = [self actionRequest];
-    NSString *json = $S(@"{ \"reboot\": { \"type\": \"%@\" } }", rebootType == RSServerRebootTypeSoft ? @"SOFT" : @"HARD");
-    [request setBody:[json dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    NSString *type = rebootType == RSServerRebootTypeSoft ? @"SOFT" : @"HARD";
+    NSDictionary *dict = $D($D(type, @"type"), @"reboot");
+    
+    [request setBody:[NSJSONSerialization dataWithJSONObject:dict options:0 error:nil]];
     
     RSNSURLConnection *connection = [[RSNSURLConnection alloc] init];    
-    *result = [connection sendSyncronously:request];
     
-    return [*result isSuccess];
+    __autoreleasing CKResult *result = [connection sendSyncronously:request];
+    
+    returnResult = &result;
+    
+    return [result isSuccess];
 
 }
 

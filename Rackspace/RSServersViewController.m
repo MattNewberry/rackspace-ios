@@ -31,13 +31,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     RSServer *server = [self.dataSource.fetchedResultsController objectAtIndexPath:indexPath];
-    [server softReboot];
-    
     CKResult *result = nil;
+    
     if ([server softReboot:&result]) {
         // yay we're happy
+        [self alert:@"reboot successful"];
     } else {
-        // [self alert:@"There was a problem rebooting your server." result:result];
+        [self alert:@"There was a problem rebooting your server." result:result];
     }
     
 }
