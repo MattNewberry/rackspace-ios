@@ -7,18 +7,13 @@
 #define kRebootSoft 0
 #define kRebootHard 1
 
-typedef enum RSServerRebootType {
-    RSServerRebootTypeSoft,
-    RSServerRebootTypeHard
-} RSServerRebootType;
-
 @implementation RSServer
 
 + (void)initialize {
     [RSServer mapToRemotePath:@"servers/detail" forRequestMethod:CKRequestMethodGET];
 }
 
-+ (CKRequest *) requestForGet{    
++ (CKRequest *)requestForGet{    
     CKRequest *request = [super requestForGet];
     
     // cache busting
@@ -37,7 +32,6 @@ typedef enum RSServerRebootType {
 
     // TODO: self.id needs to be a string instead of an int
     CKRequest *request = [CKRequest requestWithRemotePath:$S(@"/servers/%@/action", self.id)];    
-    NSLog(@"request url: %@", request.remoteURL);
     request.method = CKRequestMethodPOST;
     [request addHeaders:$D([[RSAccount activeAccount] api_auth_token], @"X-Auth-Token",
                            @"application/json", @"Content-Type")];
@@ -45,40 +39,68 @@ typedef enum RSServerRebootType {
     
 }
 
-- (void)reboot:(RSServerRebootType)rebootType success:(CKBasicBlock)successBlock failure:(void (^)(CKResult *result))failureBlock {
+- (void)send:(CKRequest *)request success:(CKBasicBlock)successBlock failure:(void (^)(CKResult *result))failureBlock {
 
-    CKRequest *request = [self actionRequest];
-
-    // set up the request body
-    NSString *type = rebootType == RSServerRebootTypeSoft ? @"SOFT" : @"HARD";
-    NSDictionary *dict = $D($D(type, @"type"), @"reboot");
-    [request setBody:[NSJSONSerialization dataWithJSONObject:dict options:0 error:nil]];
-    
-    // fire off the request
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(queue, ^{
-
-        __autoreleasing CKResult *result = [request sendSyncronously];
-        if (result.responseCode == 202) {
-            
-            successBlock();
-            
-        } else {
-            
-            failureBlock(result);
-            
+        
+        CKResult *result = [request sendSyncronously];
+        if ([result isSuccess]) {
+            successBlock();            
+        } else {            
+            failureBlock(result);            
         }
         
     });
     
 }
 
+- (void)sendActionRequestWithJSON:(NSDictionary *)json  success:(CKBasicBlock)successBlock failure:(void (^)(CKResult *result))failureBlock {
+
+    CKRequest *request = [self actionRequest];
+    [request setBodyWithJSONDict:json];
+    [self send:request success:successBlock failure:failureBlock];
+    
+}
+
 - (void)softRebootWithSuccess:(CKBasicBlock)successBlock failure:(void (^)(CKResult *result))failureBlock {
-    [self reboot:RSServerRebootTypeSoft success:successBlock failure:failureBlock];
+
+    [self sendActionRequestWithJSON:$D($D(@"SOFT", @"type"), @"reboot") success:successBlock failure:failureBlock];
+    
 }
 
 - (void)hardRebootWithSuccess:(CKBasicBlock)successBlock failure:(void (^)(CKResult *result))failureBlock {
-    [self reboot:RSServerRebootTypeHard success:successBlock failure:failureBlock];
+    
+    [self sendActionRequestWithJSON:$D($D(@"HARD", @"type"), @"reboot") success:successBlock failure:failureBlock];
+    
+}
+
+- (void)rebuildWithImage:(RSImage *)image success:(CKBasicBlock)successBlock failure:(void (^)(CKResult *result))failureBlock {
+
+    [self sendActionRequestWithJSON:$D($D(image.id, @"imageId"), @"rebuild") success:successBlock failure:failureBlock];
+    
+}
+
+- (void)resizeWithFlavor:(RSFlavor *)flavor success:(CKBasicBlock)successBlock failure:(void (^)(CKResult *result))failureBlock {
+    
+    [self sendActionRequestWithJSON:$D($D(flavor.id, @"flavorId"), @"resize") success:successBlock failure:failureBlock];
+    
+}
+
+- (void)confirmResize:(CKBasicBlock)successBlock failure:(void (^)(CKResult *result))failureBlock {
+    
+    [self sendActionRequestWithJSON:$D([NSNull null], @"confirmResize") success:successBlock failure:failureBlock];
+    
+}
+
+- (void)revertResize:(CKBasicBlock)successBlock failure:(void (^)(CKResult *result))failureBlock {
+    
+    [self sendActionRequestWithJSON:$D([NSNull null], @"revertResize") success:successBlock failure:failureBlock];
+    
+}
+
+- (void)rename:(NSString *)name success:(CKBasicBlock)successBlock failure:(void (^)(CKResult *result))failureBlock {
+    
 }
 
 + (void)get {
