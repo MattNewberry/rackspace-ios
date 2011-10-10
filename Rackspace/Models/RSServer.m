@@ -23,13 +23,8 @@ typedef enum RSServerRebootType {
     
     // cache busting
     [request.parameters setObject:[[NSDate date] description] forKey:@"now"];
-    
-    [request addHeaders:[NSDictionary dictionaryWithObject:[[RSAccount activeAccount] api_auth_token] forKey:@"X-Auth-Token"]];
-    
-    NSLog(@"map: %@", [self mapForRequestMethod:CKRequestMethodGET]);
-    NSLog(@"request: %@", request);
-    NSLog(@"url: %@", request.remoteURL);
-    NSLog(@"headers: %@", request.headers);
+    [request addHeaders:$D([[RSAccount activeAccount] api_auth_token], @"X-Auth-Token",
+                           @"application/json", @"Content-Type")];
     
     return request;    
 }
@@ -44,40 +39,46 @@ typedef enum RSServerRebootType {
     CKRequest *request = [CKRequest requestWithRemotePath:$S(@"/servers/%@/action", self.id)];    
     NSLog(@"request url: %@", request.remoteURL);
     request.method = CKRequestMethodPOST;
-    [request addHeaders:[NSDictionary dictionaryWithObject:[[RSAccount activeAccount] api_auth_token] forKey:@"X-Auth-Token"]];
+    [request addHeaders:$D([[RSAccount activeAccount] api_auth_token], @"X-Auth-Token",
+                           @"application/json", @"Content-Type")];
     return request;
     
 }
 
-- (BOOL)reboot:(RSServerRebootType)rebootType result:(CKResult **)returnResult {
-    
+- (void)reboot:(RSServerRebootType)rebootType success:(CKBasicBlock)successBlock failure:(void (^)(CKResult *result))failureBlock {
+
     CKRequest *request = [self actionRequest];
-    
+
+    // set up the request body
     NSString *type = rebootType == RSServerRebootTypeSoft ? @"SOFT" : @"HARD";
     NSDictionary *dict = $D($D(type, @"type"), @"reboot");
-    
     [request setBody:[NSJSONSerialization dataWithJSONObject:dict options:0 error:nil]];
     
-    RSNSURLConnection *connection = [[RSNSURLConnection alloc] init];    
-    
-    __autoreleasing CKResult *result = [connection sendSyncronously:request];
-    
-    returnResult = &result;
-    
-    return [result isSuccess];
+    // fire off the request
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(queue, ^{
 
+        __autoreleasing CKResult *result = [request sendSyncronously];
+        if (result.responseCode == 202) {
+            
+            successBlock();
+            
+        } else {
+            
+            failureBlock(result);
+            
+        }
+        
+    });
+    
 }
 
-- (BOOL)softReboot {
-    return [self reboot:RSServerRebootTypeSoft result:nil];
+- (void)softRebootWithSuccess:(CKBasicBlock)successBlock failure:(void (^)(CKResult *result))failureBlock {
+    [self reboot:RSServerRebootTypeSoft success:successBlock failure:failureBlock];
 }
 
-- (BOOL)softReboot:(CKResult **)result {
-    return [self reboot:RSServerRebootTypeSoft result:result];
-}
-
-- (BOOL)hardReboot {
-    return [self reboot:RSServerRebootTypeHard result:nil];
+- (void)hardRebootWithSuccess:(CKBasicBlock)successBlock failure:(void (^)(CKResult *result))failureBlock {
+    [self reboot:RSServerRebootTypeHard success:successBlock failure:failureBlock];
 }
 
 + (void)get {

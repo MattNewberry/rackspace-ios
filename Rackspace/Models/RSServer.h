@@ -5,9 +5,8 @@
 
 + (void)get;
 
-- (BOOL)softReboot;
-- (BOOL)hardReboot;
+- (void)softRebootWithSuccess:(CKBasicBlock)successBlock failure:(void (^)(CKResult *result))failureBlock;
+- (void)hardRebootWithSuccess:(CKBasicBlock)successBlock failure:(void (^)(CKResult *result))failureBlock;
 
-- (BOOL)softReboot:(CKResult **)result;
 
 @end

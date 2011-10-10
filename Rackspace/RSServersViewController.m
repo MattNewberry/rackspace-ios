@@ -9,6 +9,7 @@
 #import "RSServersViewController.h"
 #import "RSServersDataSource.h"
 #import "RSServer.h"
+#import "RSAccount.h"
 #import "UIViewController+Conveniences.h"
 
 @implementation RSServersViewController
@@ -31,14 +32,17 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     RSServer *server = [self.dataSource.fetchedResultsController objectAtIndexPath:indexPath];
-    CKResult *result = nil;
-    
-    if ([server softReboot:&result]) {
-        // yay we're happy
+
+    [server softRebootWithSuccess:^{
+        
         [self alert:@"reboot successful"];
-    } else {
-        [self alert:@"There was a problem rebooting your server." result:result];
-    }
+        
+    } failure:^(CKResult *result) {        
+        
+        [self alert:@"There was a problem rebooting your server."];
+        NSLog(@"response code: %i", result.responseCode);
+        
+    }];
     
 }
 
