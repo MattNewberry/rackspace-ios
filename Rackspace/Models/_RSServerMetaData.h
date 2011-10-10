@@ -17,7 +17,7 @@
 
 
 
-@property (nonatomic, strong) NSString *key;
+@property (nonatomic, retain) NSString *key;
 
 
 //- (BOOL)validateKey:(id*)value_ error:(NSError**)error_;
@@ -25,7 +25,7 @@
 
 
 
-@property (nonatomic, strong) NSString *value;
+@property (nonatomic, retain) NSString *value;
 
 
 //- (BOOL)validateValue:(id*)value_ error:(NSError**)error_;
@@ -34,7 +34,7 @@
 
 
 
-@property (nonatomic, strong) RSServer* server;
+@property (nonatomic, retain) RSServer* server;
 
 //- (BOOL)validateServer:(id*)value_ error:(NSError**)error_;
 

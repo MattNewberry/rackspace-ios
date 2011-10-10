@@ -19,15 +19,15 @@
 
 
 
-@property (nonatomic, strong) NSString *type;
+@property (nonatomic, retain) NSString *address;
 
 
-//- (BOOL)validateType:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateAddress:(id*)value_ error:(NSError**)error_;
 
 
 
 
-@property (nonatomic, strong) NSNumber *id;
+@property (nonatomic, retain) NSNumber *id;
 
 
 @property int idValue;
@@ -39,15 +39,7 @@
 
 
 
-@property (nonatomic, strong) NSString *address;
-
-
-//- (BOOL)validateAddress:(id*)value_ error:(NSError**)error_;
-
-
-
-
-@property (nonatomic, strong) NSString *ipVersion;
+@property (nonatomic, retain) NSString *ipVersion;
 
 
 //- (BOOL)validateIpVersion:(id*)value_ error:(NSError**)error_;
@@ -55,8 +47,16 @@
 
 
 
+@property (nonatomic, retain) NSString *type;
 
-@property (nonatomic, strong) RSLoadBalancer* load_balancer;
+
+//- (BOOL)validateType:(id*)value_ error:(NSError**)error_;
+
+
+
+
+
+@property (nonatomic, retain) RSLoadBalancer* load_balancer;
 
 //- (BOOL)validateLoad_balancer:(id*)value_ error:(NSError**)error_;
 
@@ -72,8 +72,8 @@
 @interface _RSVirtualIP (CoreDataGeneratedPrimitiveAccessors)
 
 
-- (NSString*)primitiveType;
-- (void)setPrimitiveType:(NSString*)value;
+- (NSString*)primitiveAddress;
+- (void)setPrimitiveAddress:(NSString*)value;
 
 
 
@@ -87,14 +87,14 @@
 
 
 
-- (NSString*)primitiveAddress;
-- (void)setPrimitiveAddress:(NSString*)value;
-
-
-
-
 - (NSString*)primitiveIpVersion;
 - (void)setPrimitiveIpVersion:(NSString*)value;
+
+
+
+
+- (NSString*)primitiveType;
+- (void)setPrimitiveType:(NSString*)value;
 
 
 

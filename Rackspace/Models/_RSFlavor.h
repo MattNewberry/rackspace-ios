@@ -19,7 +19,7 @@
 
 
 
-@property (nonatomic, strong) NSNumber *disk;
+@property (nonatomic, retain) NSNumber *disk;
 
 
 @property short diskValue;
@@ -31,7 +31,7 @@
 
 
 
-@property (nonatomic, strong) NSNumber *id;
+@property (nonatomic, retain) NSNumber *id;
 
 
 @property int idValue;
@@ -43,7 +43,15 @@
 
 
 
-@property (nonatomic, strong) NSNumber *ram;
+@property (nonatomic, retain) NSString *name;
+
+
+//- (BOOL)validateName:(id*)value_ error:(NSError**)error_;
+
+
+
+
+@property (nonatomic, retain) NSNumber *ram;
 
 
 @property short ramValue;
@@ -55,16 +63,8 @@
 
 
 
-@property (nonatomic, strong) NSString *name;
 
-
-//- (BOOL)validateName:(id*)value_ error:(NSError**)error_;
-
-
-
-
-
-@property (nonatomic, strong) RSServer* server;
+@property (nonatomic, retain) RSServer* server;
 
 //- (BOOL)validateServer:(id*)value_ error:(NSError**)error_;
 
@@ -98,17 +98,17 @@
 
 
 
+- (NSString*)primitiveName;
+- (void)setPrimitiveName:(NSString*)value;
+
+
+
+
 - (NSNumber*)primitiveRam;
 - (void)setPrimitiveRam:(NSNumber*)value;
 
 - (short)primitiveRamValue;
 - (void)setPrimitiveRamValue:(short)value_;
-
-
-
-
-- (NSString*)primitiveName;
-- (void)setPrimitiveName:(NSString*)value;
 
 
 

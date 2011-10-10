@@ -12,14 +12,14 @@
 
 
 
-@dynamic weekly;
-
-
-
-
-
-
 @dynamic daily;
+
+
+
+
+
+
+@dynamic weekly;
 
 
 

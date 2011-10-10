@@ -24,4 +24,10 @@
 
 }
 
+- (void)addRackspaceCacheBuster {
+    
+    [self.parameters setObject:[[NSDate date] description] forKey:@"now"];
+    
+}
+
 @end

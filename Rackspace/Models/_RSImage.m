@@ -12,7 +12,7 @@
 
 
 
-@dynamic name;
+@dynamic created;
 
 
 
@@ -45,21 +45,7 @@
 
 
 
-@dynamic updated;
-
-
-
-
-
-
-@dynamic status;
-
-
-
-
-
-
-@dynamic created;
+@dynamic name;
 
 
 
@@ -87,6 +73,20 @@
 - (void)setPrimitiveProgressValue:(short)value_ {
 	[self setPrimitiveProgress:[NSNumber numberWithShort:value_]];
 }
+
+
+
+
+
+@dynamic status;
+
+
+
+
+
+
+@dynamic updated;
+
 
 
 

@@ -19,15 +19,15 @@
 
 
 
-@property (nonatomic, strong) NSString *name;
+@property (nonatomic, retain) NSString *api_auth_url;
 
 
-//- (BOOL)validateName:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateApi_auth_url:(id*)value_ error:(NSError**)error_;
 
 
 
 
-@property (nonatomic, strong) NSNumber *id;
+@property (nonatomic, retain) NSNumber *id;
 
 
 @property short idValue;
@@ -39,7 +39,7 @@
 
 
 
-@property (nonatomic, strong) NSString *logo;
+@property (nonatomic, retain) NSString *logo;
 
 
 //- (BOOL)validateLogo:(id*)value_ error:(NSError**)error_;
@@ -47,16 +47,16 @@
 
 
 
-@property (nonatomic, strong) NSString *api_auth_url;
+@property (nonatomic, retain) NSString *name;
 
 
-//- (BOOL)validateApi_auth_url:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateName:(id*)value_ error:(NSError**)error_;
 
 
 
 
 
-@property (nonatomic, strong) NSSet* accounts;
+@property (nonatomic, retain) NSSet* accounts;
 
 - (NSMutableSet*)accountsSet;
 
@@ -77,8 +77,8 @@
 @interface _RSProvider (CoreDataGeneratedPrimitiveAccessors)
 
 
-- (NSString*)primitiveName;
-- (void)setPrimitiveName:(NSString*)value;
+- (NSString*)primitiveApi_auth_url;
+- (void)setPrimitiveApi_auth_url:(NSString*)value;
 
 
 
@@ -98,8 +98,8 @@
 
 
 
-- (NSString*)primitiveApi_auth_url;
-- (void)setPrimitiveApi_auth_url:(NSString*)value;
+- (NSString*)primitiveName;
+- (void)setPrimitiveName:(NSString*)value;
 
 
 

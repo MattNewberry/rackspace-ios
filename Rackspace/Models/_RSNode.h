@@ -21,15 +21,23 @@
 
 
 
-@property (nonatomic, strong) NSString *status;
+@property (nonatomic, retain) NSString *address;
 
 
-//- (BOOL)validateStatus:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateAddress:(id*)value_ error:(NSError**)error_;
 
 
 
 
-@property (nonatomic, strong) NSNumber *id;
+@property (nonatomic, retain) NSString *condition;
+
+
+//- (BOOL)validateCondition:(id*)value_ error:(NSError**)error_;
+
+
+
+
+@property (nonatomic, retain) NSNumber *id;
 
 
 @property int idValue;
@@ -41,7 +49,7 @@
 
 
 
-@property (nonatomic, strong) NSNumber *port;
+@property (nonatomic, retain) NSNumber *port;
 
 
 @property short portValue;
@@ -53,7 +61,15 @@
 
 
 
-@property (nonatomic, strong) NSNumber *weight;
+@property (nonatomic, retain) NSString *status;
+
+
+//- (BOOL)validateStatus:(id*)value_ error:(NSError**)error_;
+
+
+
+
+@property (nonatomic, retain) NSNumber *weight;
 
 
 @property short weightValue;
@@ -65,24 +81,8 @@
 
 
 
-@property (nonatomic, strong) NSString *address;
 
-
-//- (BOOL)validateAddress:(id*)value_ error:(NSError**)error_;
-
-
-
-
-@property (nonatomic, strong) NSString *condition;
-
-
-//- (BOOL)validateCondition:(id*)value_ error:(NSError**)error_;
-
-
-
-
-
-@property (nonatomic, strong) RSLoadBalancer* load_balancer;
+@property (nonatomic, retain) RSLoadBalancer* load_balancer;
 
 //- (BOOL)validateLoad_balancer:(id*)value_ error:(NSError**)error_;
 
@@ -98,8 +98,14 @@
 @interface _RSNode (CoreDataGeneratedPrimitiveAccessors)
 
 
-- (NSString*)primitiveStatus;
-- (void)setPrimitiveStatus:(NSString*)value;
+- (NSString*)primitiveAddress;
+- (void)setPrimitiveAddress:(NSString*)value;
+
+
+
+
+- (NSString*)primitiveCondition;
+- (void)setPrimitiveCondition:(NSString*)value;
 
 
 
@@ -122,23 +128,17 @@
 
 
 
+- (NSString*)primitiveStatus;
+- (void)setPrimitiveStatus:(NSString*)value;
+
+
+
+
 - (NSNumber*)primitiveWeight;
 - (void)setPrimitiveWeight:(NSNumber*)value;
 
 - (short)primitiveWeightValue;
 - (void)setPrimitiveWeightValue:(short)value_;
-
-
-
-
-- (NSString*)primitiveAddress;
-- (void)setPrimitiveAddress:(NSString*)value;
-
-
-
-
-- (NSString*)primitiveCondition;
-- (void)setPrimitiveCondition:(NSString*)value;
 
 
 

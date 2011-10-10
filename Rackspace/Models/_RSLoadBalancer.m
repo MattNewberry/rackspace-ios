@@ -12,6 +12,20 @@
 
 
 
+@dynamic algorithm;
+
+
+
+
+
+
+@dynamic created;
+
+
+
+
+
+
 @dynamic id;
 
 
@@ -45,13 +59,6 @@
 
 
 
-@dynamic protocol;
-
-
-
-
-
-
 @dynamic port;
 
 
@@ -78,7 +85,7 @@
 
 
 
-@dynamic updated;
+@dynamic protocol;
 
 
 
@@ -92,19 +99,16 @@
 
 
 
-@dynamic created;
+@dynamic updated;
 
 
 
 
 
 
-@dynamic algorithm;
+@dynamic account;
 
-
-
-
-
+	
 
 @dynamic nodes;
 
@@ -115,10 +119,6 @@
 	[self didAccessValueForKey:@"nodes"];
 	return result;
 }
-	
-
-@dynamic account;
-
 	
 
 @dynamic virtual_ips;

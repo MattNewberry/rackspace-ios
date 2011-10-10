@@ -12,7 +12,7 @@
 
 
 
-@dynamic type;
+@dynamic address;
 
 
 
@@ -45,14 +45,14 @@
 
 
 
-@dynamic address;
-
-
-
-
-
-
 @dynamic ipVersion;
+
+
+
+
+
+
+@dynamic type;
 
 
 

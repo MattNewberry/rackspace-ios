@@ -12,7 +12,7 @@
 
 
 
-@dynamic name;
+@dynamic api_auth_url;
 
 
 
@@ -52,7 +52,7 @@
 
 
 
-@dynamic api_auth_url;
+@dynamic name;
 
 
 

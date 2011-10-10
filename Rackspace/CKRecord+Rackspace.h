@@ -10,6 +10,4 @@
 
 @interface CKRecord (Rackspace)
 
-+ (CKRequest *)serversAPIRequestForGet;
-
 @end

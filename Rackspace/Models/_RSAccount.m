@@ -12,27 +12,6 @@
 
 
 
-@dynamic api_server_url;
-
-
-
-
-
-
-@dynamic username;
-
-
-
-
-
-
-@dynamic api_auth_token;
-
-
-
-
-
-
 @dynamic active;
 
 
@@ -59,6 +38,13 @@
 
 
 
+@dynamic api_auth_token;
+
+
+
+
+
+
 @dynamic api_cdn_url;
 
 
@@ -73,20 +59,19 @@
 
 
 
-@dynamic servers;
+@dynamic api_server_url;
 
-	
-- (NSMutableSet*)serversSet {
-	[self willAccessValueForKey:@"servers"];
-	NSMutableSet *result = [self mutableSetValueForKey:@"servers"];
-	[self didAccessValueForKey:@"servers"];
-	return result;
-}
-	
 
-@dynamic provider;
 
-	
+
+
+
+@dynamic username;
+
+
+
+
+
 
 @dynamic load_balancers;
 
@@ -95,6 +80,21 @@
 	[self willAccessValueForKey:@"load_balancers"];
 	NSMutableSet *result = [self mutableSetValueForKey:@"load_balancers"];
 	[self didAccessValueForKey:@"load_balancers"];
+	return result;
+}
+	
+
+@dynamic provider;
+
+	
+
+@dynamic servers;
+
+	
+- (NSMutableSet*)serversSet {
+	[self willAccessValueForKey:@"servers"];
+	NSMutableSet *result = [self mutableSetValueForKey:@"servers"];
+	[self didAccessValueForKey:@"servers"];
 	return result;
 }
 	

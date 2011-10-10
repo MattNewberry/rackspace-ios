@@ -17,15 +17,7 @@
 
 
 
-@property (nonatomic, strong) NSString *weekly;
-
-
-//- (BOOL)validateWeekly:(id*)value_ error:(NSError**)error_;
-
-
-
-
-@property (nonatomic, strong) NSString *daily;
+@property (nonatomic, retain) NSString *daily;
 
 
 //- (BOOL)validateDaily:(id*)value_ error:(NSError**)error_;
@@ -33,8 +25,16 @@
 
 
 
+@property (nonatomic, retain) NSString *weekly;
 
-@property (nonatomic, strong) RSServer* server;
+
+//- (BOOL)validateWeekly:(id*)value_ error:(NSError**)error_;
+
+
+
+
+
+@property (nonatomic, retain) RSServer* server;
 
 //- (BOOL)validateServer:(id*)value_ error:(NSError**)error_;
 
@@ -50,14 +50,14 @@
 @interface _RSServerBackupSchedule (CoreDataGeneratedPrimitiveAccessors)
 
 
-- (NSString*)primitiveWeekly;
-- (void)setPrimitiveWeekly:(NSString*)value;
-
-
-
-
 - (NSString*)primitiveDaily;
 - (void)setPrimitiveDaily:(NSString*)value;
+
+
+
+
+- (NSString*)primitiveWeekly;
+- (void)setPrimitiveWeekly:(NSString*)value;
 
 
 

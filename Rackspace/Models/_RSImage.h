@@ -21,15 +21,15 @@
 
 
 
-@property (nonatomic, strong) NSString *name;
+@property (nonatomic, retain) NSDate *created;
 
 
-//- (BOOL)validateName:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateCreated:(id*)value_ error:(NSError**)error_;
 
 
 
 
-@property (nonatomic, strong) NSNumber *id;
+@property (nonatomic, retain) NSNumber *id;
 
 
 @property int idValue;
@@ -41,31 +41,15 @@
 
 
 
-@property (nonatomic, strong) NSDate *updated;
+@property (nonatomic, retain) NSString *name;
 
 
-//- (BOOL)validateUpdated:(id*)value_ error:(NSError**)error_;
-
-
-
-
-@property (nonatomic, strong) NSString *status;
-
-
-//- (BOOL)validateStatus:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateName:(id*)value_ error:(NSError**)error_;
 
 
 
 
-@property (nonatomic, strong) NSDate *created;
-
-
-//- (BOOL)validateCreated:(id*)value_ error:(NSError**)error_;
-
-
-
-
-@property (nonatomic, strong) NSNumber *progress;
+@property (nonatomic, retain) NSNumber *progress;
 
 
 @property short progressValue;
@@ -77,8 +61,24 @@
 
 
 
+@property (nonatomic, retain) NSString *status;
 
-@property (nonatomic, strong) RSServer* server;
+
+//- (BOOL)validateStatus:(id*)value_ error:(NSError**)error_;
+
+
+
+
+@property (nonatomic, retain) NSDate *updated;
+
+
+//- (BOOL)validateUpdated:(id*)value_ error:(NSError**)error_;
+
+
+
+
+
+@property (nonatomic, retain) RSServer* server;
 
 //- (BOOL)validateServer:(id*)value_ error:(NSError**)error_;
 
@@ -94,8 +94,8 @@
 @interface _RSImage (CoreDataGeneratedPrimitiveAccessors)
 
 
-- (NSString*)primitiveName;
-- (void)setPrimitiveName:(NSString*)value;
+- (NSDate*)primitiveCreated;
+- (void)setPrimitiveCreated:(NSDate*)value;
 
 
 
@@ -109,8 +109,17 @@
 
 
 
-- (NSDate*)primitiveUpdated;
-- (void)setPrimitiveUpdated:(NSDate*)value;
+- (NSString*)primitiveName;
+- (void)setPrimitiveName:(NSString*)value;
+
+
+
+
+- (NSNumber*)primitiveProgress;
+- (void)setPrimitiveProgress:(NSNumber*)value;
+
+- (short)primitiveProgressValue;
+- (void)setPrimitiveProgressValue:(short)value_;
 
 
 
@@ -121,17 +130,8 @@
 
 
 
-- (NSDate*)primitiveCreated;
-- (void)setPrimitiveCreated:(NSDate*)value;
-
-
-
-
-- (NSNumber*)primitiveProgress;
-- (void)setPrimitiveProgress:(NSNumber*)value;
-
-- (short)primitiveProgressValue;
-- (void)setPrimitiveProgressValue:(short)value_;
+- (NSDate*)primitiveUpdated;
+- (void)setPrimitiveUpdated:(NSDate*)value;
 
 
 

@@ -12,7 +12,14 @@
 
 
 
-@dynamic status;
+@dynamic address;
+
+
+
+
+
+
+@dynamic condition;
 
 
 
@@ -71,6 +78,13 @@
 
 
 
+@dynamic status;
+
+
+
+
+
+
 @dynamic weight;
 
 
@@ -92,20 +106,6 @@
 - (void)setPrimitiveWeightValue:(short)value_ {
 	[self setPrimitiveWeight:[NSNumber numberWithShort:value_]];
 }
-
-
-
-
-
-@dynamic address;
-
-
-
-
-
-
-@dynamic condition;
-
 
 
 

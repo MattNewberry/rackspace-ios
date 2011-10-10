@@ -4,13 +4,13 @@
 #import <CoreData/CoreData.h>
 #import "CKRecord.h"
 
-@class RSSharedIPGroup;
 @class RSAccount;
-@class RSServerBackupSchedule;
 @class RSServerAddress;
+@class RSServerBackupSchedule;
+@class RSFlavor;
 @class RSImage;
 @class RSServerMetaData;
-@class RSFlavor;
+@class RSSharedIPGroup;
 
 
 
@@ -26,19 +26,15 @@
 
 
 
-@property (nonatomic, strong) NSNumber *progress;
+@property (nonatomic, retain) NSString *hostId;
 
 
-@property short progressValue;
-- (short)progressValue;
-- (void)setProgressValue:(short)value_;
-
-//- (BOOL)validateProgress:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateHostId:(id*)value_ error:(NSError**)error_;
 
 
 
 
-@property (nonatomic, strong) NSNumber *id;
+@property (nonatomic, retain) NSNumber *id;
 
 
 @property int idValue;
@@ -50,7 +46,7 @@
 
 
 
-@property (nonatomic, strong) NSString *name;
+@property (nonatomic, retain) NSString *name;
 
 
 //- (BOOL)validateName:(id*)value_ error:(NSError**)error_;
@@ -58,7 +54,19 @@
 
 
 
-@property (nonatomic, strong) NSString *status;
+@property (nonatomic, retain) NSNumber *progress;
+
+
+@property short progressValue;
+- (short)progressValue;
+- (void)setProgressValue:(short)value_;
+
+//- (BOOL)validateProgress:(id*)value_ error:(NSError**)error_;
+
+
+
+
+@property (nonatomic, retain) NSString *status;
 
 
 //- (BOOL)validateStatus:(id*)value_ error:(NSError**)error_;
@@ -66,60 +74,52 @@
 
 
 
-@property (nonatomic, strong) NSString *hostId;
 
-
-//- (BOOL)validateHostId:(id*)value_ error:(NSError**)error_;
-
-
-
-
-
-@property (nonatomic, strong) RSSharedIPGroup* shared_ip_group;
-
-//- (BOOL)validateShared_ip_group:(id*)value_ error:(NSError**)error_;
-
-
-
-
-@property (nonatomic, strong) RSAccount* account;
+@property (nonatomic, retain) RSAccount* account;
 
 //- (BOOL)validateAccount:(id*)value_ error:(NSError**)error_;
 
 
 
 
-@property (nonatomic, strong) RSServerBackupSchedule* backup_schedule;
-
-//- (BOOL)validateBackup_schedule:(id*)value_ error:(NSError**)error_;
-
-
-
-
-@property (nonatomic, strong) NSSet* addresses;
+@property (nonatomic, retain) NSSet* addresses;
 
 - (NSMutableSet*)addressesSet;
 
 
 
 
-@property (nonatomic, strong) RSImage* image;
+@property (nonatomic, retain) RSServerBackupSchedule* backup_schedule;
+
+//- (BOOL)validateBackup_schedule:(id*)value_ error:(NSError**)error_;
+
+
+
+
+@property (nonatomic, retain) RSFlavor* flavor;
+
+//- (BOOL)validateFlavor:(id*)value_ error:(NSError**)error_;
+
+
+
+
+@property (nonatomic, retain) RSImage* image;
 
 //- (BOOL)validateImage:(id*)value_ error:(NSError**)error_;
 
 
 
 
-@property (nonatomic, strong) NSSet* metadata;
+@property (nonatomic, retain) NSSet* metadata;
 
 - (NSMutableSet*)metadataSet;
 
 
 
 
-@property (nonatomic, strong) RSFlavor* flavor;
+@property (nonatomic, retain) RSSharedIPGroup* shared_ip_group;
 
-//- (BOOL)validateFlavor:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateShared_ip_group:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -143,11 +143,8 @@
 @interface _RSServer (CoreDataGeneratedPrimitiveAccessors)
 
 
-- (NSNumber*)primitiveProgress;
-- (void)setPrimitiveProgress:(NSNumber*)value;
-
-- (short)primitiveProgressValue;
-- (void)setPrimitiveProgressValue:(short)value_;
+- (NSString*)primitiveHostId;
+- (void)setPrimitiveHostId:(NSString*)value;
 
 
 
@@ -167,21 +164,19 @@
 
 
 
+- (NSNumber*)primitiveProgress;
+- (void)setPrimitiveProgress:(NSNumber*)value;
+
+- (short)primitiveProgressValue;
+- (void)setPrimitiveProgressValue:(short)value_;
+
+
+
+
 - (NSString*)primitiveStatus;
 - (void)setPrimitiveStatus:(NSString*)value;
 
 
-
-
-- (NSString*)primitiveHostId;
-- (void)setPrimitiveHostId:(NSString*)value;
-
-
-
-
-
-- (RSSharedIPGroup*)primitiveShared_ip_group;
-- (void)setPrimitiveShared_ip_group:(RSSharedIPGroup*)value;
 
 
 
@@ -190,13 +185,18 @@
 
 
 
+- (NSMutableSet*)primitiveAddresses;
+- (void)setPrimitiveAddresses:(NSMutableSet*)value;
+
+
+
 - (RSServerBackupSchedule*)primitiveBackup_schedule;
 - (void)setPrimitiveBackup_schedule:(RSServerBackupSchedule*)value;
 
 
 
-- (NSMutableSet*)primitiveAddresses;
-- (void)setPrimitiveAddresses:(NSMutableSet*)value;
+- (RSFlavor*)primitiveFlavor;
+- (void)setPrimitiveFlavor:(RSFlavor*)value;
 
 
 
@@ -210,8 +210,8 @@
 
 
 
-- (RSFlavor*)primitiveFlavor;
-- (void)setPrimitiveFlavor:(RSFlavor*)value;
+- (RSSharedIPGroup*)primitiveShared_ip_group;
+- (void)setPrimitiveShared_ip_group:(RSSharedIPGroup*)value;
 
 
 @end

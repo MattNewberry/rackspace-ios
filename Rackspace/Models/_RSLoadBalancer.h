@@ -4,8 +4,8 @@
 #import <CoreData/CoreData.h>
 #import "CKRecord.h"
 
-@class RSNode;
 @class RSAccount;
+@class RSNode;
 @class RSVirtualIP;
 
 
@@ -25,7 +25,23 @@
 
 
 
-@property (nonatomic, strong) NSNumber *id;
+@property (nonatomic, retain) NSString *algorithm;
+
+
+//- (BOOL)validateAlgorithm:(id*)value_ error:(NSError**)error_;
+
+
+
+
+@property (nonatomic, retain) NSDate *created;
+
+
+//- (BOOL)validateCreated:(id*)value_ error:(NSError**)error_;
+
+
+
+
+@property (nonatomic, retain) NSNumber *id;
 
 
 @property int idValue;
@@ -37,7 +53,7 @@
 
 
 
-@property (nonatomic, strong) NSString *name;
+@property (nonatomic, retain) NSString *name;
 
 
 //- (BOOL)validateName:(id*)value_ error:(NSError**)error_;
@@ -45,15 +61,7 @@
 
 
 
-@property (nonatomic, strong) NSString *protocol;
-
-
-//- (BOOL)validateProtocol:(id*)value_ error:(NSError**)error_;
-
-
-
-
-@property (nonatomic, strong) NSNumber *port;
+@property (nonatomic, retain) NSNumber *port;
 
 
 @property short portValue;
@@ -65,15 +73,15 @@
 
 
 
-@property (nonatomic, strong) NSDate *updated;
+@property (nonatomic, retain) NSString *protocol;
 
 
-//- (BOOL)validateUpdated:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateProtocol:(id*)value_ error:(NSError**)error_;
 
 
 
 
-@property (nonatomic, strong) NSString *status;
+@property (nonatomic, retain) NSString *status;
 
 
 //- (BOOL)validateStatus:(id*)value_ error:(NSError**)error_;
@@ -81,38 +89,30 @@
 
 
 
-@property (nonatomic, strong) NSDate *created;
+@property (nonatomic, retain) NSDate *updated;
 
 
-//- (BOOL)validateCreated:(id*)value_ error:(NSError**)error_;
-
-
-
-
-@property (nonatomic, strong) NSString *algorithm;
-
-
-//- (BOOL)validateAlgorithm:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateUpdated:(id*)value_ error:(NSError**)error_;
 
 
 
 
 
-@property (nonatomic, strong) NSSet* nodes;
-
-- (NSMutableSet*)nodesSet;
-
-
-
-
-@property (nonatomic, strong) RSAccount* account;
+@property (nonatomic, retain) RSAccount* account;
 
 //- (BOOL)validateAccount:(id*)value_ error:(NSError**)error_;
 
 
 
 
-@property (nonatomic, strong) NSSet* virtual_ips;
+@property (nonatomic, retain) NSSet* nodes;
+
+- (NSMutableSet*)nodesSet;
+
+
+
+
+@property (nonatomic, retain) NSSet* virtual_ips;
 
 - (NSMutableSet*)virtual_ipsSet;
 
@@ -138,6 +138,18 @@
 @interface _RSLoadBalancer (CoreDataGeneratedPrimitiveAccessors)
 
 
+- (NSString*)primitiveAlgorithm;
+- (void)setPrimitiveAlgorithm:(NSString*)value;
+
+
+
+
+- (NSDate*)primitiveCreated;
+- (void)setPrimitiveCreated:(NSDate*)value;
+
+
+
+
 - (NSNumber*)primitiveId;
 - (void)setPrimitiveId:(NSNumber*)value;
 
@@ -153,12 +165,6 @@
 
 
 
-- (NSString*)primitiveProtocol;
-- (void)setPrimitiveProtocol:(NSString*)value;
-
-
-
-
 - (NSNumber*)primitivePort;
 - (void)setPrimitivePort:(NSNumber*)value;
 
@@ -168,8 +174,8 @@
 
 
 
-- (NSDate*)primitiveUpdated;
-- (void)setPrimitiveUpdated:(NSDate*)value;
+- (NSString*)primitiveProtocol;
+- (void)setPrimitiveProtocol:(NSString*)value;
 
 
 
@@ -180,26 +186,20 @@
 
 
 
-- (NSDate*)primitiveCreated;
-- (void)setPrimitiveCreated:(NSDate*)value;
+- (NSDate*)primitiveUpdated;
+- (void)setPrimitiveUpdated:(NSDate*)value;
 
 
-
-
-- (NSString*)primitiveAlgorithm;
-- (void)setPrimitiveAlgorithm:(NSString*)value;
-
-
-
-
-
-- (NSMutableSet*)primitiveNodes;
-- (void)setPrimitiveNodes:(NSMutableSet*)value;
 
 
 
 - (RSAccount*)primitiveAccount;
 - (void)setPrimitiveAccount:(RSAccount*)value;
+
+
+
+- (NSMutableSet*)primitiveNodes;
+- (void)setPrimitiveNodes:(NSMutableSet*)value;
 
 
 

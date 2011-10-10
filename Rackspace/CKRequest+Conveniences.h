@@ -12,5 +12,6 @@
 
 - (void)setBodyWithJSONDict:(NSDictionary *)dict;
 - (void)addRackspaceHeaders;
+- (void)addRackspaceCacheBuster;
 
 @end

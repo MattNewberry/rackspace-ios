@@ -12,27 +12,8 @@
 
 
 
-@dynamic progress;
+@dynamic hostId;
 
-
-
-- (short)progressValue {
-	NSNumber *result = [self progress];
-	return [result shortValue];
-}
-
-- (void)setProgressValue:(short)value_ {
-	[self setProgress:[NSNumber numberWithShort:value_]];
-}
-
-- (short)primitiveProgressValue {
-	NSNumber *result = [self primitiveProgress];
-	return [result shortValue];
-}
-
-- (void)setPrimitiveProgressValue:(short)value_ {
-	[self setPrimitiveProgress:[NSNumber numberWithShort:value_]];
-}
 
 
 
@@ -71,6 +52,32 @@
 
 
 
+@dynamic progress;
+
+
+
+- (short)progressValue {
+	NSNumber *result = [self progress];
+	return [result shortValue];
+}
+
+- (void)setProgressValue:(short)value_ {
+	[self setProgress:[NSNumber numberWithShort:value_]];
+}
+
+- (short)primitiveProgressValue {
+	NSNumber *result = [self primitiveProgress];
+	return [result shortValue];
+}
+
+- (void)setPrimitiveProgressValue:(short)value_ {
+	[self setPrimitiveProgress:[NSNumber numberWithShort:value_]];
+}
+
+
+
+
+
 @dynamic status;
 
 
@@ -78,22 +85,7 @@
 
 
 
-@dynamic hostId;
-
-
-
-
-
-
-@dynamic shared_ip_group;
-
-	
-
 @dynamic account;
-
-	
-
-@dynamic backup_schedule;
 
 	
 
@@ -106,6 +98,14 @@
 	[self didAccessValueForKey:@"addresses"];
 	return result;
 }
+	
+
+@dynamic backup_schedule;
+
+	
+
+@dynamic flavor;
+
 	
 
 @dynamic image;
@@ -123,7 +123,7 @@
 }
 	
 
-@dynamic flavor;
+@dynamic shared_ip_group;
 
 	
 

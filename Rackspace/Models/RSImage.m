@@ -9,7 +9,12 @@
 }
 
 + (CKRequest *)requestForGet {
-    return [self serversAPIRequestForGet];
+    
+    CKRequest *request = [super requestForGet];    
+    [request addRackspaceCacheBuster];
+    [request addRackspaceHeaders];    
+    return request;    
+    
 }
 
 //+ (CKRequest *)requestForPost {

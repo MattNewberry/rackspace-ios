@@ -64,6 +64,13 @@
 
 
 
+@dynamic name;
+
+
+
+
+
+
 @dynamic ram;
 
 
@@ -85,13 +92,6 @@
 - (void)setPrimitiveRamValue:(short)value_ {
 	[self setPrimitiveRam:[NSNumber numberWithShort:value_]];
 }
-
-
-
-
-
-@dynamic name;
-
 
 
 

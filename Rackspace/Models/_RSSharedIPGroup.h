@@ -17,7 +17,7 @@
 
 
 
-@property (nonatomic, strong) NSNumber *id;
+@property (nonatomic, retain) NSNumber *id;
 
 
 @property int idValue;
@@ -29,7 +29,7 @@
 
 
 
-@property (nonatomic, strong) NSString *name;
+@property (nonatomic, retain) NSString *name;
 
 
 //- (BOOL)validateName:(id*)value_ error:(NSError**)error_;
@@ -38,7 +38,7 @@
 
 
 
-@property (nonatomic, strong) NSSet* servers;
+@property (nonatomic, retain) NSSet* servers;
 
 - (NSMutableSet*)serversSet;
 
