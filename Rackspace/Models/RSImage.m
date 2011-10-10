@@ -17,17 +17,13 @@
     
 }
 
-//+ (CKRequest *)requestForPost {
-//
-//    CKRequest *request = [CKRequest requestWithMap:[self mapForRequestMethod:CKRequestMethodPOST]];
-//    
-////    [request setBodyWithJSONDict:<#(NSDictionary *)#>
-//    
-//    
-//    request.body = [self serialize];
-//    return request;
-//    
-//}
+- (CKRequest *)requestForPost {
+
+    CKRequest *request = [CKRequest requestWithMap:[self mapForRequestMethod:CKRequestMethodPOST]];    
+    [request setBodyWithJSONDict:$D(self.server.id, @"serverId", self.name, @"name")];
+    return request;
+    
+}
 
 - (NSString *)description {
     return $S(@"Image %@: %@", self.id, self.name);
