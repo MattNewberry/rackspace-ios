@@ -7,6 +7,7 @@
 //
 
 #import "CKRequest+Conveniences.h"
+#import "RSAccount.h"
 
 @implementation CKRequest (Conveniences)
 
@@ -14,6 +15,13 @@
     
     [self setBody:[NSJSONSerialization dataWithJSONObject:dict options:0 error:nil]];
     
+}
+
+- (void)addRackspaceHeaders {
+    
+    [self addHeaders:$D([[RSAccount activeAccount] api_auth_token], @"X-Auth-Token",
+                           @"application/json", @"Content-Type")];
+
 }
 
 @end

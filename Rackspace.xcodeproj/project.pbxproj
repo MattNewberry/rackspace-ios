@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2736812114325A1E00C85805 /* RSAccountsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2736811F14325A1E00C85805 /* RSAccountsViewController.m */; };
 		2770E1BD1443654D00075520 /* CKRequest+Conveniences.m in Sources */ = {isa = PBXBuildFile; fileRef = 2770E1BC1443654D00075520 /* CKRequest+Conveniences.m */; };
+		2770E1C114436C5900075520 /* CKRecord+Rackspace.m in Sources */ = {isa = PBXBuildFile; fileRef = 2770E1C014436C5900075520 /* CKRecord+Rackspace.m */; };
 		278A19D114339AFC0087EA57 /* RSLoginProviderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 278A19D014339AFC0087EA57 /* RSLoginProviderViewController.m */; };
 		278A19D514339B1C0087EA57 /* RSLoginDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 278A19D414339B1C0087EA57 /* RSLoginDetailsViewController.m */; };
 		278A19D61433A4900087EA57 /* seeds in Resources */ = {isa = PBXBuildFile; fileRef = C9C737FD142BCFF40000638E /* seeds */; };
@@ -152,8 +153,10 @@
 /* Begin PBXFileReference section */
 		2736811E14325A1E00C85805 /* RSAccountsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = RSAccountsViewController.h; sourceTree = "<group>"; };
 		2736811F14325A1E00C85805 /* RSAccountsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAccountsViewController.m; sourceTree = "<group>"; };
-		2770E1BB1443654D00075520 /* CKRequest+Conveniences.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "CKRequest+Conveniences.h"; sourceTree = "<group>"; };
+		2770E1BB1443654D00075520 /* CKRequest+Conveniences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CKRequest+Conveniences.h"; sourceTree = "<group>"; };
 		2770E1BC1443654D00075520 /* CKRequest+Conveniences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CKRequest+Conveniences.m"; sourceTree = "<group>"; };
+		2770E1BF14436C5900075520 /* CKRecord+Rackspace.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "CKRecord+Rackspace.h"; sourceTree = "<group>"; };
+		2770E1C014436C5900075520 /* CKRecord+Rackspace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CKRecord+Rackspace.m"; sourceTree = "<group>"; };
 		278A19CF14339AFC0087EA57 /* RSLoginProviderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = RSLoginProviderViewController.h; sourceTree = "<group>"; };
 		278A19D014339AFC0087EA57 /* RSLoginProviderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSLoginProviderViewController.m; sourceTree = "<group>"; };
 		278A19D314339B1C0087EA57 /* RSLoginDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSLoginDetailsViewController.h; sourceTree = "<group>"; };
@@ -379,6 +382,8 @@
 				27BE75CD14352CE8000D9523 /* UIViewController+Conveniences.m */,
 				2770E1BB1443654D00075520 /* CKRequest+Conveniences.h */,
 				2770E1BC1443654D00075520 /* CKRequest+Conveniences.m */,
+				2770E1BF14436C5900075520 /* CKRecord+Rackspace.h */,
+				2770E1C014436C5900075520 /* CKRecord+Rackspace.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -826,6 +831,7 @@
 				27CA4D9E143661B000348395 /* RSServersViewController.m in Sources */,
 				27CA4DA1143661C500348395 /* RSServersDataSource.m in Sources */,
 				2770E1BD1443654D00075520 /* CKRequest+Conveniences.m in Sources */,
+				2770E1C114436C5900075520 /* CKRecord+Rackspace.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

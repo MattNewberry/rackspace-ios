@@ -11,5 +11,6 @@
 @interface CKRequest (Conveniences)
 
 - (void)setBodyWithJSONDict:(NSDictionary *)dict;
+- (void)addRackspaceHeaders;
 
 @end

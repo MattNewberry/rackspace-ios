@@ -3,6 +3,7 @@
 #import "RSFlavor.h"
 #import "RSImage.h"
 #import "RSNSURLConnection.h"
+#import "CKRecord+Rackspace.h"
 
 #define kRebootSoft 0
 #define kRebootHard 1
@@ -13,15 +14,8 @@
     [RSServer mapToRemotePath:@"servers/detail" forRequestMethod:CKRequestMethodGET];
 }
 
-+ (CKRequest *)requestForGet{    
-    CKRequest *request = [super requestForGet];
-    
-    // cache busting
-    [request.parameters setObject:[[NSDate date] description] forKey:@"now"];
-    [request addHeaders:$D([[RSAccount activeAccount] api_auth_token], @"X-Auth-Token",
-                           @"application/json", @"Content-Type")];
-    
-    return request;    
++ (CKRequest *)requestForGet {    
+    return [self serversAPIRequestForGet];    
 }
 
 + (NSPredicate *)predicate {
@@ -33,8 +27,7 @@
     // TODO: self.id needs to be a string instead of an int
     CKRequest *request = [CKRequest requestWithRemotePath:$S(@"/servers/%@/action", self.id)];    
     request.method = CKRequestMethodPOST;
-    [request addHeaders:$D([[RSAccount activeAccount] api_auth_token], @"X-Auth-Token",
-                           @"application/json", @"Content-Type")];
+    [request addRackspaceHeaders];
     return request;
     
 }
