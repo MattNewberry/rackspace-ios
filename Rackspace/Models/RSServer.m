@@ -63,6 +63,14 @@
     
 }
 
+- (void)sendPutRequestWithJSON:(NSDictionary *)json  success:(CKBasicBlock)successBlock failure:(void (^)(CKResult *result))failureBlock {
+    
+    CKRequest *request = [CKRequest requestWithMap:[self mapForRequestMethod:CKRequestMethodPUT]];
+    [request setBodyWithJSONDict:json];
+    [self send:request success:successBlock failure:failureBlock];
+    
+}
+
 - (void)softRebootWithSuccess:(CKBasicBlock)successBlock failure:(void (^)(CKResult *result))failureBlock {
 
     [self sendActionRequestWithJSON:$D($D(@"SOFT", @"type"), @"reboot") success:successBlock failure:failureBlock];
@@ -101,6 +109,14 @@
 
 - (void)rename:(NSString *)name success:(CKBasicBlock)successBlock failure:(void (^)(CKResult *result))failureBlock {
     
+    [self sendPutRequestWithJSON:$D($D(name, @"name"), @"server") success:successBlock failure:failureBlock];
+    
+}
+
+- (void)updateAdminPassword:(NSString *)password success:(CKBasicBlock)successBlock failure:(void (^)(CKResult *result))failureBlock {
+  
+    [self sendPutRequestWithJSON:$D($D(password, @"adminPass"), @"server") success:successBlock failure:failureBlock];
+
 }
 
 + (void)get {

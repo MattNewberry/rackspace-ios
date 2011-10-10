@@ -15,5 +15,6 @@
 - (void)revertResize:(CKBasicBlock)successBlock failure:(void (^)(CKResult *result))failureBlock;
 
 - (void)rename:(NSString *)name success:(CKBasicBlock)successBlock failure:(void (^)(CKResult *result))failureBlock;
+- (void)updateAdminPassword:(NSString *)password success:(CKBasicBlock)successBlock failure:(void (^)(CKResult *result))failureBlock;
 
 @end
