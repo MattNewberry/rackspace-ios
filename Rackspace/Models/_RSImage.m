@@ -12,6 +12,32 @@
 
 
 
+@dynamic can_be_launched;
+
+
+
+- (BOOL)can_be_launchedValue {
+	NSNumber *result = [self can_be_launched];
+	return [result boolValue];
+}
+
+- (void)setCan_be_launchedValue:(BOOL)value_ {
+	[self setCan_be_launched:[NSNumber numberWithBool:value_]];
+}
+
+- (BOOL)primitiveCan_be_launchedValue {
+	NSNumber *result = [self primitiveCan_be_launched];
+	return [result boolValue];
+}
+
+- (void)setPrimitiveCan_be_launchedValue:(BOOL)value_ {
+	[self setPrimitiveCan_be_launched:[NSNumber numberWithBool:value_]];
+}
+
+
+
+
+
 @dynamic created;
 
 
@@ -92,8 +118,15 @@
 
 
 
-@dynamic server;
+@dynamic servers;
 
+	
+- (NSMutableSet*)serversSet {
+	[self willAccessValueForKey:@"servers"];
+	NSMutableSet *result = [self mutableSetValueForKey:@"servers"];
+	[self didAccessValueForKey:@"servers"];
+	return result;
+}
 	
 
 

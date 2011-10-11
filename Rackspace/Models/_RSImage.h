@@ -13,10 +13,23 @@
 
 
 
+
 @interface RSImageID : NSManagedObjectID {}
 @end
 
 @interface _RSImage : CKRecord {}
+
+
+
+
+@property (nonatomic, retain) NSNumber *can_be_launched;
+
+
+@property BOOL can_be_launchedValue;
+- (BOOL)can_be_launchedValue;
+- (void)setCan_be_launchedValue:(BOOL)value_;
+
+//- (BOOL)validateCan_be_launched:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -78,9 +91,9 @@
 
 
 
-@property (nonatomic, retain) RSServer* server;
+@property (nonatomic, retain) NSSet* servers;
 
-//- (BOOL)validateServer:(id*)value_ error:(NSError**)error_;
+- (NSMutableSet*)serversSet;
 
 
 
@@ -89,9 +102,23 @@
 
 @interface _RSImage (CoreDataGeneratedAccessors)
 
+- (void)addServers:(NSSet*)value_;
+- (void)removeServers:(NSSet*)value_;
+- (void)addServersObject:(RSServer*)value_;
+- (void)removeServersObject:(RSServer*)value_;
+
 @end
 
 @interface _RSImage (CoreDataGeneratedPrimitiveAccessors)
+
+
+- (NSNumber*)primitiveCan_be_launched;
+- (void)setPrimitiveCan_be_launched:(NSNumber*)value;
+
+- (BOOL)primitiveCan_be_launchedValue;
+- (void)setPrimitiveCan_be_launchedValue:(BOOL)value_;
+
+
 
 
 - (NSDate*)primitiveCreated;
@@ -137,8 +164,8 @@
 
 
 
-- (RSServer*)primitiveServer;
-- (void)setPrimitiveServer:(RSServer*)value;
+- (NSMutableSet*)primitiveServers;
+- (void)setPrimitiveServers:(NSMutableSet*)value;
 
 
 @end

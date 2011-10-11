@@ -20,7 +20,7 @@
 - (CKRequest *)requestForPost {
 
     CKRequest *request = [CKRequest requestWithMap:[self mapForRequestMethod:CKRequestMethodPOST]];    
-    [request setBodyWithJSONDict:$D(self.server.id, @"serverId", self.name, @"name")];
+    [request setBodyWithJSONDict:$D([[self.servers anyObject] id], @"serverId", self.name, @"name")];
     return request;
     
 }
