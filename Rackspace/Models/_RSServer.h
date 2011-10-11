@@ -18,10 +18,19 @@
 
 
 
+
 @interface RSServerID : NSManagedObjectID {}
 @end
 
 @interface _RSServer : CKRecord {}
+
+
+
+
+@property (nonatomic, retain) NSString *flavorId;
+
+
+//- (BOOL)validateFlavorId:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -34,12 +43,8 @@
 
 
 
-@property (nonatomic, retain) NSNumber *id;
+@property (nonatomic, retain) NSString *id;
 
-
-@property int idValue;
-- (int)idValue;
-- (void)setIdValue:(int)value_;
 
 //- (BOOL)validateId:(id*)value_ error:(NSError**)error_;
 
@@ -143,17 +148,20 @@
 @interface _RSServer (CoreDataGeneratedPrimitiveAccessors)
 
 
+- (NSString*)primitiveFlavorId;
+- (void)setPrimitiveFlavorId:(NSString*)value;
+
+
+
+
 - (NSString*)primitiveHostId;
 - (void)setPrimitiveHostId:(NSString*)value;
 
 
 
 
-- (NSNumber*)primitiveId;
-- (void)setPrimitiveId:(NSNumber*)value;
-
-- (int)primitiveIdValue;
-- (void)setPrimitiveIdValue:(int)value_;
+- (NSString*)primitiveId;
+- (void)setPrimitiveId:(NSString*)value;
 
 
 

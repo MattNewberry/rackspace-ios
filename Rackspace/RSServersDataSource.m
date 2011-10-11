@@ -7,15 +7,21 @@
 //
 
 #import "RSServersDataSource.h"
-#import "RSServer.h"
 #import "RSAccount.h"
 
 @implementation RSServersDataSource
+
+- (UITableViewCellStyle)tableViewCellStyle {
+    
+    return UITableViewCellStyleSubtitle;
+    
+}
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath withObject:(id)object {
     
     RSServer *server = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = server.name;
+    cell.detailTextLabel.text = [server.flavor description];
     
 }
 

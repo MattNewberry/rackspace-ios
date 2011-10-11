@@ -23,25 +23,6 @@
 
 
 
-- (short)idValue {
-	NSNumber *result = [self id];
-	return [result shortValue];
-}
-
-- (void)setIdValue:(short)value_ {
-	[self setId:[NSNumber numberWithShort:value_]];
-}
-
-- (short)primitiveIdValue {
-	NSNumber *result = [self primitiveId];
-	return [result shortValue];
-}
-
-- (void)setPrimitiveIdValue:(short)value_ {
-	[self setPrimitiveId:[NSNumber numberWithShort:value_]];
-}
-
-
 
 
 

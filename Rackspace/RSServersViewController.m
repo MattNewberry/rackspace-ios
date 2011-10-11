@@ -8,9 +8,8 @@
 
 #import "RSServersViewController.h"
 #import "RSServersDataSource.h"
-#import "RSServer.h"
-#import "RSAccount.h"
 #import "UIViewController+Conveniences.h"
+#import "RSAccount.h"
 
 @implementation RSServersViewController
 
@@ -27,6 +26,9 @@
     self.tableView.dataSource = self.dataSource;
     
     [RSServer get];
+    [RSFlavor get:nil completionBlock:nil errorBlock:nil];
+    
+    NSLog(@"%@", [RSFlavor all]);
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

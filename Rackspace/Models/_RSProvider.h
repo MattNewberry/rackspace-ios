@@ -27,12 +27,8 @@
 
 
 
-@property (nonatomic, retain) NSNumber *id;
+@property (nonatomic, retain) NSString *id;
 
-
-@property short idValue;
-- (short)idValue;
-- (void)setIdValue:(short)value_;
 
 //- (BOOL)validateId:(id*)value_ error:(NSError**)error_;
 
@@ -83,11 +79,8 @@
 
 
 
-- (NSNumber*)primitiveId;
-- (void)setPrimitiveId:(NSNumber*)value;
-
-- (short)primitiveIdValue;
-- (void)setPrimitiveIdValue:(short)value_;
+- (NSString*)primitiveId;
+- (void)setPrimitiveId:(NSString*)value;
 
 
 
