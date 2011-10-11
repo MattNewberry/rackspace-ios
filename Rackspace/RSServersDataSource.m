@@ -21,7 +21,7 @@
     
     RSServer *server = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = server.name;
-    cell.detailTextLabel.text = [server.flavor description];
+    cell.detailTextLabel.text = $S(@"%@: %@", server.flavorId, [server.flavor description]);
     
 }
 

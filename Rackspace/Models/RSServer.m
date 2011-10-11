@@ -12,6 +12,8 @@
 
 + (void)initialize {
     [RSServer mapToRemotePath:@"servers/detail" forRequestMethod:CKRequestMethodGET];
+//    [RSServer mapRelationship:@"flavor" toRemotePath:@"/flavors"];
+//    [[CKRouter sharedRouter] mapLocalAttribute:@"flavorId" toRemoteKey:@"id" forModel:[RSServer class]];
 }
 
 + (CKRequest *)requestForGet {    

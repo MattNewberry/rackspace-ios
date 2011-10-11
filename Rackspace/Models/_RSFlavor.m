@@ -78,8 +78,15 @@
 
 
 
-@dynamic server;
+@dynamic servers;
 
+	
+- (NSMutableSet*)serversSet {
+	[self willAccessValueForKey:@"servers"];
+	NSMutableSet *result = [self mutableSetValueForKey:@"servers"];
+	[self didAccessValueForKey:@"servers"];
+	return result;
+}
 	
 
 

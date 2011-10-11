@@ -155,7 +155,7 @@
 		2736811F14325A1E00C85805 /* RSAccountsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAccountsViewController.m; sourceTree = "<group>"; };
 		2770E1BB1443654D00075520 /* CKRequest+Conveniences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CKRequest+Conveniences.h"; sourceTree = "<group>"; };
 		2770E1BC1443654D00075520 /* CKRequest+Conveniences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CKRequest+Conveniences.m"; sourceTree = "<group>"; };
-		2770E1BF14436C5900075520 /* CKRecord+Rackspace.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "CKRecord+Rackspace.h"; sourceTree = "<group>"; };
+		2770E1BF14436C5900075520 /* CKRecord+Rackspace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CKRecord+Rackspace.h"; sourceTree = "<group>"; };
 		2770E1C014436C5900075520 /* CKRecord+Rackspace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CKRecord+Rackspace.m"; sourceTree = "<group>"; };
 		278A19CF14339AFC0087EA57 /* RSLoginProviderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = RSLoginProviderViewController.h; sourceTree = "<group>"; };
 		278A19D014339AFC0087EA57 /* RSLoginProviderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSLoginProviderViewController.m; sourceTree = "<group>"; };
@@ -415,7 +415,6 @@
 		C94ADA7C141AA2CF00766C2F = {
 			isa = PBXGroup;
 			children = (
-				27C1E3A214328805001A18FC /* MapKit.framework */,
 				C94ADA91141AA2CF00766C2F /* Rackspace */,
 				C9C73778142BC9890000638E /* UnitTests */,
 				C94ADA8A141AA2CF00766C2F /* Frameworks */,
@@ -435,6 +434,7 @@
 		C94ADA8A141AA2CF00766C2F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				27C1E3A214328805001A18FC /* MapKit.framework */,
 				C9E0AB4A142BAF4900EA595C /* CoreKit */,
 				C9E0AB79142BAF4900EA595C /* CoreSupport */,
 				C9E0ABC2142BB36600EA595C /* YML.framework */,

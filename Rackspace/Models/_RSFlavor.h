@@ -60,9 +60,9 @@
 
 
 
-@property (nonatomic, retain) RSServer* server;
+@property (nonatomic, retain) NSSet* servers;
 
-//- (BOOL)validateServer:(id*)value_ error:(NSError**)error_;
+- (NSMutableSet*)serversSet;
 
 
 
@@ -70,6 +70,11 @@
 @end
 
 @interface _RSFlavor (CoreDataGeneratedAccessors)
+
+- (void)addServers:(NSSet*)value_;
+- (void)removeServers:(NSSet*)value_;
+- (void)addServersObject:(RSServer*)value_;
+- (void)removeServersObject:(RSServer*)value_;
 
 @end
 
@@ -107,8 +112,8 @@
 
 
 
-- (RSServer*)primitiveServer;
-- (void)setPrimitiveServer:(RSServer*)value;
+- (NSMutableSet*)primitiveServers;
+- (void)setPrimitiveServers:(NSMutableSet*)value;
 
 
 @end
