@@ -37,10 +37,19 @@
 
 - (id)serialize {
     id data = [super serialize];
-    id deserialized = [[[CKManager sharedManager] serializer] deserialize:data];
+    NSDictionary *deserialized = [[[CKManager sharedManager] serializer] deserialize:data];
+
     NSLog(@"data: %@", data);
     NSLog(@"des: %@", deserialized);
-    return [[[CKManager sharedManager] serializer] serialize:$D(deserialized, @"server")];
+    
+    NSMutableDictionary *mutated = [NSMutableDictionary dictionaryWithDictionary:deserialized];
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
+
+    [mutated setObject:[formatter numberFromString:self.imageId] forKey:@"imageId"];
+    [mutated setObject:[formatter numberFromString:self.flavorId] forKey:@"flavorId"];
+        
+    return [[[CKManager sharedManager] serializer] serialize:$D(mutated, @"server")];
 }
 
 + (NSPredicate *)predicate {
@@ -141,6 +150,8 @@
     
     [RSServer get:nil completionBlock:^(CKResult *result) {
         
+        NSLog(@"server get response code %i: %@", result.responseCode, [[NSString alloc] initWithData:result.responseBody encoding:NSUTF8StringEncoding]);        
+        
         if ([result isSuccess]) {
         
             // We should remove servers that didn't come back in the results.
@@ -179,7 +190,7 @@
 + (NSFetchRequest *)fetchRequest {
 
     NSFetchRequest *fetch = [super fetchRequest];
-    fetch.predicate = [self predicate];    
+//    fetch.predicate = [self predicate];    
 	return fetch;
 
 }
