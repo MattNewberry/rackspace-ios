@@ -11,9 +11,10 @@
 @implementation RSServer
 
 + (void)initialize {
+    
     [RSServer mapToRemotePath:@"servers/detail" forRequestMethod:CKRequestMethodGET];
-//    [RSServer mapRelationship:@"flavor" toRemotePath:@"/flavors"];
-//    [[CKRouter sharedRouter] mapLocalAttribute:@"flavorId" toRemoteKey:@"id" forModel:[RSServer class]];
+    [RSServer mapInstancesToRemotePath:@"servers" forRequestMethod:CKRequestMethodPOST];
+
 }
 
 + (CKRequest *)requestForGet {    
@@ -23,6 +24,23 @@
     [request addRackspaceHeaders];    
     return request;    
     
+}
+
+- (CKRequest *)requestForPost {
+    
+    CKRequest *request = [super requestForPost];
+    NSLog(@"%@", request.remoteURL);
+    [request addRackspaceHeaders];    
+    return request;
+    
+}
+
+- (id)serialize {
+    id data = [super serialize];
+    id deserialized = [[[CKManager sharedManager] serializer] deserialize:data];
+    NSLog(@"data: %@", data);
+    NSLog(@"des: %@", deserialized);
+    return [[[CKManager sharedManager] serializer] serialize:$D(deserialized, @"server")];
 }
 
 + (NSPredicate *)predicate {
@@ -166,6 +184,18 @@
 
 }
 
+- (RSFlavor *)flavor {
+    
+    return [RSFlavor findById:self.flavorId];
+    
+}
+
+- (RSImage *)image {
+    
+    return [RSImage findById:self.imageId];
+    
+}
+
 - (BOOL)save {
     
     self.account = [RSAccount activeAccount];
@@ -179,6 +209,14 @@
     server.account = [RSAccount activeAccount];
     return server;
     
+}
+
+- (NSString *)description {
+    return $S(@"Server %@: %@, flavor %@, image %@", self.id, self.name, self.flavorId, self.image);
+}
+
++ (NSString *)primaryKeyName {
+    return @"name";
 }
 
 @end

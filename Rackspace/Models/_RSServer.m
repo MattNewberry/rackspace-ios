@@ -33,6 +33,13 @@
 
 
 
+@dynamic imageId;
+
+
+
+
+
+
 @dynamic name;
 
 

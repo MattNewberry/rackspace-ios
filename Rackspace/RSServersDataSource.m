@@ -17,11 +17,18 @@
     
 }
 
+- (UITableViewCellAccessoryType)tableViewCellAccessoryType {
+    
+    return UITableViewCellAccessoryDisclosureIndicator;
+    
+}
+
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath withObject:(id)object {
     
     RSServer *server = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
     cell.textLabel.text = server.name;
-    cell.detailTextLabel.text = $S(@"%@: %@", server.flavorId, [server.flavor description]);
+    cell.detailTextLabel.text = server.image.name;
     
 }
 

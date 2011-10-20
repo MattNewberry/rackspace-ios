@@ -26,7 +26,7 @@
 }
 
 - (NSString *)description {
-    return $S(@"Image %@: %@", self.id, self.name);
+    return self.name;
 }
 
 @end

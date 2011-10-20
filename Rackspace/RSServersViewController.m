@@ -27,11 +27,40 @@
     
     [RSServer get];
     [RSFlavor get:nil completionBlock:nil errorBlock:nil];
+    [RSImage get:nil completionBlock:nil errorBlock:nil];
     
     NSLog(@"%@", [RSFlavor all]);
+    NSLog(@"%@", [RSServer all]);
+    NSLog(@"%@", [RSImage all]);
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+//    RSServer *server = [self.dataSource.fetchedResultsController objectAtIndexPath:indexPath];
+//    [self alert:$S(@"%@", [server serialize])];
+    
+    RSServer *server = [RSServer blank];
+    server.name = @"ck-test";
+    server.flavorId = [[RSFlavor first] id];
+    server.imageId = [[RSImage first] id];
+
+    [server post:nil completionBlock:^(CKResult *result) {
+        
+        NSLog(@"response code %i: %@", result.responseCode, [[NSString alloc] initWithData:result.responseBody encoding:NSUTF8StringEncoding]);        
+        
+        if ([result isSuccess]) {
+            
+            [self alert:@"success!"];
+            
+        } else {
+            [self alert:@"fail in completionBlock!"];
+        }
+        
+    } errorBlock:^(CKResult *result) {
+        
+        [self alert:@"fail in errorBlock!"];
+        
+    }];
 
     /*
     RSServer *server = [self.dataSource.fetchedResultsController objectAtIndexPath:indexPath];

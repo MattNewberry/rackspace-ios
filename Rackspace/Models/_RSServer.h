@@ -19,6 +19,7 @@
 
 
 
+
 @interface RSServerID : NSManagedObjectID {}
 @end
 
@@ -47,6 +48,14 @@
 
 
 //- (BOOL)validateId:(id*)value_ error:(NSError**)error_;
+
+
+
+
+@property (nonatomic, retain) NSString *imageId;
+
+
+//- (BOOL)validateImageId:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -162,6 +171,12 @@
 
 - (NSString*)primitiveId;
 - (void)setPrimitiveId:(NSString*)value;
+
+
+
+
+- (NSString*)primitiveImageId;
+- (void)setPrimitiveImageId:(NSString*)value;
 
 
 
