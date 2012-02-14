@@ -1,0 +1,9 @@
+providers:
+    - name: Rackspace US
+      api_auth_url: https://auth.api.rackspacecloud.com/v1.0
+      id: 1
+
+    - name: Rackspace UK
+      api_auth_url: https://lon.auth.api.rackspacecloud.com/v1.0
+      id: 2
+      

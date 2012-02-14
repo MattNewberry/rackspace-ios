@@ -1,0 +1,1070 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2736812114325A1E00C85805 /* RSAccountsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2736811F14325A1E00C85805 /* RSAccountsViewController.m */; };
+		2770E1BD1443654D00075520 /* CKRequest+Conveniences.m in Sources */ = {isa = PBXBuildFile; fileRef = 2770E1BC1443654D00075520 /* CKRequest+Conveniences.m */; };
+		2770E1C114436C5900075520 /* CKRecord+Rackspace.m in Sources */ = {isa = PBXBuildFile; fileRef = 2770E1C014436C5900075520 /* CKRecord+Rackspace.m */; };
+		278A19D114339AFC0087EA57 /* RSLoginProviderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 278A19D014339AFC0087EA57 /* RSLoginProviderViewController.m */; };
+		278A19D514339B1C0087EA57 /* RSLoginDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 278A19D414339B1C0087EA57 /* RSLoginDetailsViewController.m */; };
+		278A19D61433A4900087EA57 /* seeds in Resources */ = {isa = PBXBuildFile; fileRef = C9C737FD142BCFF40000638E /* seeds */; };
+		278A19D91433A9500087EA57 /* RSProvidersDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 278A19D81433A9500087EA57 /* RSProvidersDataSource.m */; };
+		2792510A143BBCA0000D725B /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 27925108143BBCA0000D725B /* Icon.png */; };
+		2792510B143BBCA0000D725B /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27925109143BBCA0000D725B /* Icon@2x.png */; };
+		27BE75CF14352CE8000D9523 /* UIViewController+Conveniences.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BE75CD14352CE8000D9523 /* UIViewController+Conveniences.m */; };
+		27C1E39B14326FFC001A18FC /* RSAccountsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C1E39A14326FFC001A18FC /* RSAccountsDataSource.m */; };
+		27CA4D9E143661B000348395 /* RSServersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CA4D9D143661B000348395 /* RSServersViewController.m */; };
+		27CA4DA1143661C500348395 /* RSServersDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CA4DA0143661C500348395 /* RSServersDataSource.m */; };
+		C94ADA8C141AA2CF00766C2F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94ADA8B141AA2CF00766C2F /* UIKit.framework */; };
+		C94ADA8E141AA2CF00766C2F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94ADA8D141AA2CF00766C2F /* Foundation.framework */; };
+		C94ADA90141AA2CF00766C2F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94ADA8F141AA2CF00766C2F /* CoreGraphics.framework */; };
+		C94ADA96141AA2CF00766C2F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C94ADA94141AA2CF00766C2F /* InfoPlist.strings */; };
+		C94ADA98141AA2CF00766C2F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C94ADA97141AA2CF00766C2F /* main.m */; };
+		C94ADA9C141AA2CF00766C2F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C94ADA9B141AA2CF00766C2F /* AppDelegate.m */; };
+		C94ADA9F141AA2CF00766C2F /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C94ADA9D141AA2CF00766C2F /* MainStoryboard_iPhone.storyboard */; };
+		C94ADAA2141AA2CF00766C2F /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C94ADAA0141AA2CF00766C2F /* MainStoryboard_iPad.storyboard */; };
+		C94ADAA5141AA2CF00766C2F /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94ADAA4141AA2CF00766C2F /* FirstViewController.m */; };
+		C94ADAA7141AA2CF00766C2F /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = C94ADAA6141AA2CF00766C2F /* first.png */; };
+		C94ADAA9141AA2CF00766C2F /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C94ADAA8141AA2CF00766C2F /* first@2x.png */; };
+		C94ADAAC141AA2CF00766C2F /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94ADAAB141AA2CF00766C2F /* SecondViewController.m */; };
+		C94ADAAE141AA2CF00766C2F /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = C94ADAAD141AA2CF00766C2F /* second.png */; };
+		C94ADAB0141AA2CF00766C2F /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C94ADAAF141AA2CF00766C2F /* second@2x.png */; };
+		C94ADACF141AA3C600766C2F /* Localizations.strings in Resources */ = {isa = PBXBuildFile; fileRef = C94ADACE141AA3C600766C2F /* Localizations.strings */; };
+		C96F092A142A71850048BC2C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96F0929142A71850048BC2C /* CoreData.framework */; };
+		C96F092C142A718D0048BC2C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96F092B142A718D0048BC2C /* SystemConfiguration.framework */; };
+		C96F0963142A72210048BC2C /* _RSAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F0934142A72210048BC2C /* _RSAccount.m */; };
+		C96F0965142A72210048BC2C /* _RSFlavor.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F0936142A72210048BC2C /* _RSFlavor.m */; };
+		C96F0967142A72210048BC2C /* _RSImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F0938142A72210048BC2C /* _RSImage.m */; };
+		C96F0969142A72210048BC2C /* _RSLoadBalancer.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F093A142A72210048BC2C /* _RSLoadBalancer.m */; };
+		C96F096B142A72210048BC2C /* _RSNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F093C142A72210048BC2C /* _RSNode.m */; };
+		C96F096D142A72210048BC2C /* _RSProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F093E142A72210048BC2C /* _RSProvider.m */; };
+		C96F096F142A72210048BC2C /* _RSServer.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F0940142A72210048BC2C /* _RSServer.m */; };
+		C96F0971142A72210048BC2C /* _RSServerAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F0942142A72210048BC2C /* _RSServerAddress.m */; };
+		C96F0973142A72210048BC2C /* _RSServerBackupSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F0944142A72210048BC2C /* _RSServerBackupSchedule.m */; };
+		C96F0975142A72210048BC2C /* _RSServerMetaData.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F0946142A72210048BC2C /* _RSServerMetaData.m */; };
+		C96F0977142A72210048BC2C /* _RSSharedIPGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F0948142A72210048BC2C /* _RSSharedIPGroup.m */; };
+		C96F0979142A72210048BC2C /* _RSVirtualIP.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F094A142A72210048BC2C /* _RSVirtualIP.m */; };
+		C96F097B142A72210048BC2C /* RSAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F094C142A72210048BC2C /* RSAccount.m */; };
+		C96F097D142A72210048BC2C /* RSFlavor.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F094E142A72210048BC2C /* RSFlavor.m */; };
+		C96F097F142A72210048BC2C /* RSImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F0950142A72210048BC2C /* RSImage.m */; };
+		C96F0981142A72210048BC2C /* RSLoadBalancer.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F0952142A72210048BC2C /* RSLoadBalancer.m */; };
+		C96F0983142A72210048BC2C /* RSNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F0954142A72210048BC2C /* RSNode.m */; };
+		C96F0985142A72210048BC2C /* RSProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F0956142A72210048BC2C /* RSProvider.m */; };
+		C96F0987142A72210048BC2C /* RSServer.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F0958142A72210048BC2C /* RSServer.m */; };
+		C96F0989142A72210048BC2C /* RSServerAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F095A142A72210048BC2C /* RSServerAddress.m */; };
+		C96F098B142A72210048BC2C /* RSServerBackupSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F095C142A72210048BC2C /* RSServerBackupSchedule.m */; };
+		C96F098D142A72210048BC2C /* RSServerMetaData.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F095E142A72210048BC2C /* RSServerMetaData.m */; };
+		C96F098F142A72210048BC2C /* RSSharedIPGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F0960142A72210048BC2C /* RSSharedIPGroup.m */; };
+		C96F0991142A72210048BC2C /* RSVirtualIP.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F0962142A72210048BC2C /* RSVirtualIP.m */; };
+		C96F0995142A724C0048BC2C /* Rackspace.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = C96F0994142A724C0048BC2C /* Rackspace.xcdatamodel */; };
+		C96F099B142A72AB0048BC2C /* RSFileConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F0998142A72AB0048BC2C /* RSFileConnection.m */; };
+		C96F099D142A72AB0048BC2C /* RSNSURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F099A142A72AB0048BC2C /* RSNSURLConnection.m */; };
+		C9C73775142BC9890000638E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94ADAB7141AA2D000766C2F /* SenTestingKit.framework */; };
+		C9C73776142BC9890000638E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94ADA8B141AA2CF00766C2F /* UIKit.framework */; };
+		C9C73777142BC9890000638E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94ADA8D141AA2CF00766C2F /* Foundation.framework */; };
+		C9C7377D142BC9890000638E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9C7377B142BC9890000638E /* InfoPlist.strings */; };
+		C9C73791142BCA3D0000638E /* fixtures in Resources */ = {isa = PBXBuildFile; fileRef = C9C73790142BCA3D0000638E /* fixtures */; };
+		C9C73792142BCA420000638E /* RSAccountTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C73786142BCA280000638E /* RSAccountTest.m */; };
+		C9C73793142BCA460000638E /* RSFileConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C73788142BCA280000638E /* RSFileConnection.m */; };
+		C9C73794142BCA490000638E /* RSFileConnectionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C73789142BCA280000638E /* RSFileConnectionTest.m */; };
+		C9C73795142BCA4C0000638E /* RSProviderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C7378A142BCA280000638E /* RSProviderTest.m */; };
+		C9C73796142BCAA20000638E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96F0929142A71850048BC2C /* CoreData.framework */; };
+		C9C73797142BCAA50000638E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96F092B142A718D0048BC2C /* SystemConfiguration.framework */; };
+		C9C73798142BCAC50000638E /* Rackspace.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = C96F0994142A724C0048BC2C /* Rackspace.xcdatamodel */; };
+		C9C7379A142BCAC50000638E /* RSAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F094C142A72210048BC2C /* RSAccount.m */; };
+		C9C7379C142BCAC50000638E /* RSFlavor.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F094E142A72210048BC2C /* RSFlavor.m */; };
+		C9C7379E142BCAC50000638E /* RSImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F0950142A72210048BC2C /* RSImage.m */; };
+		C9C737A0142BCAC50000638E /* RSLoadBalancer.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F0952142A72210048BC2C /* RSLoadBalancer.m */; };
+		C9C737A2142BCAC50000638E /* RSNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F0954142A72210048BC2C /* RSNode.m */; };
+		C9C737A4142BCAC50000638E /* RSProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F0956142A72210048BC2C /* RSProvider.m */; };
+		C9C737A6142BCAC50000638E /* RSServer.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F0958142A72210048BC2C /* RSServer.m */; };
+		C9C737A8142BCAC50000638E /* RSServerAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F095A142A72210048BC2C /* RSServerAddress.m */; };
+		C9C737AA142BCAC50000638E /* RSServerBackupSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F095C142A72210048BC2C /* RSServerBackupSchedule.m */; };
+		C9C737AC142BCAC50000638E /* RSServerMetaData.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F095E142A72210048BC2C /* RSServerMetaData.m */; };
+		C9C737AE142BCAC50000638E /* RSSharedIPGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F0960142A72210048BC2C /* RSSharedIPGroup.m */; };
+		C9C737B0142BCAC50000638E /* RSVirtualIP.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F0962142A72210048BC2C /* RSVirtualIP.m */; };
+		C9C737B2142BCAC50000638E /* _RSAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F0934142A72210048BC2C /* _RSAccount.m */; };
+		C9C737B4142BCAC50000638E /* _RSFlavor.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F0936142A72210048BC2C /* _RSFlavor.m */; };
+		C9C737B6142BCAC50000638E /* _RSImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F0938142A72210048BC2C /* _RSImage.m */; };
+		C9C737B8142BCAC50000638E /* _RSLoadBalancer.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F093A142A72210048BC2C /* _RSLoadBalancer.m */; };
+		C9C737BA142BCAC50000638E /* _RSNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F093C142A72210048BC2C /* _RSNode.m */; };
+		C9C737BC142BCAC50000638E /* _RSProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F093E142A72210048BC2C /* _RSProvider.m */; };
+		C9C737BE142BCAC50000638E /* _RSServer.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F0940142A72210048BC2C /* _RSServer.m */; };
+		C9C737C0142BCAC50000638E /* _RSServerAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F0942142A72210048BC2C /* _RSServerAddress.m */; };
+		C9C737C2142BCAC50000638E /* _RSServerBackupSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F0944142A72210048BC2C /* _RSServerBackupSchedule.m */; };
+		C9C737C4142BCAC50000638E /* _RSServerMetaData.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F0946142A72210048BC2C /* _RSServerMetaData.m */; };
+		C9C737C6142BCAC50000638E /* _RSSharedIPGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F0948142A72210048BC2C /* _RSSharedIPGroup.m */; };
+		C9C737C8142BCAC50000638E /* _RSVirtualIP.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F094A142A72210048BC2C /* _RSVirtualIP.m */; };
+		C9C737CA142BCAEA0000638E /* CKBindingMap.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB4C142BAF4900EA595C /* CKBindingMap.m */; };
+		C9C737CC142BCAEA0000638E /* CKBindings.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB4E142BAF4900EA595C /* CKBindings.m */; };
+		C9C737CF142BCAEA0000638E /* CKCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB51142BAF4900EA595C /* CKCoreData.m */; };
+		C9C737D2142BCAEA0000638E /* CKManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB54142BAF4900EA595C /* CKManager.m */; };
+		C9C737D4142BCAEA0000638E /* CKNSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB56142BAF4900EA595C /* CKNSJSONSerialization.m */; };
+		C9C737D6142BCAEA0000638E /* CKNSURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB58142BAF4900EA595C /* CKNSURLConnection.m */; };
+		C9C737D8142BCAEA0000638E /* CKRecord+CKBindings.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB5A142BAF4900EA595C /* CKRecord+CKBindings.m */; };
+		C9C737DA142BCAEA0000638E /* CKRecord+CKRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB5C142BAF4900EA595C /* CKRecord+CKRouter.m */; };
+		C9C737DC142BCAEA0000638E /* CKRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB5E142BAF4900EA595C /* CKRecord.m */; };
+		C9C737DE142BCAEA0000638E /* CKRecordPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB60142BAF4900EA595C /* CKRecordPrivate.m */; };
+		C9C737E0142BCAEA0000638E /* CKRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB62142BAF4900EA595C /* CKRequest.m */; };
+		C9C737E2142BCAEA0000638E /* CKResult.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB64142BAF4900EA595C /* CKResult.m */; };
+		C9C737E4142BCAEA0000638E /* CKRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB66142BAF4900EA595C /* CKRouter.m */; };
+		C9C737E6142BCAEA0000638E /* CKRouterMap.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB68142BAF4900EA595C /* CKRouterMap.m */; };
+		C9C737E9142BCAEA0000638E /* CKSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB6B142BAF4900EA595C /* CKSupport.m */; };
+		C9C737EB142BCAEA0000638E /* CKTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB6D142BAF4900EA595C /* CKTableViewDataSource.m */; };
+		C9C737EF142BCAEA0000638E /* CWInflector.mm in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB71142BAF4900EA595C /* CWInflector.mm */; };
+		C9C737F0142BCAEA0000638E /* inflections.plist in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB72142BAF4900EA595C /* inflections.plist */; };
+		C9C737F2142BCAEA0000638E /* NSDictionary+NSDictionary_KeyPath.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB74142BAF4900EA595C /* NSDictionary+NSDictionary_KeyPath.m */; };
+		C9C737F4142BCAEA0000638E /* NSString+InflectionSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB76142BAF4900EA595C /* NSString+InflectionSupport.m */; };
+		C9C737F6142BCAEA0000638E /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB78142BAF4900EA595C /* Reachability.m */; };
+		C9C737F9142BCAEA0000638E /* CoreSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB7C142BAF4900EA595C /* CoreSupport.m */; };
+		C9C737FA142BCB7F0000638E /* RSNSURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F099A142A72AB0048BC2C /* RSNSURLConnection.m */; };
+		C9C737FB142BCB820000638E /* YAMLParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0ABC0142BB35200EA595C /* YAMLParsing.m */; };
+		C9C737FC142BCB960000638E /* YML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E0ABC2142BB36600EA595C /* YML.framework */; };
+		C9C737FE142BCFF40000638E /* seeds in Resources */ = {isa = PBXBuildFile; fileRef = C9C737FD142BCFF40000638E /* seeds */; };
+		C9E0AB7D142BAF4900EA595C /* CKBindingMap.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB4C142BAF4900EA595C /* CKBindingMap.m */; };
+		C9E0AB7F142BAF4900EA595C /* CKBindings.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB4E142BAF4900EA595C /* CKBindings.m */; };
+		C9E0AB81142BAF4900EA595C /* CKCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB51142BAF4900EA595C /* CKCoreData.m */; };
+		C9E0AB83142BAF4900EA595C /* CKManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB54142BAF4900EA595C /* CKManager.m */; };
+		C9E0AB85142BAF4900EA595C /* CKNSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB56142BAF4900EA595C /* CKNSJSONSerialization.m */; };
+		C9E0AB87142BAF4900EA595C /* CKNSURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB58142BAF4900EA595C /* CKNSURLConnection.m */; };
+		C9E0AB89142BAF4900EA595C /* CKRecord+CKBindings.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB5A142BAF4900EA595C /* CKRecord+CKBindings.m */; };
+		C9E0AB8B142BAF4900EA595C /* CKRecord+CKRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB5C142BAF4900EA595C /* CKRecord+CKRouter.m */; };
+		C9E0AB8D142BAF4900EA595C /* CKRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB5E142BAF4900EA595C /* CKRecord.m */; };
+		C9E0AB8F142BAF4900EA595C /* CKRecordPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB60142BAF4900EA595C /* CKRecordPrivate.m */; };
+		C9E0AB91142BAF4900EA595C /* CKRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB62142BAF4900EA595C /* CKRequest.m */; };
+		C9E0AB93142BAF4900EA595C /* CKResult.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB64142BAF4900EA595C /* CKResult.m */; };
+		C9E0AB95142BAF4900EA595C /* CKRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB66142BAF4900EA595C /* CKRouter.m */; };
+		C9E0AB97142BAF4900EA595C /* CKRouterMap.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB68142BAF4900EA595C /* CKRouterMap.m */; };
+		C9E0AB99142BAF4900EA595C /* CKSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB6B142BAF4900EA595C /* CKSupport.m */; };
+		C9E0AB9B142BAF4900EA595C /* CKTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB6D142BAF4900EA595C /* CKTableViewDataSource.m */; };
+		C9E0AB9D142BAF4900EA595C /* CWInflector.mm in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB71142BAF4900EA595C /* CWInflector.mm */; };
+		C9E0AB9F142BAF4900EA595C /* inflections.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9E0AB72142BAF4900EA595C /* inflections.plist */; };
+		C9E0ABA1142BAF4900EA595C /* NSDictionary+NSDictionary_KeyPath.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB74142BAF4900EA595C /* NSDictionary+NSDictionary_KeyPath.m */; };
+		C9E0ABA3142BAF4900EA595C /* NSString+InflectionSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB76142BAF4900EA595C /* NSString+InflectionSupport.m */; };
+		C9E0ABA5142BAF4900EA595C /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB78142BAF4900EA595C /* Reachability.m */; };
+		C9E0ABA7142BAF4900EA595C /* CoreSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0AB7C142BAF4900EA595C /* CoreSupport.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2736811E14325A1E00C85805 /* RSAccountsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = RSAccountsViewController.h; sourceTree = "<group>"; };
+		2736811F14325A1E00C85805 /* RSAccountsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAccountsViewController.m; sourceTree = "<group>"; };
+		2770E1BB1443654D00075520 /* CKRequest+Conveniences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CKRequest+Conveniences.h"; sourceTree = "<group>"; };
+		2770E1BC1443654D00075520 /* CKRequest+Conveniences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CKRequest+Conveniences.m"; sourceTree = "<group>"; };
+		2770E1BF14436C5900075520 /* CKRecord+Rackspace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CKRecord+Rackspace.h"; sourceTree = "<group>"; };
+		2770E1C014436C5900075520 /* CKRecord+Rackspace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CKRecord+Rackspace.m"; sourceTree = "<group>"; };
+		278A19CF14339AFC0087EA57 /* RSLoginProviderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = RSLoginProviderViewController.h; sourceTree = "<group>"; };
+		278A19D014339AFC0087EA57 /* RSLoginProviderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSLoginProviderViewController.m; sourceTree = "<group>"; };
+		278A19D314339B1C0087EA57 /* RSLoginDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSLoginDetailsViewController.h; sourceTree = "<group>"; };
+		278A19D414339B1C0087EA57 /* RSLoginDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSLoginDetailsViewController.m; sourceTree = "<group>"; };
+		278A19D71433A9500087EA57 /* RSProvidersDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSProvidersDataSource.h; sourceTree = "<group>"; };
+		278A19D81433A9500087EA57 /* RSProvidersDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSProvidersDataSource.m; sourceTree = "<group>"; };
+		27925108143BBCA0000D725B /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		27925109143BBCA0000D725B /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		27BE75CC14352CE8000D9523 /* UIViewController+Conveniences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = "UIViewController+Conveniences.h"; sourceTree = "<group>"; };
+		27BE75CD14352CE8000D9523 /* UIViewController+Conveniences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Conveniences.m"; sourceTree = "<group>"; };
+		27C1E39914326FFC001A18FC /* RSAccountsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAccountsDataSource.h; sourceTree = "<group>"; };
+		27C1E39A14326FFC001A18FC /* RSAccountsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAccountsDataSource.m; sourceTree = "<group>"; };
+		27C1E3A214328805001A18FC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		27CA4D9C143661B000348395 /* RSServersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSServersViewController.h; sourceTree = "<group>"; };
+		27CA4D9D143661B000348395 /* RSServersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSServersViewController.m; sourceTree = "<group>"; };
+		27CA4D9F143661C500348395 /* RSServersDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSServersDataSource.h; sourceTree = "<group>"; };
+		27CA4DA0143661C500348395 /* RSServersDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSServersDataSource.m; sourceTree = "<group>"; };
+		C94ADA87141AA2CF00766C2F /* Rackspace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rackspace.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C94ADA8B141AA2CF00766C2F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C94ADA8D141AA2CF00766C2F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C94ADA8F141AA2CF00766C2F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C94ADA93141AA2CF00766C2F /* Rackspace-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Rackspace-Info.plist"; sourceTree = "<group>"; };
+		C94ADA95141AA2CF00766C2F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C94ADA97141AA2CF00766C2F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C94ADA99141AA2CF00766C2F /* Rackspace-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rackspace-Prefix.pch"; sourceTree = "<group>"; };
+		C94ADA9A141AA2CF00766C2F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C94ADA9B141AA2CF00766C2F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C94ADA9E141AA2CF00766C2F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		C94ADAA1141AA2CF00766C2F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		C94ADAA3141AA2CF00766C2F /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		C94ADAA4141AA2CF00766C2F /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		C94ADAA6141AA2CF00766C2F /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		C94ADAA8141AA2CF00766C2F /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		C94ADAAA141AA2CF00766C2F /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		C94ADAAB141AA2CF00766C2F /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		C94ADAAD141AA2CF00766C2F /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		C94ADAAF141AA2CF00766C2F /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		C94ADAB7141AA2D000766C2F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		C94ADACE141AA3C600766C2F /* Localizations.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizations.strings; sourceTree = "<group>"; };
+		C96F0929142A71850048BC2C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C96F092B142A718D0048BC2C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C96F0933142A72210048BC2C /* _RSAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _RSAccount.h; sourceTree = "<group>"; };
+		C96F0934142A72210048BC2C /* _RSAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _RSAccount.m; sourceTree = "<group>"; };
+		C96F0935142A72210048BC2C /* _RSFlavor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _RSFlavor.h; sourceTree = "<group>"; };
+		C96F0936142A72210048BC2C /* _RSFlavor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _RSFlavor.m; sourceTree = "<group>"; };
+		C96F0937142A72210048BC2C /* _RSImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _RSImage.h; sourceTree = "<group>"; };
+		C96F0938142A72210048BC2C /* _RSImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _RSImage.m; sourceTree = "<group>"; };
+		C96F0939142A72210048BC2C /* _RSLoadBalancer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _RSLoadBalancer.h; sourceTree = "<group>"; };
+		C96F093A142A72210048BC2C /* _RSLoadBalancer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _RSLoadBalancer.m; sourceTree = "<group>"; };
+		C96F093B142A72210048BC2C /* _RSNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _RSNode.h; sourceTree = "<group>"; };
+		C96F093C142A72210048BC2C /* _RSNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _RSNode.m; sourceTree = "<group>"; };
+		C96F093D142A72210048BC2C /* _RSProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _RSProvider.h; sourceTree = "<group>"; };
+		C96F093E142A72210048BC2C /* _RSProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _RSProvider.m; sourceTree = "<group>"; };
+		C96F093F142A72210048BC2C /* _RSServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _RSServer.h; sourceTree = "<group>"; };
+		C96F0940142A72210048BC2C /* _RSServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _RSServer.m; sourceTree = "<group>"; };
+		C96F0941142A72210048BC2C /* _RSServerAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _RSServerAddress.h; sourceTree = "<group>"; };
+		C96F0942142A72210048BC2C /* _RSServerAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _RSServerAddress.m; sourceTree = "<group>"; };
+		C96F0943142A72210048BC2C /* _RSServerBackupSchedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _RSServerBackupSchedule.h; sourceTree = "<group>"; };
+		C96F0944142A72210048BC2C /* _RSServerBackupSchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _RSServerBackupSchedule.m; sourceTree = "<group>"; };
+		C96F0945142A72210048BC2C /* _RSServerMetaData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _RSServerMetaData.h; sourceTree = "<group>"; };
+		C96F0946142A72210048BC2C /* _RSServerMetaData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _RSServerMetaData.m; sourceTree = "<group>"; };
+		C96F0947142A72210048BC2C /* _RSSharedIPGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _RSSharedIPGroup.h; sourceTree = "<group>"; };
+		C96F0948142A72210048BC2C /* _RSSharedIPGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _RSSharedIPGroup.m; sourceTree = "<group>"; };
+		C96F0949142A72210048BC2C /* _RSVirtualIP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _RSVirtualIP.h; sourceTree = "<group>"; };
+		C96F094A142A72210048BC2C /* _RSVirtualIP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _RSVirtualIP.m; sourceTree = "<group>"; };
+		C96F094B142A72210048BC2C /* RSAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAccount.h; sourceTree = "<group>"; };
+		C96F094C142A72210048BC2C /* RSAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAccount.m; sourceTree = "<group>"; };
+		C96F094D142A72210048BC2C /* RSFlavor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSFlavor.h; sourceTree = "<group>"; };
+		C96F094E142A72210048BC2C /* RSFlavor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSFlavor.m; sourceTree = "<group>"; };
+		C96F094F142A72210048BC2C /* RSImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSImage.h; sourceTree = "<group>"; };
+		C96F0950142A72210048BC2C /* RSImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSImage.m; sourceTree = "<group>"; };
+		C96F0951142A72210048BC2C /* RSLoadBalancer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSLoadBalancer.h; sourceTree = "<group>"; };
+		C96F0952142A72210048BC2C /* RSLoadBalancer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSLoadBalancer.m; sourceTree = "<group>"; };
+		C96F0953142A72210048BC2C /* RSNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSNode.h; sourceTree = "<group>"; };
+		C96F0954142A72210048BC2C /* RSNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSNode.m; sourceTree = "<group>"; };
+		C96F0955142A72210048BC2C /* RSProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSProvider.h; sourceTree = "<group>"; };
+		C96F0956142A72210048BC2C /* RSProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSProvider.m; sourceTree = "<group>"; };
+		C96F0957142A72210048BC2C /* RSServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSServer.h; sourceTree = "<group>"; };
+		C96F0958142A72210048BC2C /* RSServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSServer.m; sourceTree = "<group>"; };
+		C96F0959142A72210048BC2C /* RSServerAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSServerAddress.h; sourceTree = "<group>"; };
+		C96F095A142A72210048BC2C /* RSServerAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSServerAddress.m; sourceTree = "<group>"; };
+		C96F095B142A72210048BC2C /* RSServerBackupSchedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSServerBackupSchedule.h; sourceTree = "<group>"; };
+		C96F095C142A72210048BC2C /* RSServerBackupSchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSServerBackupSchedule.m; sourceTree = "<group>"; };
+		C96F095D142A72210048BC2C /* RSServerMetaData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSServerMetaData.h; sourceTree = "<group>"; };
+		C96F095E142A72210048BC2C /* RSServerMetaData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSServerMetaData.m; sourceTree = "<group>"; };
+		C96F095F142A72210048BC2C /* RSSharedIPGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSharedIPGroup.h; sourceTree = "<group>"; };
+		C96F0960142A72210048BC2C /* RSSharedIPGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSharedIPGroup.m; sourceTree = "<group>"; };
+		C96F0961142A72210048BC2C /* RSVirtualIP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSVirtualIP.h; sourceTree = "<group>"; };
+		C96F0962142A72210048BC2C /* RSVirtualIP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSVirtualIP.m; sourceTree = "<group>"; };
+		C96F0994142A724C0048BC2C /* Rackspace.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Rackspace.xcdatamodel; sourceTree = "<group>"; };
+		C96F0997142A72AB0048BC2C /* RSFileConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSFileConnection.h; sourceTree = "<group>"; };
+		C96F0998142A72AB0048BC2C /* RSFileConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSFileConnection.m; sourceTree = "<group>"; };
+		C96F0999142A72AB0048BC2C /* RSNSURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSNSURLConnection.h; sourceTree = "<group>"; };
+		C96F099A142A72AB0048BC2C /* RSNSURLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSNSURLConnection.m; sourceTree = "<group>"; };
+		C9C73774142BC9890000638E /* UnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9C7377A142BC9890000638E /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
+		C9C7377C142BC9890000638E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C9C73781142BC9890000638E /* UnitTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Prefix.pch"; sourceTree = "<group>"; };
+		C9C73786142BCA280000638E /* RSAccountTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAccountTest.m; sourceTree = "<group>"; };
+		C9C73787142BCA280000638E /* RSFileConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSFileConnection.h; sourceTree = "<group>"; };
+		C9C73788142BCA280000638E /* RSFileConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSFileConnection.m; sourceTree = "<group>"; };
+		C9C73789142BCA280000638E /* RSFileConnectionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSFileConnectionTest.m; sourceTree = "<group>"; };
+		C9C7378A142BCA280000638E /* RSProviderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSProviderTest.m; sourceTree = "<group>"; };
+		C9C73790142BCA3D0000638E /* fixtures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fixtures; sourceTree = "<group>"; };
+		C9C737FD142BCFF40000638E /* seeds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = seeds; sourceTree = "<group>"; };
+		C9E0AB4B142BAF4900EA595C /* CKBindingMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKBindingMap.h; sourceTree = "<group>"; };
+		C9E0AB4C142BAF4900EA595C /* CKBindingMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKBindingMap.m; sourceTree = "<group>"; };
+		C9E0AB4D142BAF4900EA595C /* CKBindings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKBindings.h; sourceTree = "<group>"; };
+		C9E0AB4E142BAF4900EA595C /* CKBindings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKBindings.m; sourceTree = "<group>"; };
+		C9E0AB4F142BAF4900EA595C /* CKConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKConnection.h; sourceTree = "<group>"; };
+		C9E0AB50142BAF4900EA595C /* CKCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCoreData.h; sourceTree = "<group>"; };
+		C9E0AB51142BAF4900EA595C /* CKCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCoreData.m; sourceTree = "<group>"; };
+		C9E0AB52142BAF4900EA595C /* CKDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKDefines.h; sourceTree = "<group>"; };
+		C9E0AB53142BAF4900EA595C /* CKManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKManager.h; sourceTree = "<group>"; };
+		C9E0AB54142BAF4900EA595C /* CKManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKManager.m; sourceTree = "<group>"; };
+		C9E0AB55142BAF4900EA595C /* CKNSJSONSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKNSJSONSerialization.h; sourceTree = "<group>"; };
+		C9E0AB56142BAF4900EA595C /* CKNSJSONSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKNSJSONSerialization.m; sourceTree = "<group>"; };
+		C9E0AB57142BAF4900EA595C /* CKNSURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKNSURLConnection.h; sourceTree = "<group>"; };
+		C9E0AB58142BAF4900EA595C /* CKNSURLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKNSURLConnection.m; sourceTree = "<group>"; };
+		C9E0AB59142BAF4900EA595C /* CKRecord+CKBindings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CKRecord+CKBindings.h"; sourceTree = "<group>"; };
+		C9E0AB5A142BAF4900EA595C /* CKRecord+CKBindings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CKRecord+CKBindings.m"; sourceTree = "<group>"; };
+		C9E0AB5B142BAF4900EA595C /* CKRecord+CKRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CKRecord+CKRouter.h"; sourceTree = "<group>"; };
+		C9E0AB5C142BAF4900EA595C /* CKRecord+CKRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CKRecord+CKRouter.m"; sourceTree = "<group>"; };
+		C9E0AB5D142BAF4900EA595C /* CKRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKRecord.h; sourceTree = "<group>"; };
+		C9E0AB5E142BAF4900EA595C /* CKRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKRecord.m; sourceTree = "<group>"; };
+		C9E0AB5F142BAF4900EA595C /* CKRecordPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKRecordPrivate.h; sourceTree = "<group>"; };
+		C9E0AB60142BAF4900EA595C /* CKRecordPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKRecordPrivate.m; sourceTree = "<group>"; };
+		C9E0AB61142BAF4900EA595C /* CKRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKRequest.h; sourceTree = "<group>"; };
+		C9E0AB62142BAF4900EA595C /* CKRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKRequest.m; sourceTree = "<group>"; };
+		C9E0AB63142BAF4900EA595C /* CKResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKResult.h; sourceTree = "<group>"; };
+		C9E0AB64142BAF4900EA595C /* CKResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKResult.m; sourceTree = "<group>"; };
+		C9E0AB65142BAF4900EA595C /* CKRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKRouter.h; sourceTree = "<group>"; };
+		C9E0AB66142BAF4900EA595C /* CKRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKRouter.m; sourceTree = "<group>"; };
+		C9E0AB67142BAF4900EA595C /* CKRouterMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKRouterMap.h; sourceTree = "<group>"; };
+		C9E0AB68142BAF4900EA595C /* CKRouterMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKRouterMap.m; sourceTree = "<group>"; };
+		C9E0AB69142BAF4900EA595C /* CKSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKSerialization.h; sourceTree = "<group>"; };
+		C9E0AB6A142BAF4900EA595C /* CKSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKSupport.h; sourceTree = "<group>"; };
+		C9E0AB6B142BAF4900EA595C /* CKSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKSupport.m; sourceTree = "<group>"; };
+		C9E0AB6C142BAF4900EA595C /* CKTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKTableViewDataSource.h; sourceTree = "<group>"; };
+		C9E0AB6D142BAF4900EA595C /* CKTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKTableViewDataSource.m; sourceTree = "<group>"; };
+		C9E0AB6E142BAF4900EA595C /* CoreKit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoreKit-Prefix.pch"; sourceTree = "<group>"; };
+		C9E0AB6F142BAF4900EA595C /* CoreKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreKit.h; sourceTree = "<group>"; };
+		C9E0AB70142BAF4900EA595C /* CWInflector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWInflector.h; sourceTree = "<group>"; };
+		C9E0AB71142BAF4900EA595C /* CWInflector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CWInflector.mm; sourceTree = "<group>"; };
+		C9E0AB72142BAF4900EA595C /* inflections.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = inflections.plist; sourceTree = "<group>"; };
+		C9E0AB73142BAF4900EA595C /* NSDictionary+NSDictionary_KeyPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NSDictionary_KeyPath.h"; sourceTree = "<group>"; };
+		C9E0AB74142BAF4900EA595C /* NSDictionary+NSDictionary_KeyPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NSDictionary_KeyPath.m"; sourceTree = "<group>"; };
+		C9E0AB75142BAF4900EA595C /* NSString+InflectionSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+InflectionSupport.h"; sourceTree = "<group>"; };
+		C9E0AB76142BAF4900EA595C /* NSString+InflectionSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+InflectionSupport.m"; sourceTree = "<group>"; };
+		C9E0AB77142BAF4900EA595C /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		C9E0AB78142BAF4900EA595C /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		C9E0AB7A142BAF4900EA595C /* CoreSupport-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoreSupport-Prefix.pch"; sourceTree = "<group>"; };
+		C9E0AB7B142BAF4900EA595C /* CoreSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreSupport.h; sourceTree = "<group>"; };
+		C9E0AB7C142BAF4900EA595C /* CoreSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreSupport.m; sourceTree = "<group>"; };
+		C9E0ABBF142BB35200EA595C /* YAMLParsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAMLParsing.h; sourceTree = "<group>"; };
+		C9E0ABC0142BB35200EA595C /* YAMLParsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YAMLParsing.m; sourceTree = "<group>"; };
+		C9E0ABC2142BB36600EA595C /* YML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YML.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C94ADA84141AA2CF00766C2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C96F092C142A718D0048BC2C /* SystemConfiguration.framework in Frameworks */,
+				C96F092A142A71850048BC2C /* CoreData.framework in Frameworks */,
+				C94ADA8C141AA2CF00766C2F /* UIKit.framework in Frameworks */,
+				C94ADA8E141AA2CF00766C2F /* Foundation.framework in Frameworks */,
+				C94ADA90141AA2CF00766C2F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9C73770142BC9890000638E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9C73775142BC9890000638E /* SenTestingKit.framework in Frameworks */,
+				C9C73776142BC9890000638E /* UIKit.framework in Frameworks */,
+				C9C73777142BC9890000638E /* Foundation.framework in Frameworks */,
+				C9C73796142BCAA20000638E /* CoreData.framework in Frameworks */,
+				C9C73797142BCAA50000638E /* SystemConfiguration.framework in Frameworks */,
+				C9C737FC142BCB960000638E /* YML.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2736811C143259BF00C85805 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				27C1E3A11432866F001A18FC /* Login */,
+				2736811D143259C800C85805 /* Accounts */,
+				27CA4D9A1436619200348395 /* Servers */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		2736811D143259C800C85805 /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				2736811E14325A1E00C85805 /* RSAccountsViewController.h */,
+				2736811F14325A1E00C85805 /* RSAccountsViewController.m */,
+				27C1E39914326FFC001A18FC /* RSAccountsDataSource.h */,
+				27C1E39A14326FFC001A18FC /* RSAccountsDataSource.m */,
+			);
+			name = Accounts;
+			sourceTree = "<group>";
+		};
+		27925106143BBC94000D725B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				27925108143BBCA0000D725B /* Icon.png */,
+				27925109143BBCA0000D725B /* Icon@2x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		27BE75C514352CB2000D9523 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				27BE75CC14352CE8000D9523 /* UIViewController+Conveniences.h */,
+				27BE75CD14352CE8000D9523 /* UIViewController+Conveniences.m */,
+				2770E1BB1443654D00075520 /* CKRequest+Conveniences.h */,
+				2770E1BC1443654D00075520 /* CKRequest+Conveniences.m */,
+				2770E1BF14436C5900075520 /* CKRecord+Rackspace.h */,
+				2770E1C014436C5900075520 /* CKRecord+Rackspace.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		27C1E3A11432866F001A18FC /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				278A19CF14339AFC0087EA57 /* RSLoginProviderViewController.h */,
+				278A19D014339AFC0087EA57 /* RSLoginProviderViewController.m */,
+				278A19D314339B1C0087EA57 /* RSLoginDetailsViewController.h */,
+				278A19D414339B1C0087EA57 /* RSLoginDetailsViewController.m */,
+				278A19D71433A9500087EA57 /* RSProvidersDataSource.h */,
+				278A19D81433A9500087EA57 /* RSProvidersDataSource.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		27CA4D9A1436619200348395 /* Servers */ = {
+			isa = PBXGroup;
+			children = (
+				27CA4D9C143661B000348395 /* RSServersViewController.h */,
+				27CA4D9D143661B000348395 /* RSServersViewController.m */,
+				27CA4D9F143661C500348395 /* RSServersDataSource.h */,
+				27CA4DA0143661C500348395 /* RSServersDataSource.m */,
+			);
+			name = Servers;
+			sourceTree = "<group>";
+		};
+		C94ADA7C141AA2CF00766C2F = {
+			isa = PBXGroup;
+			children = (
+				C94ADA91141AA2CF00766C2F /* Rackspace */,
+				C9C73778142BC9890000638E /* UnitTests */,
+				C94ADA8A141AA2CF00766C2F /* Frameworks */,
+				C94ADA88141AA2CF00766C2F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C94ADA88141AA2CF00766C2F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C94ADA87141AA2CF00766C2F /* Rackspace.app */,
+				C9C73774142BC9890000638E /* UnitTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C94ADA8A141AA2CF00766C2F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27C1E3A214328805001A18FC /* MapKit.framework */,
+				C9E0AB4A142BAF4900EA595C /* CoreKit */,
+				C9E0AB79142BAF4900EA595C /* CoreSupport */,
+				C9E0ABC2142BB36600EA595C /* YML.framework */,
+				C96F092B142A718D0048BC2C /* SystemConfiguration.framework */,
+				C96F0929142A71850048BC2C /* CoreData.framework */,
+				C94ADA8B141AA2CF00766C2F /* UIKit.framework */,
+				C94ADA8D141AA2CF00766C2F /* Foundation.framework */,
+				C94ADA8F141AA2CF00766C2F /* CoreGraphics.framework */,
+				C94ADAB7141AA2D000766C2F /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C94ADA91141AA2CF00766C2F /* Rackspace */ = {
+			isa = PBXGroup;
+			children = (
+				27925106143BBC94000D725B /* Resources */,
+				27BE75C514352CB2000D9523 /* Categories */,
+				2736811C143259BF00C85805 /* View Controllers */,
+				C96F0932142A72210048BC2C /* Models */,
+				C94ADA9A141AA2CF00766C2F /* AppDelegate.h */,
+				C94ADA9B141AA2CF00766C2F /* AppDelegate.m */,
+				C94ADA9D141AA2CF00766C2F /* MainStoryboard_iPhone.storyboard */,
+				C94ADAA0141AA2CF00766C2F /* MainStoryboard_iPad.storyboard */,
+				C94ADAA3141AA2CF00766C2F /* FirstViewController.h */,
+				C94ADAA4141AA2CF00766C2F /* FirstViewController.m */,
+				C94ADAA6141AA2CF00766C2F /* first.png */,
+				C94ADAA8141AA2CF00766C2F /* first@2x.png */,
+				C94ADAAA141AA2CF00766C2F /* SecondViewController.h */,
+				C94ADAAB141AA2CF00766C2F /* SecondViewController.m */,
+				C94ADAAD141AA2CF00766C2F /* second.png */,
+				C94ADAAF141AA2CF00766C2F /* second@2x.png */,
+				C96F099F142A72B00048BC2C /* CoreKit Additions */,
+				C94ADA92141AA2CF00766C2F /* Supporting Files */,
+			);
+			path = Rackspace;
+			sourceTree = "<group>";
+		};
+		C94ADA92141AA2CF00766C2F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C94ADACE141AA3C600766C2F /* Localizations.strings */,
+				C94ADA93141AA2CF00766C2F /* Rackspace-Info.plist */,
+				C94ADA94141AA2CF00766C2F /* InfoPlist.strings */,
+				C94ADA97141AA2CF00766C2F /* main.m */,
+				C94ADA99141AA2CF00766C2F /* Rackspace-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C96F0932142A72210048BC2C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C96F0994142A724C0048BC2C /* Rackspace.xcdatamodel */,
+				C96F094B142A72210048BC2C /* RSAccount.h */,
+				C96F094C142A72210048BC2C /* RSAccount.m */,
+				C96F094D142A72210048BC2C /* RSFlavor.h */,
+				C96F094E142A72210048BC2C /* RSFlavor.m */,
+				C96F094F142A72210048BC2C /* RSImage.h */,
+				C96F0950142A72210048BC2C /* RSImage.m */,
+				C96F0951142A72210048BC2C /* RSLoadBalancer.h */,
+				C96F0952142A72210048BC2C /* RSLoadBalancer.m */,
+				C96F0953142A72210048BC2C /* RSNode.h */,
+				C96F0954142A72210048BC2C /* RSNode.m */,
+				C96F0955142A72210048BC2C /* RSProvider.h */,
+				C96F0956142A72210048BC2C /* RSProvider.m */,
+				C96F0957142A72210048BC2C /* RSServer.h */,
+				C96F0958142A72210048BC2C /* RSServer.m */,
+				C96F0959142A72210048BC2C /* RSServerAddress.h */,
+				C96F095A142A72210048BC2C /* RSServerAddress.m */,
+				C96F095B142A72210048BC2C /* RSServerBackupSchedule.h */,
+				C96F095C142A72210048BC2C /* RSServerBackupSchedule.m */,
+				C96F095D142A72210048BC2C /* RSServerMetaData.h */,
+				C96F095E142A72210048BC2C /* RSServerMetaData.m */,
+				C96F095F142A72210048BC2C /* RSSharedIPGroup.h */,
+				C96F0960142A72210048BC2C /* RSSharedIPGroup.m */,
+				C96F0961142A72210048BC2C /* RSVirtualIP.h */,
+				C96F0962142A72210048BC2C /* RSVirtualIP.m */,
+				C96F0993142A72320048BC2C /* Machine Files */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C96F0993142A72320048BC2C /* Machine Files */ = {
+			isa = PBXGroup;
+			children = (
+				C96F0933142A72210048BC2C /* _RSAccount.h */,
+				C96F0934142A72210048BC2C /* _RSAccount.m */,
+				C96F0935142A72210048BC2C /* _RSFlavor.h */,
+				C96F0936142A72210048BC2C /* _RSFlavor.m */,
+				C96F0937142A72210048BC2C /* _RSImage.h */,
+				C96F0938142A72210048BC2C /* _RSImage.m */,
+				C96F0939142A72210048BC2C /* _RSLoadBalancer.h */,
+				C96F093A142A72210048BC2C /* _RSLoadBalancer.m */,
+				C96F093B142A72210048BC2C /* _RSNode.h */,
+				C96F093C142A72210048BC2C /* _RSNode.m */,
+				C96F093D142A72210048BC2C /* _RSProvider.h */,
+				C96F093E142A72210048BC2C /* _RSProvider.m */,
+				C96F093F142A72210048BC2C /* _RSServer.h */,
+				C96F0940142A72210048BC2C /* _RSServer.m */,
+				C96F0941142A72210048BC2C /* _RSServerAddress.h */,
+				C96F0942142A72210048BC2C /* _RSServerAddress.m */,
+				C96F0943142A72210048BC2C /* _RSServerBackupSchedule.h */,
+				C96F0944142A72210048BC2C /* _RSServerBackupSchedule.m */,
+				C96F0945142A72210048BC2C /* _RSServerMetaData.h */,
+				C96F0946142A72210048BC2C /* _RSServerMetaData.m */,
+				C96F0947142A72210048BC2C /* _RSSharedIPGroup.h */,
+				C96F0948142A72210048BC2C /* _RSSharedIPGroup.m */,
+				C96F0949142A72210048BC2C /* _RSVirtualIP.h */,
+				C96F094A142A72210048BC2C /* _RSVirtualIP.m */,
+			);
+			name = "Machine Files";
+			sourceTree = "<group>";
+		};
+		C96F099F142A72B00048BC2C /* CoreKit Additions */ = {
+			isa = PBXGroup;
+			children = (
+				C96F0997142A72AB0048BC2C /* RSFileConnection.h */,
+				C96F0998142A72AB0048BC2C /* RSFileConnection.m */,
+				C96F0999142A72AB0048BC2C /* RSNSURLConnection.h */,
+				C96F099A142A72AB0048BC2C /* RSNSURLConnection.m */,
+				C9E0ABBF142BB35200EA595C /* YAMLParsing.h */,
+				C9E0ABC0142BB35200EA595C /* YAMLParsing.m */,
+			);
+			name = "CoreKit Additions";
+			sourceTree = "<group>";
+		};
+		C9C73778142BC9890000638E /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				C9C737FD142BCFF40000638E /* seeds */,
+				C9C73790142BCA3D0000638E /* fixtures */,
+				C9C73786142BCA280000638E /* RSAccountTest.m */,
+				C9C73787142BCA280000638E /* RSFileConnection.h */,
+				C9C73788142BCA280000638E /* RSFileConnection.m */,
+				C9C73789142BCA280000638E /* RSFileConnectionTest.m */,
+				C9C7378A142BCA280000638E /* RSProviderTest.m */,
+				C9C73779142BC9890000638E /* Supporting Files */,
+			);
+			path = UnitTests;
+			sourceTree = "<group>";
+		};
+		C9C73779142BC9890000638E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C9C7377A142BC9890000638E /* UnitTests-Info.plist */,
+				C9C7377B142BC9890000638E /* InfoPlist.strings */,
+				C9C73781142BC9890000638E /* UnitTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C9E0AB4A142BAF4900EA595C /* CoreKit */ = {
+			isa = PBXGroup;
+			children = (
+				C9E0AB4B142BAF4900EA595C /* CKBindingMap.h */,
+				C9E0AB4C142BAF4900EA595C /* CKBindingMap.m */,
+				C9E0AB4D142BAF4900EA595C /* CKBindings.h */,
+				C9E0AB4E142BAF4900EA595C /* CKBindings.m */,
+				C9E0AB4F142BAF4900EA595C /* CKConnection.h */,
+				C9E0AB50142BAF4900EA595C /* CKCoreData.h */,
+				C9E0AB51142BAF4900EA595C /* CKCoreData.m */,
+				C9E0AB52142BAF4900EA595C /* CKDefines.h */,
+				C9E0AB53142BAF4900EA595C /* CKManager.h */,
+				C9E0AB54142BAF4900EA595C /* CKManager.m */,
+				C9E0AB55142BAF4900EA595C /* CKNSJSONSerialization.h */,
+				C9E0AB56142BAF4900EA595C /* CKNSJSONSerialization.m */,
+				C9E0AB57142BAF4900EA595C /* CKNSURLConnection.h */,
+				C9E0AB58142BAF4900EA595C /* CKNSURLConnection.m */,
+				C9E0AB59142BAF4900EA595C /* CKRecord+CKBindings.h */,
+				C9E0AB5A142BAF4900EA595C /* CKRecord+CKBindings.m */,
+				C9E0AB5B142BAF4900EA595C /* CKRecord+CKRouter.h */,
+				C9E0AB5C142BAF4900EA595C /* CKRecord+CKRouter.m */,
+				C9E0AB5D142BAF4900EA595C /* CKRecord.h */,
+				C9E0AB5E142BAF4900EA595C /* CKRecord.m */,
+				C9E0AB5F142BAF4900EA595C /* CKRecordPrivate.h */,
+				C9E0AB60142BAF4900EA595C /* CKRecordPrivate.m */,
+				C9E0AB61142BAF4900EA595C /* CKRequest.h */,
+				C9E0AB62142BAF4900EA595C /* CKRequest.m */,
+				C9E0AB63142BAF4900EA595C /* CKResult.h */,
+				C9E0AB64142BAF4900EA595C /* CKResult.m */,
+				C9E0AB65142BAF4900EA595C /* CKRouter.h */,
+				C9E0AB66142BAF4900EA595C /* CKRouter.m */,
+				C9E0AB67142BAF4900EA595C /* CKRouterMap.h */,
+				C9E0AB68142BAF4900EA595C /* CKRouterMap.m */,
+				C9E0AB69142BAF4900EA595C /* CKSerialization.h */,
+				C9E0AB6A142BAF4900EA595C /* CKSupport.h */,
+				C9E0AB6B142BAF4900EA595C /* CKSupport.m */,
+				C9E0AB6C142BAF4900EA595C /* CKTableViewDataSource.h */,
+				C9E0AB6D142BAF4900EA595C /* CKTableViewDataSource.m */,
+				C9E0AB6E142BAF4900EA595C /* CoreKit-Prefix.pch */,
+				C9E0AB6F142BAF4900EA595C /* CoreKit.h */,
+				C9E0AB70142BAF4900EA595C /* CWInflector.h */,
+				C9E0AB71142BAF4900EA595C /* CWInflector.mm */,
+				C9E0AB72142BAF4900EA595C /* inflections.plist */,
+				C9E0AB73142BAF4900EA595C /* NSDictionary+NSDictionary_KeyPath.h */,
+				C9E0AB74142BAF4900EA595C /* NSDictionary+NSDictionary_KeyPath.m */,
+				C9E0AB75142BAF4900EA595C /* NSString+InflectionSupport.h */,
+				C9E0AB76142BAF4900EA595C /* NSString+InflectionSupport.m */,
+				C9E0AB77142BAF4900EA595C /* Reachability.h */,
+				C9E0AB78142BAF4900EA595C /* Reachability.m */,
+			);
+			name = CoreKit;
+			path = ../corekit/CoreKit;
+			sourceTree = "<group>";
+		};
+		C9E0AB79142BAF4900EA595C /* CoreSupport */ = {
+			isa = PBXGroup;
+			children = (
+				C9E0AB7A142BAF4900EA595C /* CoreSupport-Prefix.pch */,
+				C9E0AB7B142BAF4900EA595C /* CoreSupport.h */,
+				C9E0AB7C142BAF4900EA595C /* CoreSupport.m */,
+			);
+			name = CoreSupport;
+			path = ../corekit/CoreSupport;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C94ADA86141AA2CF00766C2F /* Rackspace */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C94ADAC8141AA2D000766C2F /* Build configuration list for PBXNativeTarget "Rackspace" */;
+			buildPhases = (
+				C94ADA83141AA2CF00766C2F /* Sources */,
+				C94ADA84141AA2CF00766C2F /* Frameworks */,
+				C94ADA85141AA2CF00766C2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rackspace;
+			productName = Rackspace;
+			productReference = C94ADA87141AA2CF00766C2F /* Rackspace.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C9C73773142BC9890000638E /* UnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9C73782142BC9890000638E /* Build configuration list for PBXNativeTarget "UnitTests" */;
+			buildPhases = (
+				C9C7376F142BC9890000638E /* Sources */,
+				C9C73770142BC9890000638E /* Frameworks */,
+				C9C73771142BC9890000638E /* Resources */,
+				C9C73772142BC9890000638E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UnitTests;
+			productName = UnitTests;
+			productReference = C9C73774142BC9890000638E /* UnitTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C94ADA7E141AA2CF00766C2F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Rackspace, US Inc.";
+			};
+			buildConfigurationList = C94ADA81141AA2CF00766C2F /* Build configuration list for PBXProject "Rackspace" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C94ADA7C141AA2CF00766C2F;
+			productRefGroup = C94ADA88141AA2CF00766C2F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C94ADA86141AA2CF00766C2F /* Rackspace */,
+				C9C73773142BC9890000638E /* UnitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C94ADA85141AA2CF00766C2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C94ADA96141AA2CF00766C2F /* InfoPlist.strings in Resources */,
+				C94ADA9F141AA2CF00766C2F /* MainStoryboard_iPhone.storyboard in Resources */,
+				C94ADAA2141AA2CF00766C2F /* MainStoryboard_iPad.storyboard in Resources */,
+				C94ADAA7141AA2CF00766C2F /* first.png in Resources */,
+				C94ADAA9141AA2CF00766C2F /* first@2x.png in Resources */,
+				C94ADAAE141AA2CF00766C2F /* second.png in Resources */,
+				C94ADAB0141AA2CF00766C2F /* second@2x.png in Resources */,
+				C94ADACF141AA3C600766C2F /* Localizations.strings in Resources */,
+				C9E0AB9F142BAF4900EA595C /* inflections.plist in Resources */,
+				278A19D61433A4900087EA57 /* seeds in Resources */,
+				2792510A143BBCA0000D725B /* Icon.png in Resources */,
+				2792510B143BBCA0000D725B /* Icon@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9C73771142BC9890000638E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9C7377D142BC9890000638E /* InfoPlist.strings in Resources */,
+				C9C73791142BCA3D0000638E /* fixtures in Resources */,
+				C9C737FE142BCFF40000638E /* seeds in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C9C73772142BC9890000638E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C94ADA83141AA2CF00766C2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C94ADA98141AA2CF00766C2F /* main.m in Sources */,
+				C94ADA9C141AA2CF00766C2F /* AppDelegate.m in Sources */,
+				C94ADAA5141AA2CF00766C2F /* FirstViewController.m in Sources */,
+				C94ADAAC141AA2CF00766C2F /* SecondViewController.m in Sources */,
+				C96F0963142A72210048BC2C /* _RSAccount.m in Sources */,
+				C96F0965142A72210048BC2C /* _RSFlavor.m in Sources */,
+				C96F0967142A72210048BC2C /* _RSImage.m in Sources */,
+				C96F0969142A72210048BC2C /* _RSLoadBalancer.m in Sources */,
+				C96F096B142A72210048BC2C /* _RSNode.m in Sources */,
+				C96F096D142A72210048BC2C /* _RSProvider.m in Sources */,
+				C96F096F142A72210048BC2C /* _RSServer.m in Sources */,
+				C96F0971142A72210048BC2C /* _RSServerAddress.m in Sources */,
+				C96F0973142A72210048BC2C /* _RSServerBackupSchedule.m in Sources */,
+				C96F0975142A72210048BC2C /* _RSServerMetaData.m in Sources */,
+				C96F0977142A72210048BC2C /* _RSSharedIPGroup.m in Sources */,
+				C96F0979142A72210048BC2C /* _RSVirtualIP.m in Sources */,
+				C96F097B142A72210048BC2C /* RSAccount.m in Sources */,
+				C96F097D142A72210048BC2C /* RSFlavor.m in Sources */,
+				C96F097F142A72210048BC2C /* RSImage.m in Sources */,
+				C96F0981142A72210048BC2C /* RSLoadBalancer.m in Sources */,
+				C96F0983142A72210048BC2C /* RSNode.m in Sources */,
+				C96F0985142A72210048BC2C /* RSProvider.m in Sources */,
+				C96F0987142A72210048BC2C /* RSServer.m in Sources */,
+				C96F0989142A72210048BC2C /* RSServerAddress.m in Sources */,
+				C96F098B142A72210048BC2C /* RSServerBackupSchedule.m in Sources */,
+				C96F098D142A72210048BC2C /* RSServerMetaData.m in Sources */,
+				C96F098F142A72210048BC2C /* RSSharedIPGroup.m in Sources */,
+				C96F0991142A72210048BC2C /* RSVirtualIP.m in Sources */,
+				C96F0995142A724C0048BC2C /* Rackspace.xcdatamodel in Sources */,
+				C96F099B142A72AB0048BC2C /* RSFileConnection.m in Sources */,
+				C96F099D142A72AB0048BC2C /* RSNSURLConnection.m in Sources */,
+				C9E0AB7D142BAF4900EA595C /* CKBindingMap.m in Sources */,
+				C9E0AB7F142BAF4900EA595C /* CKBindings.m in Sources */,
+				C9E0AB81142BAF4900EA595C /* CKCoreData.m in Sources */,
+				C9E0AB83142BAF4900EA595C /* CKManager.m in Sources */,
+				C9E0AB85142BAF4900EA595C /* CKNSJSONSerialization.m in Sources */,
+				C9E0AB87142BAF4900EA595C /* CKNSURLConnection.m in Sources */,
+				C9E0AB89142BAF4900EA595C /* CKRecord+CKBindings.m in Sources */,
+				C9E0AB8B142BAF4900EA595C /* CKRecord+CKRouter.m in Sources */,
+				C9E0AB8D142BAF4900EA595C /* CKRecord.m in Sources */,
+				C9E0AB8F142BAF4900EA595C /* CKRecordPrivate.m in Sources */,
+				C9E0AB91142BAF4900EA595C /* CKRequest.m in Sources */,
+				C9E0AB93142BAF4900EA595C /* CKResult.m in Sources */,
+				C9E0AB95142BAF4900EA595C /* CKRouter.m in Sources */,
+				C9E0AB97142BAF4900EA595C /* CKRouterMap.m in Sources */,
+				C9E0AB99142BAF4900EA595C /* CKSupport.m in Sources */,
+				C9E0AB9B142BAF4900EA595C /* CKTableViewDataSource.m in Sources */,
+				C9E0AB9D142BAF4900EA595C /* CWInflector.mm in Sources */,
+				C9E0ABA1142BAF4900EA595C /* NSDictionary+NSDictionary_KeyPath.m in Sources */,
+				C9E0ABA3142BAF4900EA595C /* NSString+InflectionSupport.m in Sources */,
+				C9E0ABA5142BAF4900EA595C /* Reachability.m in Sources */,
+				C9E0ABA7142BAF4900EA595C /* CoreSupport.m in Sources */,
+				2736812114325A1E00C85805 /* RSAccountsViewController.m in Sources */,
+				27C1E39B14326FFC001A18FC /* RSAccountsDataSource.m in Sources */,
+				278A19D114339AFC0087EA57 /* RSLoginProviderViewController.m in Sources */,
+				278A19D514339B1C0087EA57 /* RSLoginDetailsViewController.m in Sources */,
+				278A19D91433A9500087EA57 /* RSProvidersDataSource.m in Sources */,
+				27BE75CF14352CE8000D9523 /* UIViewController+Conveniences.m in Sources */,
+				27CA4D9E143661B000348395 /* RSServersViewController.m in Sources */,
+				27CA4DA1143661C500348395 /* RSServersDataSource.m in Sources */,
+				2770E1BD1443654D00075520 /* CKRequest+Conveniences.m in Sources */,
+				2770E1C114436C5900075520 /* CKRecord+Rackspace.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9C7376F142BC9890000638E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9C737CA142BCAEA0000638E /* CKBindingMap.m in Sources */,
+				C9C737CC142BCAEA0000638E /* CKBindings.m in Sources */,
+				C9C737CF142BCAEA0000638E /* CKCoreData.m in Sources */,
+				C9C737D2142BCAEA0000638E /* CKManager.m in Sources */,
+				C9C737D4142BCAEA0000638E /* CKNSJSONSerialization.m in Sources */,
+				C9C737D6142BCAEA0000638E /* CKNSURLConnection.m in Sources */,
+				C9C737D8142BCAEA0000638E /* CKRecord+CKBindings.m in Sources */,
+				C9C737DA142BCAEA0000638E /* CKRecord+CKRouter.m in Sources */,
+				C9C737DC142BCAEA0000638E /* CKRecord.m in Sources */,
+				C9C737DE142BCAEA0000638E /* CKRecordPrivate.m in Sources */,
+				C9C737E0142BCAEA0000638E /* CKRequest.m in Sources */,
+				C9C737E2142BCAEA0000638E /* CKResult.m in Sources */,
+				C9C737E4142BCAEA0000638E /* CKRouter.m in Sources */,
+				C9C737E6142BCAEA0000638E /* CKRouterMap.m in Sources */,
+				C9C737E9142BCAEA0000638E /* CKSupport.m in Sources */,
+				C9C737EB142BCAEA0000638E /* CKTableViewDataSource.m in Sources */,
+				C9C737EF142BCAEA0000638E /* CWInflector.mm in Sources */,
+				C9C737F0142BCAEA0000638E /* inflections.plist in Sources */,
+				C9C737F2142BCAEA0000638E /* NSDictionary+NSDictionary_KeyPath.m in Sources */,
+				C9C737F4142BCAEA0000638E /* NSString+InflectionSupport.m in Sources */,
+				C9C737F6142BCAEA0000638E /* Reachability.m in Sources */,
+				C9C737F9142BCAEA0000638E /* CoreSupport.m in Sources */,
+				C9C73798142BCAC50000638E /* Rackspace.xcdatamodel in Sources */,
+				C9C7379A142BCAC50000638E /* RSAccount.m in Sources */,
+				C9C7379C142BCAC50000638E /* RSFlavor.m in Sources */,
+				C9C7379E142BCAC50000638E /* RSImage.m in Sources */,
+				C9C737A0142BCAC50000638E /* RSLoadBalancer.m in Sources */,
+				C9C737A2142BCAC50000638E /* RSNode.m in Sources */,
+				C9C737A4142BCAC50000638E /* RSProvider.m in Sources */,
+				C9C737A6142BCAC50000638E /* RSServer.m in Sources */,
+				C9C737A8142BCAC50000638E /* RSServerAddress.m in Sources */,
+				C9C737AA142BCAC50000638E /* RSServerBackupSchedule.m in Sources */,
+				C9C737AC142BCAC50000638E /* RSServerMetaData.m in Sources */,
+				C9C737AE142BCAC50000638E /* RSSharedIPGroup.m in Sources */,
+				C9C737B0142BCAC50000638E /* RSVirtualIP.m in Sources */,
+				C9C737B2142BCAC50000638E /* _RSAccount.m in Sources */,
+				C9C737B4142BCAC50000638E /* _RSFlavor.m in Sources */,
+				C9C737B6142BCAC50000638E /* _RSImage.m in Sources */,
+				C9C737B8142BCAC50000638E /* _RSLoadBalancer.m in Sources */,
+				C9C737BA142BCAC50000638E /* _RSNode.m in Sources */,
+				C9C737BC142BCAC50000638E /* _RSProvider.m in Sources */,
+				C9C737BE142BCAC50000638E /* _RSServer.m in Sources */,
+				C9C737C0142BCAC50000638E /* _RSServerAddress.m in Sources */,
+				C9C737C2142BCAC50000638E /* _RSServerBackupSchedule.m in Sources */,
+				C9C737C4142BCAC50000638E /* _RSServerMetaData.m in Sources */,
+				C9C737C6142BCAC50000638E /* _RSSharedIPGroup.m in Sources */,
+				C9C737C8142BCAC50000638E /* _RSVirtualIP.m in Sources */,
+				C9C73792142BCA420000638E /* RSAccountTest.m in Sources */,
+				C9C73793142BCA460000638E /* RSFileConnection.m in Sources */,
+				C9C73794142BCA490000638E /* RSFileConnectionTest.m in Sources */,
+				C9C73795142BCA4C0000638E /* RSProviderTest.m in Sources */,
+				C9C737FA142BCB7F0000638E /* RSNSURLConnection.m in Sources */,
+				C9C737FB142BCB820000638E /* YAMLParsing.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C94ADA94141AA2CF00766C2F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C94ADA95141AA2CF00766C2F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C94ADA9D141AA2CF00766C2F /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C94ADA9E141AA2CF00766C2F /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		C94ADAA0141AA2CF00766C2F /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C94ADAA1141AA2CF00766C2F /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		C9C7377B142BC9890000638E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9C7377C142BC9890000638E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C94ADAC6141AA2D000766C2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C94ADAC7141AA2D000766C2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C94ADAC9141AA2D000766C2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Rackspace/Rackspace-Prefix.pch";
+				INFOPLIST_FILE = "Rackspace/Rackspace-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C94ADACA141AA2D000766C2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Rackspace/Rackspace-Prefix.pch";
+				INFOPLIST_FILE = "Rackspace/Rackspace-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C9C73783142BC9890000638E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UnitTests/UnitTests-Prefix.pch";
+				INFOPLIST_FILE = "UnitTests/UnitTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		C9C73784142BC9890000638E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UnitTests/UnitTests-Prefix.pch";
+				INFOPLIST_FILE = "UnitTests/UnitTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C94ADA81141AA2CF00766C2F /* Build configuration list for PBXProject "Rackspace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C94ADAC6141AA2D000766C2F /* Debug */,
+				C94ADAC7141AA2D000766C2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C94ADAC8141AA2D000766C2F /* Build configuration list for PBXNativeTarget "Rackspace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C94ADAC9141AA2D000766C2F /* Debug */,
+				C94ADACA141AA2D000766C2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9C73782142BC9890000638E /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9C73783142BC9890000638E /* Debug */,
+				C9C73784142BC9890000638E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C94ADA7E141AA2CF00766C2F /* Project object */;
+}

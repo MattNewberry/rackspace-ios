@@ -1,0 +1,1 @@
+{"progress"=>100, "id"=>20029957, "imageId"=>69, "flavorId"=>1, "status"=>"ACTIVE", "name"=>"nova-adminvm", "hostId"=>"fb8ad8c8afa5d630bc8c7e225e9076d3", "addresses"=>{"public"=>["184.106.206.224"], "private"=>["10.179.108.30"]}, "metadata"=>{}}

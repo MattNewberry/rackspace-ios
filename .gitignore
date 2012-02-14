@@ -1,11 +1,1 @@
-.DS_Store
-*.swp
-*~.nib
-build/
-*.pbxuser
-*.perspective
-*.perspectivev3
-*.mode1v3
-*.mode2v3
-xcuserdata
-/Constants.plist
+/Rackspace.xcodeproj/project.xcworkspace/xcuserdata/Matt.xcuserdatad/UserInterfaceState.xcuserstate

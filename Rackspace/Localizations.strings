@@ -1,0 +1,9 @@
+/* 
+  Localizations.strings
+  Rackspace
+
+  Created by Matt Newberry on 7/5/11.
+  Copyright 2011 Rackspace. All rights reserved.
+*/
+
+"AccountAddTitle" = "Add Account";

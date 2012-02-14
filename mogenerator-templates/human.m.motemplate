@@ -1,0 +1,14 @@
+//
+//  _<$managedObjectClassName$>.m
+//  Rackspace
+//
+//  Copyright (c) 2011 Rackspace, US Inc. All rights reserved.
+//
+
+#import "<$managedObjectClassName$>.h"
+
+@implementation <$managedObjectClassName$>
+
+// Custom logic goes here.
+
+@end
