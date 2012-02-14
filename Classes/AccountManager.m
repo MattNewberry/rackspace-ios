@@ -27,7 +27,6 @@
 #import "APICallback.h"
 #import "Analytics.h"
 #import "SBJSON.h"
-#import "Flavor.h"
 
 
 @implementation AccountManager
@@ -134,8 +133,7 @@
 #pragma mark Create Server
 
 - (APICallback *)createServer:(Server *)server {
-    
-    [[GANTracker sharedTracker] trackEvent:CATEGORY_SERVER action:EVENT_CREATED label:@"Size" value:server.flavor.ram withError:nil];
+    TrackEvent(CATEGORY_SERVER, EVENT_CREATED);
     
     __block OpenStackRequest *request = [OpenStackRequest createServerRequest:self.account server:server];
     return [self callbackWithRequest:request];

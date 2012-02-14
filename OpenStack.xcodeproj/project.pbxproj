@@ -3111,6 +3111,8 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				27F08DC41446426C00C6BA78 /* libz.dylib */,
+				27C15CC413A7D81D00A1BB9F /* UIKit.framework */,
 				27828720125A2A4200004D33 /* Tests */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				27FC363F12F32C200014FB4E /* Resources */,
@@ -3135,8 +3137,6 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				27F08DC41446426C00C6BA78 /* libz.dylib */,
-				27C15CC413A7D81D00A1BB9F /* UIKit.framework */,
 				7F8F374813859F190034710B /* libxml2.dylib */,
 				7F9351B813845AC80097720F /* libsqlite3.0.dylib */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
